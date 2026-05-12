@@ -10,7 +10,7 @@ Web app quản lý đăng ký tín chỉ và điểm số cho **3 vai trò**:
 | **Giảng viên** | Xem lớp đang dạy · Nhập điểm thành phần · Tổng kết môn |
 | **Nhân viên (Admin)** | CRUD tài khoản · Cấu hình cấu trúc trường (khoa, ngành, môn, kỳ, lớp HP, lịch) · Tổng kết kỳ · Báo cáo học lực |
 
-**Stack:** React 18 + Vite (port 5173) — Spring Boot 3.2.5 / Java 17 (port 8080) — MySQL 8
+**Stack:** React 18 + Vite (port 5173), Spring Boot 3.2.5 / Java 17 (port 8080), MySQL 8
 
 ---
 
