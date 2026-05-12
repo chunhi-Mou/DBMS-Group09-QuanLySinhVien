@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "namhoc_id": 1,
+    "hocki_id": 1
+  },
+  {
+    "id": 2,
+    "namhoc_id": 1,
+    "hocki_id": 2
+  },
+  {
+    "id": 3,
+    "namhoc_id": 2,
+    "hocki_id": 1
+  },
+  {
+    "id": 4,
+    "namhoc_id": 2,
+    "hocki_id": 2
+  },
+  {
+    "id": 5,
+    "namhoc_id": 3,
+    "hocki_id": 1
+  },
+  {
+    "id": 6,
+    "namhoc_id": 3,
+    "hocki_id": 2
+  },
+  {
+    "id": 7,
+    "namhoc_id": 4,
+    "hocki_id": 1
+  },
+  {
+    "id": 8,
+    "namhoc_id": 4,
+    "hocki_id": 2
+  }
+]
