@@ -1,4 +1,4 @@
-/* Schema: Quản lý Đăng ký tín chỉ và Điểm Sinh viên */
+-- Schema: Quản lý Đăng ký tín chỉ và Điểm Sinh viên
 
 CREATE DATABASE IF NOT EXISTS SinhVien
     CHARACTER SET utf8mb4
@@ -44,16 +44,16 @@ DROP TABLE IF EXISTS
 
 SET FOREIGN_KEY_CHECKS = 1;
 
-/* TẦNG 1: CƠ SỞ VẬT CHẤT & ĐỊA LÝ */
+-- TẦNG 1: CƠ SỞ VẬT CHẤT & ĐỊA LÝ
 
-/* 1. Trường */
+-- 1. Trường
 CREATE TABLE Truong (
     id   INT AUTO_INCREMENT PRIMARY KEY,
     ten  VARCHAR(255),
     mota VARCHAR(255)
 );
 
-/* 2. Địa chỉ */
+-- 2. Địa chỉ
 CREATE TABLE DiaChi (
     id        INT AUTO_INCREMENT PRIMARY KEY,
     sonha     VARCHAR(255),
@@ -66,9 +66,9 @@ CREATE TABLE DiaChi (
     FOREIGN KEY (truong_id) REFERENCES Truong(id)
 );
 
-/* TẦNG 2: CƠ CẤU TỔ CHỨC */
+-- TẦNG 2: CƠ CẤU TỔ CHỨC
 
-/* 3. Khoa */
+-- 3. Khoa
 CREATE TABLE Khoa (
     id        INT AUTO_INCREMENT PRIMARY KEY,
     ten       VARCHAR(255),
@@ -77,7 +77,7 @@ CREATE TABLE Khoa (
     FOREIGN KEY (truong_id) REFERENCES Truong(id)
 );
 
-/* 4. Bộ môn */
+-- 4. Bộ môn
 CREATE TABLE BoMon (
     id      INT AUTO_INCREMENT PRIMARY KEY,
     ten     VARCHAR(255),
@@ -86,7 +86,7 @@ CREATE TABLE BoMon (
     FOREIGN KEY (khoa_id) REFERENCES Khoa(id)
 );
 
-/* 5. Ngành học */
+-- 5. Ngành học
 CREATE TABLE NganhHoc (
     id      INT AUTO_INCREMENT PRIMARY KEY,
     ten     VARCHAR(255),
@@ -94,7 +94,7 @@ CREATE TABLE NganhHoc (
     FOREIGN KEY (khoa_id) REFERENCES Khoa(id)
 );
 
-/* 6. Lớp hành chính */
+-- 6. Lớp hành chính
 CREATE TABLE LopHanhChinh (
     id       INT AUTO_INCREMENT PRIMARY KEY,
     tenlop   VARCHAR(50) UNIQUE,
@@ -102,24 +102,25 @@ CREATE TABLE LopHanhChinh (
     FOREIGN KEY (nganh_id) REFERENCES NganhHoc(id)
 );
 
-/* TẦNG 3: NGƯỜI DÙNG HỆ THỐNG */
+-- TẦNG 3: NGƯỜI DÙNG HỆ THỐNG
 
-/* 7. Thành viên */
+-- 7. Thành viên
 CREATE TABLE ThanhVien (
     id        INT AUTO_INCREMENT PRIMARY KEY,
-    username  VARCHAR(255) UNIQUE,
-    password  VARCHAR(255),
+    username  VARCHAR(255) NOT NULL UNIQUE,
+    password  VARCHAR(255) NOT NULL,
     hodem     VARCHAR(255),
-    ten       VARCHAR(255),
+    ten       VARCHAR(255) NOT NULL,
     ngaysinh  DATE,
-    email     VARCHAR(255) UNIQUE,
+    email     VARCHAR(255) NOT NULL UNIQUE,
     dt        VARCHAR(50),
-    vaitro    VARCHAR(50),
+    vaitro    VARCHAR(50)  NOT NULL,
     diachi_id INT,
-    FOREIGN KEY (diachi_id) REFERENCES DiaChi(id)
+    FOREIGN KEY (diachi_id) REFERENCES DiaChi(id),
+    CONSTRAINT chk_thanhvien_vaitro CHECK (vaitro IN ('ADMIN', 'GV', 'SV', 'NV'))
 );
 
-/* 8. Sinh viên */
+-- 8. Sinh viên
 CREATE TABLE SinhVien (
     masv            VARCHAR(50) PRIMARY KEY,
     thanhvien_id    INT UNIQUE,
@@ -128,7 +129,7 @@ CREATE TABLE SinhVien (
     FOREIGN KEY (lophanhchinh_id) REFERENCES LopHanhChinh(id)
 );
 
-/* 9. Giảng viên */
+-- 9. Giảng viên
 CREATE TABLE GiangVien (
     thanhvien_id INT PRIMARY KEY,
     bomon_id     INT,
@@ -137,16 +138,16 @@ CREATE TABLE GiangVien (
     FOREIGN KEY (bomon_id)     REFERENCES BoMon(id)
 );
 
-/* 10. Nhân viên */
+-- 10. Nhân viên
 CREATE TABLE NhanVien (
     thanhvien_id INT PRIMARY KEY,
     vitri        VARCHAR(255),
     FOREIGN KEY (thanhvien_id) REFERENCES ThanhVien(id)
 );
 
-/* TẦNG 4: CHƯƠNG TRÌNH ĐÀO TẠO */
+-- TẦNG 4: CHƯƠNG TRÌNH ĐÀO TẠO
 
-/* 11. Sinh viên - Ngành học */
+-- 11. Sinh viên - Ngành học
 CREATE TABLE SinhVien_Nganh (
     sinhvien_id VARCHAR(50),
     nganh_id    INT,
@@ -155,68 +156,71 @@ CREATE TABLE SinhVien_Nganh (
     FOREIGN KEY (nganh_id)    REFERENCES NganhHoc(id)
 );
 
-/* 12. Môn học */
+-- 12. Môn học
 CREATE TABLE MonHoc (
     id       INT AUTO_INCREMENT PRIMARY KEY,
-    mamh     VARCHAR(50) UNIQUE,
-    ten      VARCHAR(255),
-    sotc     INT CHECK (sotc > 0),
+    mamh     VARCHAR(50) NOT NULL UNIQUE,
+    ten      VARCHAR(255) NOT NULL,
+    sotc     INT NOT NULL CHECK (sotc > 0),
     mota     TEXT,
     bomon_id INT,
     FOREIGN KEY (bomon_id) REFERENCES BoMon(id)
 );
 
-/* 13. Ngành học - Môn học */
+-- 13. Ngành học - Môn học
 CREATE TABLE NganhHoc_MonHoc (
     nganh_id  INT,
     monhoc_id INT,
-    loai      VARCHAR(50),
+    loai      VARCHAR(50) NOT NULL,
     PRIMARY KEY (nganh_id, monhoc_id),
     FOREIGN KEY (nganh_id)  REFERENCES NganhHoc(id),
-    FOREIGN KEY (monhoc_id) REFERENCES MonHoc(id)
+    FOREIGN KEY (monhoc_id) REFERENCES MonHoc(id),
+    CONSTRAINT chk_nganhhoc_monhoc_loai CHECK (loai IN ('BB', 'TC'))
 );
 
-/* 14. Đầu điểm */
+-- 14. Đầu điểm
 CREATE TABLE DauDiem (
     id   INT AUTO_INCREMENT PRIMARY KEY,
-    ten  VARCHAR(50),
+    ten  VARCHAR(50) NOT NULL,
     mota VARCHAR(255)
 );
 
-/* 15. Môn học - Đầu điểm */
+-- 15. Môn học - Đầu điểm
 CREATE TABLE MonHoc_DauDiem (
     monhoc_id  INT,
     daudiem_id INT,
-    tile       FLOAT,
+    tile       DECIMAL(5,4) NOT NULL,
     PRIMARY KEY (monhoc_id, daudiem_id),
     FOREIGN KEY (monhoc_id)  REFERENCES MonHoc(id),
-    FOREIGN KEY (daudiem_id) REFERENCES DauDiem(id)
+    FOREIGN KEY (daudiem_id) REFERENCES DauDiem(id),
+    CONSTRAINT chk_monhoc_daudiem_tile CHECK (tile > 0 AND tile <= 1)
 );
 
-/* TẦNG 5: THỜI GIAN VÀ XẾP LỊCH */
+-- TẦNG 5: THỜI GIAN VÀ XẾP LỊCH
 
-/* 16. Năm học */
+-- 16. Năm học
 CREATE TABLE NamHoc (
     id  INT AUTO_INCREMENT PRIMARY KEY,
     ten VARCHAR(50)
 );
 
-/* 17. Học kỳ */
+-- 17. Học kỳ
 CREATE TABLE HocKi (
     id  INT AUTO_INCREMENT PRIMARY KEY,
     ten VARCHAR(50)
 );
 
-/* 18. Kỳ học */
+-- 18. Kỳ học
 CREATE TABLE KiHoc (
     id        INT AUTO_INCREMENT PRIMARY KEY,
-    namhoc_id INT,
-    hocki_id  INT,
+    namhoc_id INT NOT NULL,
+    hocki_id  INT NOT NULL,
     FOREIGN KEY (namhoc_id) REFERENCES NamHoc(id),
-    FOREIGN KEY (hocki_id)  REFERENCES HocKi(id)
+    FOREIGN KEY (hocki_id)  REFERENCES HocKi(id),
+    CONSTRAINT uq_kihoc_namhoc_hocki UNIQUE (namhoc_id, hocki_id)
 );
 
-/* 19. Môn học - Kỳ học */
+-- 19. Môn học - Kỳ học
 CREATE TABLE MonHoc_KiHoc (
     id        INT AUTO_INCREMENT PRIMARY KEY,
     monhoc_id INT,
@@ -226,18 +230,18 @@ CREATE TABLE MonHoc_KiHoc (
     FOREIGN KEY (kihoc_id)  REFERENCES KiHoc(id)
 );
 
-/* 20. Lớp học phần */
+-- 20. Lớp học phần
 CREATE TABLE LopHocPhan (
     id             INT AUTO_INCREMENT PRIMARY KEY,
-    ten            VARCHAR(255),
+    ten            VARCHAR(255) NOT NULL,
     nhom           INT,
     tothuchanh     INT,
-    sisotoida      INT CHECK (sisotoida > 0),
-    monhockihoc_id INT,
+    sisotoida      INT NOT NULL CHECK (sisotoida > 0),
+    monhockihoc_id INT NOT NULL,
     FOREIGN KEY (monhockihoc_id) REFERENCES MonHoc_KiHoc(id)
 );
 
-/* 21. Giảng viên - Lớp học phần */
+-- 21. Giảng viên - Lớp học phần
 CREATE TABLE GiangVien_LopHocPhan (
     giangvien_id  INT,
     lophocphan_id INT,
@@ -246,40 +250,41 @@ CREATE TABLE GiangVien_LopHocPhan (
     FOREIGN KEY (lophocphan_id) REFERENCES LopHocPhan(id)
 );
 
-/* 22. Tuần học */
+-- 22. Tuần học
 CREATE TABLE TuanHoc (
     id  INT AUTO_INCREMENT PRIMARY KEY,
     ten VARCHAR(50)
 );
 
-/* 23. Ngày học */
+-- 23. Ngày học
 CREATE TABLE NgayHoc (
     id  INT AUTO_INCREMENT PRIMARY KEY,
     ten VARCHAR(50)
 );
 
-/* 24. Kíp học */
+-- 24. Kíp học
 CREATE TABLE KipHoc (
     id  INT AUTO_INCREMENT PRIMARY KEY,
     ten VARCHAR(50)
 );
 
-/* 25. Phòng học */
+-- 25. Phòng học
 CREATE TABLE PhongHoc (
     id      INT AUTO_INCREMENT PRIMARY KEY,
-    ten     VARCHAR(255),
-    succhua INT
+    ten     VARCHAR(255) NOT NULL,
+    succhua INT NOT NULL,
+    CONSTRAINT chk_phonghoc_succhua CHECK (succhua > 0)
 );
 
-/* 26. Buổi học (Lịch) */
+-- 26. Buổi học (Lịch)
 CREATE TABLE BuoiHoc (
     id            INT AUTO_INCREMENT PRIMARY KEY,
-    lophocphan_id INT,
-    tuan_id       INT,
-    ngay_id       INT,
-    kiphoc_id     INT,
-    phonghoc_id   INT,
-    giangvien_id  INT,
+    lophocphan_id INT NOT NULL,
+    tuan_id       INT NOT NULL,
+    ngay_id       INT NOT NULL,
+    kiphoc_id     INT NOT NULL,
+    phonghoc_id   INT NOT NULL,
+    giangvien_id  INT NOT NULL,
     FOREIGN KEY (lophocphan_id) REFERENCES LopHocPhan(id),
     FOREIGN KEY (tuan_id)       REFERENCES TuanHoc(id),
     FOREIGN KEY (ngay_id)       REFERENCES NgayHoc(id),
@@ -291,60 +296,64 @@ CREATE TABLE BuoiHoc (
     UNIQUE (tuan_id, ngay_id, kiphoc_id, giangvien_id)
 );
 
-/* TẦNG 6: KẾT QUẢ HỌC TẬP */
+-- TẦNG 6: KẾT QUẢ HỌC TẬP
 
-/* 27. Đăng ký học */
+-- 27. Đăng ký học
 CREATE TABLE DangKyHoc (
     id            INT AUTO_INCREMENT PRIMARY KEY,
     ngaydangky    TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    trangthai     VARCHAR(50) DEFAULT 'Đã khóa',
-    sinhvien_id   VARCHAR(50),
-    lophocphan_id INT,
+    trangthai     VARCHAR(50) NOT NULL DEFAULT 'Đã lưu',
+    sinhvien_id   VARCHAR(50) NOT NULL,
+    lophocphan_id INT         NOT NULL,
     UNIQUE (sinhvien_id, lophocphan_id),
     FOREIGN KEY (sinhvien_id)   REFERENCES SinhVien(masv),
-    FOREIGN KEY (lophocphan_id) REFERENCES LopHocPhan(id)
+    FOREIGN KEY (lophocphan_id) REFERENCES LopHocPhan(id),
+    CONSTRAINT chk_dangkyhoc_trangthai CHECK (trangthai IN ('Đã lưu', 'Đã khóa', 'Chờ duyệt', 'Đã hủy'))
 );
 
-/* 28. Điểm thành phần */
+-- 28. Điểm thành phần
 CREATE TABLE DiemThanhPhan (
-    dangkyhoc_id INT,
-    daudiem_id   INT,
-    diem         FLOAT CHECK (diem >= 0 AND diem <= 10),
+    dangkyhoc_id INT NOT NULL,
+    daudiem_id   INT NOT NULL,
+    diem         DECIMAL(4,2) NOT NULL CHECK (diem >= 0 AND diem <= 10),
     PRIMARY KEY (dangkyhoc_id, daudiem_id),
     FOREIGN KEY (dangkyhoc_id) REFERENCES DangKyHoc(id),
     FOREIGN KEY (daudiem_id)   REFERENCES DauDiem(id)
 );
 
-/* 29. Điểm hệ chữ */
+-- 29. Điểm hệ chữ
 CREATE TABLE DiemHeChu (
     id         INT AUTO_INCREMENT PRIMARY KEY,
-    ten        VARCHAR(5),
-    diem4      FLOAT,
-    diem10_min FLOAT,
-    diem10_max FLOAT,
-    mota       VARCHAR(255)
+    ten        VARCHAR(5)   NOT NULL,
+    diem4      DECIMAL(4,2) NOT NULL,
+    diem10_min DECIMAL(4,2) NOT NULL,
+    diem10_max DECIMAL(4,2) NOT NULL,
+    mota       VARCHAR(255),
+    CONSTRAINT chk_diemhechu_diem4  CHECK (diem4 >= 0 AND diem4 <= 4),
+    CONSTRAINT chk_diemhechu_range  CHECK (diem10_min >= 0 AND diem10_max <= 10 AND diem10_min < diem10_max)
 );
 
-/* 30. Kết quả môn */
+-- 30. Kết quả môn
 CREATE TABLE KetQuaMon (
     id           INT AUTO_INCREMENT PRIMARY KEY,
-    dangkyhoc_id INT UNIQUE,
-    diem         FLOAT CHECK (diem >= 0 AND diem <= 10),
-    diemhechu_id INT,
+    dangkyhoc_id INT          NOT NULL UNIQUE,
+    diem         DECIMAL(4,2) NOT NULL CHECK (diem >= 0 AND diem <= 10),
+    diemhechu_id INT          NOT NULL,
     FOREIGN KEY (dangkyhoc_id) REFERENCES DangKyHoc(id),
     FOREIGN KEY (diemhechu_id) REFERENCES DiemHeChu(id)
 );
 
-/* 31. Loại học lực */
+-- 31. Loại học lực
 CREATE TABLE LoaiHocLuc (
     id       INT AUTO_INCREMENT PRIMARY KEY,
-    ten      VARCHAR(50),
-    diem_min FLOAT,
-    diem_max FLOAT,
-    mota     VARCHAR(255)
+    ten      VARCHAR(50)  NOT NULL,
+    diem_min DECIMAL(4,2) NOT NULL,
+    diem_max DECIMAL(4,2) NOT NULL,
+    mota     VARCHAR(255),
+    CONSTRAINT chk_loaihocluc_range CHECK (diem_min >= 0 AND diem_max <= 4 AND diem_min < diem_max)
 );
 
-/* 32. Tổng kết học kỳ */
+-- 32. Tổng kết học kỳ
 CREATE TABLE TONGKET_HOCKI (
     id            INT AUTO_INCREMENT PRIMARY KEY,
     sinhvien_id   VARCHAR(50) NOT NULL,
