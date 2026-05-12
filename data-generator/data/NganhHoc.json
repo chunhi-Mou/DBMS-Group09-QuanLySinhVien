@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "ten": "Công nghệ thông tin",
+    "khoa_id": 1
+  },
+  {
+    "id": 2,
+    "ten": "An toàn thông tin",
+    "khoa_id": 2
+  },
+  {
+    "id": 3,
+    "ten": "Kỹ thuật phần mềm",
+    "khoa_id": 1
+  },
+  {
+    "id": 4,
+    "ten": "Hệ thống thông tin",
+    "khoa_id": 1
+  },
+  {
+    "id": 5,
+    "ten": "Kế toán",
+    "khoa_id": 4
+  }
+]

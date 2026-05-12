@@ -1,0 +1,22 @@
+/* Dashboard responsive padding */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0 24px;
+  max-width: 100%;
+}
+
+/* Mobile responsive padding (Requirement 1) */
+@media (max-width: 767px) {
+  .dashboard-container {
+    padding: 0 16px;
+  }
+}
+
+/* Ensure content area uses at least 60% of viewport width */
+@media (min-width: 768px) {
+  .dashboard-container {
+    min-width: 60vw;
+  }
+}

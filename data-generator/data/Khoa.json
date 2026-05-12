@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "ten": "Công nghệ thông tin 1",
+    "mota": "",
+    "truong_id": 1
+  },
+  {
+    "id": 2,
+    "ten": "An toàn thông tin",
+    "mota": "",
+    "truong_id": 1
+  },
+  {
+    "id": 3,
+    "ten": "Kỹ thuật điện tử",
+    "mota": "",
+    "truong_id": 1
+  },
+  {
+    "id": 4,
+    "ten": "Quản trị kinh doanh",
+    "mota": "",
+    "truong_id": 1
+  },
+  {
+    "id": 5,
+    "ten": "Khoa học cơ bản",
+    "mota": "",
+    "truong_id": 1
+  }
+]

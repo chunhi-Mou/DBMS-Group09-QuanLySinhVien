@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "tenlop": "D23CQCE01-B",
+    "nganh_id": 1
+  },
+  {
+    "id": 2,
+    "tenlop": "D23CQCE02-B",
+    "nganh_id": 1
+  },
+  {
+    "id": 3,
+    "tenlop": "D23CQAT01-B",
+    "nganh_id": 2
+  },
+  {
+    "id": 4,
+    "tenlop": "D23CQAT02-B",
+    "nganh_id": 2
+  },
+  {
+    "id": 5,
+    "tenlop": "D23CQPM01-B",
+    "nganh_id": 3
+  },
+  {
+    "id": 6,
+    "tenlop": "D23CQPM02-B",
+    "nganh_id": 3
+  },
+  {
+    "id": 7,
+    "tenlop": "D23CQHT01-B",
+    "nganh_id": 4
+  },
+  {
+    "id": 8,
+    "tenlop": "D23CQHT02-B",
+    "nganh_id": 4
+  },
+  {
+    "id": 9,
+    "tenlop": "D23CQKT01-B",
+    "nganh_id": 5
+  },
+  {
+    "id": 10,
+    "tenlop": "D23CQKT02-B",
+    "nganh_id": 5
+  }
+]

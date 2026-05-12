@@ -1,0 +1,202 @@
+[
+  {
+    "thanhvien_id": 5,
+    "bomon_id": 1,
+    "hocham": "ThS"
+  },
+  {
+    "thanhvien_id": 6,
+    "bomon_id": 1,
+    "hocham": "ThS"
+  },
+  {
+    "thanhvien_id": 7,
+    "bomon_id": 2,
+    "hocham": "TS"
+  },
+  {
+    "thanhvien_id": 8,
+    "bomon_id": 7,
+    "hocham": "TS"
+  },
+  {
+    "thanhvien_id": 9,
+    "bomon_id": 1,
+    "hocham": "TS"
+  },
+  {
+    "thanhvien_id": 10,
+    "bomon_id": 1,
+    "hocham": "TS"
+  },
+  {
+    "thanhvien_id": 11,
+    "bomon_id": 1,
+    "hocham": "TS"
+  },
+  {
+    "thanhvien_id": 12,
+    "bomon_id": 2,
+    "hocham": "TS"
+  },
+  {
+    "thanhvien_id": 13,
+    "bomon_id": 3,
+    "hocham": "TS"
+  },
+  {
+    "thanhvien_id": 14,
+    "bomon_id": 4,
+    "hocham": "ThS"
+  },
+  {
+    "thanhvien_id": 15,
+    "bomon_id": 5,
+    "hocham": "TS"
+  },
+  {
+    "thanhvien_id": 16,
+    "bomon_id": 6,
+    "hocham": "TS"
+  },
+  {
+    "thanhvien_id": 17,
+    "bomon_id": 7,
+    "hocham": "TS"
+  },
+  {
+    "thanhvien_id": 18,
+    "bomon_id": 1,
+    "hocham": "TS"
+  },
+  {
+    "thanhvien_id": 19,
+    "bomon_id": 2,
+    "hocham": "PGS"
+  },
+  {
+    "thanhvien_id": 20,
+    "bomon_id": 3,
+    "hocham": "ThS"
+  },
+  {
+    "thanhvien_id": 21,
+    "bomon_id": 4,
+    "hocham": "TS"
+  },
+  {
+    "thanhvien_id": 22,
+    "bomon_id": 5,
+    "hocham": "PGS"
+  },
+  {
+    "thanhvien_id": 23,
+    "bomon_id": 6,
+    "hocham": "PGS"
+  },
+  {
+    "thanhvien_id": 24,
+    "bomon_id": 7,
+    "hocham": "TS"
+  },
+  {
+    "thanhvien_id": 25,
+    "bomon_id": 1,
+    "hocham": "ThS"
+  },
+  {
+    "thanhvien_id": 26,
+    "bomon_id": 2,
+    "hocham": "ThS"
+  },
+  {
+    "thanhvien_id": 27,
+    "bomon_id": 3,
+    "hocham": "ThS"
+  },
+  {
+    "thanhvien_id": 28,
+    "bomon_id": 4,
+    "hocham": "ThS"
+  },
+  {
+    "thanhvien_id": 29,
+    "bomon_id": 5,
+    "hocham": "ThS"
+  },
+  {
+    "thanhvien_id": 30,
+    "bomon_id": 6,
+    "hocham": "TS"
+  },
+  {
+    "thanhvien_id": 31,
+    "bomon_id": 7,
+    "hocham": "TS"
+  },
+  {
+    "thanhvien_id": 32,
+    "bomon_id": 1,
+    "hocham": "ThS"
+  },
+  {
+    "thanhvien_id": 33,
+    "bomon_id": 2,
+    "hocham": "ThS"
+  },
+  {
+    "thanhvien_id": 34,
+    "bomon_id": 3,
+    "hocham": "TS"
+  },
+  {
+    "thanhvien_id": 35,
+    "bomon_id": 4,
+    "hocham": "ThS"
+  },
+  {
+    "thanhvien_id": 36,
+    "bomon_id": 5,
+    "hocham": "TS"
+  },
+  {
+    "thanhvien_id": 37,
+    "bomon_id": 6,
+    "hocham": "TS"
+  },
+  {
+    "thanhvien_id": 38,
+    "bomon_id": 7,
+    "hocham": "PGS"
+  },
+  {
+    "thanhvien_id": 39,
+    "bomon_id": 1,
+    "hocham": "TS"
+  },
+  {
+    "thanhvien_id": 40,
+    "bomon_id": 2,
+    "hocham": "TS"
+  },
+  {
+    "thanhvien_id": 41,
+    "bomon_id": 3,
+    "hocham": "ThS"
+  },
+  {
+    "thanhvien_id": 42,
+    "bomon_id": 4,
+    "hocham": "TS"
+  },
+  {
+    "thanhvien_id": 43,
+    "bomon_id": 5,
+    "hocham": "TS"
+  },
+  {
+    "thanhvien_id": 44,
+    "bomon_id": 6,
+    "hocham": "TS"
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "ten": "Lập trình và Thuật toán",
+    "mota": "",
+    "khoa_id": 1
+  },
+  {
+    "id": 2,
+    "ten": "Hệ thống máy tính",
+    "mota": "",
+    "khoa_id": 1
+  },
+  {
+    "id": 3,
+    "ten": "Mạng và Truyền thông",
+    "mota": "",
+    "khoa_id": 1
+  },
+  {
+    "id": 4,
+    "ten": "An toàn thông tin",
+    "mota": "",
+    "khoa_id": 2
+  },
+  {
+    "id": 5,
+    "ten": "Kỹ thuật phần mềm",
+    "mota": "",
+    "khoa_id": 1
+  },
+  {
+    "id": 6,
+    "ten": "Kế toán - Tài chính",
+    "mota": "",
+    "khoa_id": 4
+  },
+  {
+    "id": 7,
+    "ten": "Toán - Lý thuyết",
+    "mota": "",
+    "khoa_id": 5
+  }
+]
