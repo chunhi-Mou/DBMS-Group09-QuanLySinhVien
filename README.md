@@ -1,4 +1,4 @@
-# Hệ thống Quản lý Sinh viên — PTIT (BTL Nhóm 09)
+# Hệ thống Quản lý Sinh viên - PTIT (BTL Nhóm 09)
 
 ## Phạm vi hệ thống
 
