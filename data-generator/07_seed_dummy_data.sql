@@ -1,4 +1,5 @@
 USE SinhVien;
+SET NAMES utf8mb4;
 
 INSERT INTO Truong(id, ten, mota) VALUES
     (1, 'Học viện Công nghệ Bưu chính Viễn thông', 'PTIT');

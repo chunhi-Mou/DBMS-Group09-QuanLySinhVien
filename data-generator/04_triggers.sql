@@ -1,4 +1,6 @@
 USE SinhVien;
+SET NAMES utf8mb4;
+
 
 DROP TRIGGER IF EXISTS trg_dangkyhoc_check_siso;
 DROP TRIGGER IF EXISTS trg_dangkyhoc_check_lich;

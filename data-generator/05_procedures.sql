@@ -1,4 +1,6 @@
 USE SinhVien;
+SET NAMES utf8mb4;
+
 
 DROP PROCEDURE IF EXISTS sp_GetAuthUserByUsername;
 DROP PROCEDURE IF EXISTS sp_GetDanhSachKiHoc;
@@ -647,7 +649,7 @@ BEGIN
                       AND dkh.trangthai <> 'Đã hủy'
                     ORDER BY sv.masv
                    ) roster
-        ), JSON_ARRAY()) AS `rows`
+        ), JSON_ARRAY()) AS danhSach
     FROM LopHocPhan lhp
     JOIN MonHoc_KiHoc mkh ON mkh.id = lhp.monhockihoc_id
     JOIN MonHoc mh ON mh.id = mkh.monhoc_id

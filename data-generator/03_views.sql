@@ -1,4 +1,5 @@
 USE SinhVien;
+SET NAMES utf8mb4;
 
 DROP VIEW IF EXISTS v_BaoCao_HocLuc_ChiTiet;
 DROP VIEW IF EXISTS v_NhapDiem_GiangVien;
