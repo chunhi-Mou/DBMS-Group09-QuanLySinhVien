@@ -1,0 +1,21 @@
+USE SinhVien;
+
+CREATE INDEX idx_thanhvien_vaitro ON ThanhVien(vaitro);
+CREATE INDEX idx_sinhvien_lophanhchinh ON SinhVien(lophanhchinh_id);
+CREATE INDEX idx_giangvien_bomon ON GiangVien(bomon_id);
+CREATE INDEX idx_monhoc_bomon ON MonHoc(bomon_id);
+CREATE INDEX idx_sinhvien_nganh_nganh ON SinhVien_Nganh(nganh_id);
+CREATE INDEX idx_nganhhoc_monhoc_monhoc ON NganhHoc_MonHoc(monhoc_id);
+CREATE INDEX idx_monhoc_kihoc_kihoc ON MonHoc_KiHoc(kihoc_id);
+CREATE INDEX idx_lophocphan_monhockihoc ON LopHocPhan(monhockihoc_id);
+CREATE INDEX idx_giangvien_lhp_lophocphan ON GiangVien_LopHocPhan(lophocphan_id);
+CREATE INDEX idx_dangkyhoc_lophocphan_trangthai ON DangKyHoc(lophocphan_id, trangthai);
+CREATE INDEX idx_dangkyhoc_sinhvien_trangthai ON DangKyHoc(sinhvien_id, trangthai);
+CREATE INDEX idx_buoihoc_lophocphan ON BuoiHoc(lophocphan_id);
+CREATE INDEX idx_buoihoc_giangvien ON BuoiHoc(giangvien_id);
+CREATE INDEX idx_buoihoc_phonghoc ON BuoiHoc(phonghoc_id);
+CREATE INDEX idx_buoihoc_slot ON BuoiHoc(tuan_id, ngay_id, kiphoc_id);
+CREATE INDEX idx_diemthanhphan_daudiem ON DiemThanhPhan(daudiem_id);
+CREATE INDEX idx_ketquamon_diemhechu ON KetQuaMon(diemhechu_id);
+CREATE INDEX idx_tongket_kihoc ON TONGKET_HOCKI(kihoc_id);
+CREATE INDEX idx_tongket_loaihocluc ON TONGKET_HOCKI(loaihocluc_id);
