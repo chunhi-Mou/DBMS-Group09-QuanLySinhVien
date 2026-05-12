@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "ten": "A+",
+    "diem4": 4.0,
+    "diem10_min": 9.0,
+    "diem10_max": 10.0,
+    "mota": "Xuất sắc"
+  },
+  {
+    "id": 2,
+    "ten": "A",
+    "diem4": 3.7,
+    "diem10_min": 8.5,
+    "diem10_max": 8.9,
+    "mota": "Giỏi"
+  },
+  {
+    "id": 3,
+    "ten": "B+",
+    "diem4": 3.5,
+    "diem10_min": 8.0,
+    "diem10_max": 8.4,
+    "mota": "Khá giỏi"
+  },
+  {
+    "id": 4,
+    "ten": "B",
+    "diem4": 3.0,
+    "diem10_min": 7.0,
+    "diem10_max": 7.9,
+    "mota": "Khá"
+  },
+  {
+    "id": 5,
+    "ten": "C+",
+    "diem4": 2.5,
+    "diem10_min": 6.5,
+    "diem10_max": 6.9,
+    "mota": "TB Khá"
+  },
+  {
+    "id": 6,
+    "ten": "C",
+    "diem4": 2.0,
+    "diem10_min": 5.5,
+    "diem10_max": 6.4,
+    "mota": "Trung bình"
+  },
+  {
+    "id": 7,
+    "ten": "D+",
+    "diem4": 1.5,
+    "diem10_min": 5.0,
+    "diem10_max": 5.4,
+    "mota": "TB Yếu"
+  },
+  {
+    "id": 8,
+    "ten": "D",
+    "diem4": 1.0,
+    "diem10_min": 4.0,
+    "diem10_max": 4.9,
+    "mota": "Yếu"
+  },
+  {
+    "id": 9,
+    "ten": "F",
+    "diem4": 0.0,
+    "diem10_min": 0.0,
+    "diem10_max": 3.9,
+    "mota": "Kém"
+  }
+]

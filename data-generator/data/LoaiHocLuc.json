@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "ten": "Xuất sắc",
+    "diem_min": 3.6,
+    "diem_max": 4.0,
+    "mota": ""
+  },
+  {
+    "id": 2,
+    "ten": "Giỏi",
+    "diem_min": 3.2,
+    "diem_max": 3.59,
+    "mota": ""
+  },
+  {
+    "id": 3,
+    "ten": "Khá",
+    "diem_min": 2.5,
+    "diem_max": 3.19,
+    "mota": ""
+  },
+  {
+    "id": 4,
+    "ten": "Trung bình",
+    "diem_min": 2.0,
+    "diem_max": 2.49,
+    "mota": ""
+  },
+  {
+    "id": 5,
+    "ten": "Yếu",
+    "diem_min": 1.0,
+    "diem_max": 1.99,
+    "mota": ""
+  },
+  {
+    "id": 6,
+    "ten": "Kém",
+    "diem_min": 0.0,
+    "diem_max": 0.99,
+    "mota": ""
+  }
+]

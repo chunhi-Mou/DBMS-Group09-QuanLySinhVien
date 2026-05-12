@@ -1,0 +1,442 @@
+[
+  {
+    "id": 1,
+    "mamh": "SKD1103",
+    "ten": "Kỹ năng tạo lập Văn bản",
+    "sotc": 1,
+    "mota": "Kỹ năng tạo lập Văn bản",
+    "bomon_id": 7
+  },
+  {
+    "id": 2,
+    "mamh": "BAS1152",
+    "ten": "Chủ nghĩa xã hội khoa học",
+    "sotc": 2,
+    "mota": "Chủ nghĩa xã hội khoa học",
+    "bomon_id": 7
+  },
+  {
+    "id": 3,
+    "mamh": "BAS1203",
+    "ten": "Toán rời rạc",
+    "sotc": 3,
+    "mota": "Toán rời rạc",
+    "bomon_id": 7
+  },
+  {
+    "id": 4,
+    "mamh": "BAS1201",
+    "ten": "Giải tích 1",
+    "sotc": 3,
+    "mota": "Giải tích 1",
+    "bomon_id": 7
+  },
+  {
+    "id": 5,
+    "mamh": "BAS1202",
+    "ten": "Giải tích 2",
+    "sotc": 3,
+    "mota": "Giải tích 2",
+    "bomon_id": 7
+  },
+  {
+    "id": 6,
+    "mamh": "BAS1106",
+    "ten": "Đại số tuyến tính",
+    "sotc": 3,
+    "mota": "Đại số tuyến tính",
+    "bomon_id": 7
+  },
+  {
+    "id": 7,
+    "mamh": "INT1154",
+    "ten": "Tin học cơ sở 1",
+    "sotc": 2,
+    "mota": "Tin học cơ sở 1",
+    "bomon_id": 1
+  },
+  {
+    "id": 8,
+    "mamh": "INT1155",
+    "ten": "Tin học cơ sở 2",
+    "sotc": 2,
+    "mota": "Tin học cơ sở 2",
+    "bomon_id": 1
+  },
+  {
+    "id": 9,
+    "mamh": "GD1001",
+    "ten": "Triết học Mác-Lênin",
+    "sotc": 3,
+    "mota": "Triết học Mác-Lênin",
+    "bomon_id": 7
+  },
+  {
+    "id": 10,
+    "mamh": "GD1002",
+    "ten": "Kinh tế chính trị Mác-Lênin",
+    "sotc": 2,
+    "mota": "Kinh tế chính trị Mác-Lênin",
+    "bomon_id": 7
+  },
+  {
+    "id": 11,
+    "mamh": "GD1003",
+    "ten": "Tư tưởng Hồ Chí Minh",
+    "sotc": 2,
+    "mota": "Tư tưởng Hồ Chí Minh",
+    "bomon_id": 7
+  },
+  {
+    "id": 12,
+    "mamh": "GD1004",
+    "ten": "Lịch sử Đảng Cộng sản Việt Nam",
+    "sotc": 2,
+    "mota": "Lịch sử Đảng Cộng sản Việt Nam",
+    "bomon_id": 7
+  },
+  {
+    "id": 13,
+    "mamh": "GD1005",
+    "ten": "Pháp luật đại cương",
+    "sotc": 2,
+    "mota": "Pháp luật đại cương",
+    "bomon_id": 7
+  },
+  {
+    "id": 14,
+    "mamh": "BAS1301",
+    "ten": "Vật lý đại cương",
+    "sotc": 3,
+    "mota": "Vật lý đại cương",
+    "bomon_id": 7
+  },
+  {
+    "id": 15,
+    "mamh": "BAS1401",
+    "ten": "Xác suất thống kê",
+    "sotc": 3,
+    "mota": "Xác suất thống kê",
+    "bomon_id": 7
+  },
+  {
+    "id": 16,
+    "mamh": "ENG1001",
+    "ten": "Tiếng Anh 1",
+    "sotc": 3,
+    "mota": "Tiếng Anh 1",
+    "bomon_id": 7
+  },
+  {
+    "id": 17,
+    "mamh": "ENG1002",
+    "ten": "Tiếng Anh 2",
+    "sotc": 3,
+    "mota": "Tiếng Anh 2",
+    "bomon_id": 7
+  },
+  {
+    "id": 18,
+    "mamh": "ENG1003",
+    "ten": "Tiếng Anh chuyên ngành",
+    "sotc": 3,
+    "mota": "Tiếng Anh chuyên ngành",
+    "bomon_id": 7
+  },
+  {
+    "id": 19,
+    "mamh": "INT1313",
+    "ten": "Cơ sở dữ liệu",
+    "sotc": 3,
+    "mota": "Cơ sở dữ liệu",
+    "bomon_id": 2
+  },
+  {
+    "id": 20,
+    "mamh": "INT1430",
+    "ten": "Mạng máy tính",
+    "sotc": 3,
+    "mota": "Mạng máy tính",
+    "bomon_id": 3
+  },
+  {
+    "id": 21,
+    "mamh": "INT1434_CLC",
+    "ten": "Lập trình web",
+    "sotc": 3,
+    "mota": "Lập trình web",
+    "bomon_id": 1
+  },
+  {
+    "id": 22,
+    "mamh": "INT14167_CLC",
+    "ten": "Hệ quản trị Cơ sở dữ liệu",
+    "sotc": 3,
+    "mota": "Hệ quản trị Cơ sở dữ liệu",
+    "bomon_id": 2
+  },
+  {
+    "id": 23,
+    "mamh": "INT1341_CLC",
+    "ten": "Nhập môn trí tuệ nhân tạo",
+    "sotc": 3,
+    "mota": "Nhập môn trí tuệ nhân tạo",
+    "bomon_id": 1
+  },
+  {
+    "id": 24,
+    "mamh": "INT1340_CLC",
+    "ten": "Nhập môn CNPM",
+    "sotc": 3,
+    "mota": "Nhập môn CNPM",
+    "bomon_id": 5
+  },
+  {
+    "id": 25,
+    "mamh": "INT13187_CLC",
+    "ten": "Thực tập cơ sở",
+    "sotc": 4,
+    "mota": "Thực tập cơ sở",
+    "bomon_id": 1
+  },
+  {
+    "id": 26,
+    "mamh": "INT1316",
+    "ten": "Kiến trúc máy tính",
+    "sotc": 3,
+    "mota": "Kiến trúc máy tính",
+    "bomon_id": 2
+  },
+  {
+    "id": 27,
+    "mamh": "INT1307",
+    "ten": "Cấu trúc dữ liệu & Giải thuật",
+    "sotc": 3,
+    "mota": "Cấu trúc dữ liệu & Giải thuật",
+    "bomon_id": 1
+  },
+  {
+    "id": 28,
+    "mamh": "INT1305",
+    "ten": "Lập trình hướng đối tượng",
+    "sotc": 3,
+    "mota": "Lập trình hướng đối tượng",
+    "bomon_id": 1
+  },
+  {
+    "id": 29,
+    "mamh": "INT1201",
+    "ten": "Hệ điều hành",
+    "sotc": 3,
+    "mota": "Hệ điều hành",
+    "bomon_id": 3
+  },
+  {
+    "id": 30,
+    "mamh": "INT1202",
+    "ten": "Lập trình C/C++",
+    "sotc": 3,
+    "mota": "Lập trình C/C++",
+    "bomon_id": 1
+  },
+  {
+    "id": 31,
+    "mamh": "INT1421",
+    "ten": "Phát triển ứng dụng di động",
+    "sotc": 3,
+    "mota": "Phát triển ứng dụng di động",
+    "bomon_id": 1
+  },
+  {
+    "id": 32,
+    "mamh": "INT1422",
+    "ten": "Điện toán đám mây",
+    "sotc": 3,
+    "mota": "Điện toán đám mây",
+    "bomon_id": 3
+  },
+  {
+    "id": 33,
+    "mamh": "INT1423",
+    "ten": "Khai phá dữ liệu",
+    "sotc": 3,
+    "mota": "Khai phá dữ liệu",
+    "bomon_id": 2
+  },
+  {
+    "id": 34,
+    "mamh": "SEC1201",
+    "ten": "Mật mã học",
+    "sotc": 3,
+    "mota": "Mật mã học",
+    "bomon_id": 4
+  },
+  {
+    "id": 35,
+    "mamh": "SEC1202",
+    "ten": "Bảo mật mạng",
+    "sotc": 3,
+    "mota": "Bảo mật mạng",
+    "bomon_id": 4
+  },
+  {
+    "id": 36,
+    "mamh": "SEC1203",
+    "ten": "An toàn ứng dụng web",
+    "sotc": 3,
+    "mota": "An toàn ứng dụng web",
+    "bomon_id": 4
+  },
+  {
+    "id": 37,
+    "mamh": "SEC1204",
+    "ten": "Quản lý rủi ro an toàn thông tin",
+    "sotc": 2,
+    "mota": "Quản lý rủi ro an toàn thông tin",
+    "bomon_id": 4
+  },
+  {
+    "id": 38,
+    "mamh": "SWE1201",
+    "ten": "Kiểm thử phần mềm",
+    "sotc": 3,
+    "mota": "Kiểm thử phần mềm",
+    "bomon_id": 5
+  },
+  {
+    "id": 39,
+    "mamh": "SWE1202",
+    "ten": "Quản lý dự án CNTT",
+    "sotc": 3,
+    "mota": "Quản lý dự án CNTT",
+    "bomon_id": 5
+  },
+  {
+    "id": 40,
+    "mamh": "SWE1203",
+    "ten": "Phát triển phần mềm Agile",
+    "sotc": 3,
+    "mota": "Phát triển phần mềm Agile",
+    "bomon_id": 5
+  },
+  {
+    "id": 41,
+    "mamh": "SWE1204",
+    "ten": "Thiết kế hướng đối tượng",
+    "sotc": 3,
+    "mota": "Thiết kế hướng đối tượng",
+    "bomon_id": 5
+  },
+  {
+    "id": 42,
+    "mamh": "IS1201",
+    "ten": "Phân tích thiết kế hệ thống thông tin",
+    "sotc": 3,
+    "mota": "Phân tích thiết kế hệ thống thông tin",
+    "bomon_id": 5
+  },
+  {
+    "id": 43,
+    "mamh": "IS1202",
+    "ten": "Quản trị cơ sở dữ liệu nâng cao",
+    "sotc": 3,
+    "mota": "Quản trị cơ sở dữ liệu nâng cao",
+    "bomon_id": 2
+  },
+  {
+    "id": 44,
+    "mamh": "ACC1101",
+    "ten": "Nguyên lý kế toán",
+    "sotc": 3,
+    "mota": "Nguyên lý kế toán",
+    "bomon_id": 6
+  },
+  {
+    "id": 45,
+    "mamh": "ACC1102",
+    "ten": "Kế toán tài chính",
+    "sotc": 3,
+    "mota": "Kế toán tài chính",
+    "bomon_id": 6
+  },
+  {
+    "id": 46,
+    "mamh": "ACC1103",
+    "ten": "Kinh tế vi mô",
+    "sotc": 3,
+    "mota": "Kinh tế vi mô",
+    "bomon_id": 6
+  },
+  {
+    "id": 47,
+    "mamh": "ACC1104",
+    "ten": "Kinh tế vĩ mô",
+    "sotc": 3,
+    "mota": "Kinh tế vĩ mô",
+    "bomon_id": 6
+  },
+  {
+    "id": 48,
+    "mamh": "ACC1105",
+    "ten": "Tài chính doanh nghiệp",
+    "sotc": 3,
+    "mota": "Tài chính doanh nghiệp",
+    "bomon_id": 6
+  },
+  {
+    "id": 49,
+    "mamh": "ACC1106",
+    "ten": "Kế toán quản trị",
+    "sotc": 3,
+    "mota": "Kế toán quản trị",
+    "bomon_id": 6
+  },
+  {
+    "id": 50,
+    "mamh": "ACC1107",
+    "ten": "Kiểm toán",
+    "sotc": 3,
+    "mota": "Kiểm toán",
+    "bomon_id": 6
+  },
+  {
+    "id": 51,
+    "mamh": "ACC1108",
+    "ten": "Phân tích tài chính",
+    "sotc": 3,
+    "mota": "Phân tích tài chính",
+    "bomon_id": 6
+  },
+  {
+    "id": 52,
+    "mamh": "ACC1109",
+    "ten": "Kế toán máy",
+    "sotc": 3,
+    "mota": "Kế toán máy",
+    "bomon_id": 6
+  },
+  {
+    "id": 53,
+    "mamh": "ACC1110",
+    "ten": "Luật kinh tế",
+    "sotc": 2,
+    "mota": "Luật kinh tế",
+    "bomon_id": 6
+  },
+  {
+    "id": 54,
+    "mamh": "ACC1111",
+    "ten": "Thống kê doanh nghiệp",
+    "sotc": 3,
+    "mota": "Thống kê doanh nghiệp",
+    "bomon_id": 6
+  },
+  {
+    "id": 55,
+    "mamh": "ACC1112",
+    "ten": "Quản trị học",
+    "sotc": 2,
+    "mota": "Quản trị học",
+    "bomon_id": 6
+  }
+]

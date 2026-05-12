@@ -1,0 +1,812 @@
+[
+  {
+    "nganh_id": 1,
+    "monhoc_id": 1,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 1,
+    "monhoc_id": 2,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 1,
+    "monhoc_id": 3,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 1,
+    "monhoc_id": 4,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 1,
+    "monhoc_id": 5,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 1,
+    "monhoc_id": 6,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 1,
+    "monhoc_id": 7,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 1,
+    "monhoc_id": 8,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 1,
+    "monhoc_id": 19,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 1,
+    "monhoc_id": 20,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 1,
+    "monhoc_id": 21,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 1,
+    "monhoc_id": 22,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 1,
+    "monhoc_id": 23,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 1,
+    "monhoc_id": 24,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 1,
+    "monhoc_id": 25,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 1,
+    "monhoc_id": 26,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 1,
+    "monhoc_id": 27,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 1,
+    "monhoc_id": 28,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 1,
+    "monhoc_id": 29,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 1,
+    "monhoc_id": 30,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 1,
+    "monhoc_id": 31,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 1,
+    "monhoc_id": 32,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 1,
+    "monhoc_id": 33,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 1,
+    "monhoc_id": 9,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 1,
+    "monhoc_id": 10,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 1,
+    "monhoc_id": 11,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 1,
+    "monhoc_id": 12,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 1,
+    "monhoc_id": 13,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 1,
+    "monhoc_id": 14,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 1,
+    "monhoc_id": 15,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 1,
+    "monhoc_id": 16,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 1,
+    "monhoc_id": 17,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 1,
+    "monhoc_id": 18,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 2,
+    "monhoc_id": 1,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 2,
+    "monhoc_id": 2,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 2,
+    "monhoc_id": 3,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 2,
+    "monhoc_id": 4,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 2,
+    "monhoc_id": 6,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 2,
+    "monhoc_id": 7,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 2,
+    "monhoc_id": 8,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 2,
+    "monhoc_id": 19,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 2,
+    "monhoc_id": 20,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 2,
+    "monhoc_id": 22,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 2,
+    "monhoc_id": 23,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 2,
+    "monhoc_id": 26,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 2,
+    "monhoc_id": 27,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 2,
+    "monhoc_id": 28,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 2,
+    "monhoc_id": 34,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 2,
+    "monhoc_id": 35,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 2,
+    "monhoc_id": 29,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 2,
+    "monhoc_id": 30,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 2,
+    "monhoc_id": 32,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 2,
+    "monhoc_id": 36,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 2,
+    "monhoc_id": 37,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 2,
+    "monhoc_id": 21,
+    "loai": "Tự chọn"
+  },
+  {
+    "nganh_id": 2,
+    "monhoc_id": 24,
+    "loai": "Tự chọn"
+  },
+  {
+    "nganh_id": 2,
+    "monhoc_id": 9,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 2,
+    "monhoc_id": 10,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 2,
+    "monhoc_id": 11,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 2,
+    "monhoc_id": 12,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 2,
+    "monhoc_id": 13,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 2,
+    "monhoc_id": 14,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 2,
+    "monhoc_id": 15,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 2,
+    "monhoc_id": 16,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 2,
+    "monhoc_id": 17,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 2,
+    "monhoc_id": 18,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 3,
+    "monhoc_id": 1,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 3,
+    "monhoc_id": 2,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 3,
+    "monhoc_id": 3,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 3,
+    "monhoc_id": 4,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 3,
+    "monhoc_id": 6,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 3,
+    "monhoc_id": 7,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 3,
+    "monhoc_id": 8,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 3,
+    "monhoc_id": 19,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 3,
+    "monhoc_id": 20,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 3,
+    "monhoc_id": 21,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 3,
+    "monhoc_id": 22,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 3,
+    "monhoc_id": 23,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 3,
+    "monhoc_id": 24,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 3,
+    "monhoc_id": 25,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 3,
+    "monhoc_id": 27,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 3,
+    "monhoc_id": 28,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 3,
+    "monhoc_id": 38,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 3,
+    "monhoc_id": 39,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 3,
+    "monhoc_id": 29,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 3,
+    "monhoc_id": 30,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 3,
+    "monhoc_id": 31,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 3,
+    "monhoc_id": 32,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 3,
+    "monhoc_id": 40,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 3,
+    "monhoc_id": 41,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 3,
+    "monhoc_id": 9,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 3,
+    "monhoc_id": 10,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 3,
+    "monhoc_id": 11,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 3,
+    "monhoc_id": 12,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 3,
+    "monhoc_id": 13,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 3,
+    "monhoc_id": 14,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 3,
+    "monhoc_id": 15,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 3,
+    "monhoc_id": 16,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 3,
+    "monhoc_id": 17,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 3,
+    "monhoc_id": 18,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 4,
+    "monhoc_id": 1,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 4,
+    "monhoc_id": 2,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 4,
+    "monhoc_id": 3,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 4,
+    "monhoc_id": 4,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 4,
+    "monhoc_id": 6,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 4,
+    "monhoc_id": 7,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 4,
+    "monhoc_id": 8,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 4,
+    "monhoc_id": 19,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 4,
+    "monhoc_id": 20,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 4,
+    "monhoc_id": 21,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 4,
+    "monhoc_id": 22,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 4,
+    "monhoc_id": 23,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 4,
+    "monhoc_id": 24,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 4,
+    "monhoc_id": 25,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 4,
+    "monhoc_id": 26,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 4,
+    "monhoc_id": 27,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 4,
+    "monhoc_id": 29,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 4,
+    "monhoc_id": 30,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 4,
+    "monhoc_id": 32,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 4,
+    "monhoc_id": 33,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 4,
+    "monhoc_id": 42,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 4,
+    "monhoc_id": 43,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 4,
+    "monhoc_id": 28,
+    "loai": "Tự chọn"
+  },
+  {
+    "nganh_id": 4,
+    "monhoc_id": 9,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 4,
+    "monhoc_id": 10,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 4,
+    "monhoc_id": 11,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 4,
+    "monhoc_id": 12,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 4,
+    "monhoc_id": 13,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 4,
+    "monhoc_id": 14,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 4,
+    "monhoc_id": 15,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 4,
+    "monhoc_id": 16,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 4,
+    "monhoc_id": 17,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 4,
+    "monhoc_id": 18,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 5,
+    "monhoc_id": 1,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 5,
+    "monhoc_id": 2,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 5,
+    "monhoc_id": 4,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 5,
+    "monhoc_id": 6,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 5,
+    "monhoc_id": 7,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 5,
+    "monhoc_id": 8,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 5,
+    "monhoc_id": 44,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 5,
+    "monhoc_id": 45,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 5,
+    "monhoc_id": 46,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 5,
+    "monhoc_id": 47,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 5,
+    "monhoc_id": 48,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 5,
+    "monhoc_id": 49,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 5,
+    "monhoc_id": 50,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 5,
+    "monhoc_id": 51,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 5,
+    "monhoc_id": 52,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 5,
+    "monhoc_id": 53,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 5,
+    "monhoc_id": 54,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 5,
+    "monhoc_id": 55,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 5,
+    "monhoc_id": 3,
+    "loai": "Tự chọn"
+  },
+  {
+    "nganh_id": 5,
+    "monhoc_id": 9,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 5,
+    "monhoc_id": 10,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 5,
+    "monhoc_id": 11,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 5,
+    "monhoc_id": 12,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 5,
+    "monhoc_id": 13,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 5,
+    "monhoc_id": 14,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 5,
+    "monhoc_id": 15,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 5,
+    "monhoc_id": 16,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 5,
+    "monhoc_id": 17,
+    "loai": "Bắt buộc"
+  },
+  {
+    "nganh_id": 5,
+    "monhoc_id": 18,
+    "loai": "Bắt buộc"
+  }
+]

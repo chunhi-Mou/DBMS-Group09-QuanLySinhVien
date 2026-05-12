@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "ten": "CC",
+    "mota": "Chuyên cần"
+  },
+  {
+    "id": 2,
+    "ten": "BT",
+    "mota": "Bài tập"
+  },
+  {
+    "id": 3,
+    "ten": "GK",
+    "mota": "Giữa kỳ"
+  },
+  {
+    "id": 4,
+    "ten": "TH",
+    "mota": "Thực hành"
+  },
+  {
+    "id": 5,
+    "ten": "CK",
+    "mota": "Cuối kỳ"
+  }
+]
