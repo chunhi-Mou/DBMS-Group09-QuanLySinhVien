@@ -28,7 +28,7 @@ Web app quản lý đăng ký tín chỉ và điểm số cho **3 vai trò**:
 
 ---
 
-## Bước 1 — Tạo và nạp dữ liệu
+## Bước 1: Tạo và nạp dữ liệu
 
 ```bash
 cd data-generator
@@ -46,7 +46,7 @@ Kết quả mong đợi: tất cả 31 bảng đều hiển thị `✓`.
 
 ---
 
-## Bước 2 — Khởi động Backend
+## Bước 2: Khởi động Backend
 
 ```bash
 cd backend
@@ -58,7 +58,7 @@ Swagger UI: `http://localhost:8080/swagger-ui.html`
 
 ---
 
-## Bước 3 — Khởi động Frontend
+## Bước 3: Khởi động Frontend
 
 Mở terminal mới:
 
