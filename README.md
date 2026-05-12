@@ -40,7 +40,7 @@ python gen_main.py
 python import_data.py
 ```
 
-Kết quả mong đợi: tất cả 31 bảng đều hiển thị `✓`.
+Kết quả mong đợi: tất cả 32 bảng đều hiển thị `✓`.
 
 > **Lưu ý:** Mỗi lần chạy `import_data.py` sẽ **xóa và tạo lại** database `sinhvien` từ đầu.
 
