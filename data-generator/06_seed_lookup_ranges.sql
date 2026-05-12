@@ -1,4 +1,4 @@
-USE SinhVien;
+USE sinhvien;
 
 INSERT INTO DauDiem(id, ten, mota) VALUES
     (1, 'Chuyên cần', 'Điểm chuyên cần / quá trình'),

@@ -1,4 +1,4 @@
-USE SinhVien;
+USE sinhvien;
 
 DROP VIEW IF EXISTS v_BaoCao_HocLuc_ChiTiet;
 DROP VIEW IF EXISTS v_NhapDiem_GiangVien;

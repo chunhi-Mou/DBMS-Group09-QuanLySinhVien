@@ -1,4 +1,4 @@
-USE SinhVien;
+USE sinhvien;
 
 DROP TRIGGER IF EXISTS trg_dangkyhoc_check_siso;
 DROP TRIGGER IF EXISTS trg_dangkyhoc_check_lich;

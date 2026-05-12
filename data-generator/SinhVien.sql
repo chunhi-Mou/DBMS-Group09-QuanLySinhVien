@@ -1,10 +1,10 @@
 -- Schema: Quản lý Đăng ký tín chỉ và Điểm Sinh viên
 
-CREATE DATABASE IF NOT EXISTS SinhVien
+CREATE DATABASE IF NOT EXISTS sinhvien
     CHARACTER SET utf8mb4
     COLLATE utf8mb4_unicode_ci;
 
-USE SinhVien;
+USE sinhvien;
 
 SET FOREIGN_KEY_CHECKS = 0;
 

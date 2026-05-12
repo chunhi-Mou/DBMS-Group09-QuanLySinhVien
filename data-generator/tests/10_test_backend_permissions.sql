@@ -1,4 +1,4 @@
-USE SinhVien;
+USE sinhvien;
 
 CALL sp_GetAuthUserByUsername('sv_test');
 

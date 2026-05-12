@@ -1,4 +1,4 @@
-USE SinhVien;
+USE sinhvien;
 
 CREATE INDEX idx_thanhvien_vaitro ON ThanhVien(vaitro);
 CREATE INDEX idx_sinhvien_lophanhchinh ON SinhVien(lophanhchinh_id);
