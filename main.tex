@@ -1,0 +1,1469 @@
+
+\documentclass[12pt,a4paper]{report}
+
+% ── Font & language ───────────────────────────────────────────
+\usepackage[T5]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{mathptmx}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{background}
+% ── Layout ───────────────────────────────────────────────────
+\usepackage[
+    top=2cm,
+    bottom=2cm,
+    left=2cm,
+    right=3cm
+]{geometry}
+\usepackage{setspace}
+\singlespacing
+
+% ── Tables ────────────────────────────────────────────────────
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{makecell}
+
+% ── Section headings ──────────────────────────────────────────
+\usepackage{titlesec}
+\titleformat{\section}
+  {\normalfont\Large\bfseries}{\thesection.}{0.5em}{}
+
+% ── Colors ───────────────────────────────────────────────────
+\usepackage[table]{xcolor}
+\definecolor{headerblue}{RGB}{41,65,122}
+\definecolor{lightgray}{gray}{0.93}
+
+% ── Hyperlinks ────────────────────────────────────────────────
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=headerblue,
+  urlcolor=headerblue
+}
+
+\usepackage{tikz}
+\usepackage{enumitem}
+
+\titleformat{\subsection}
+  {\normalfont\large\bfseries}{\thesubsection.}{0.5em}{}
+
+\newcommand{\groupheader}[1]{%
+  \rowcolor{headerblue!15}
+  \multicolumn{4}{|l|}{\textbf{#1}} \\
+}
+\newcommand{\arrow}{$\rightarrow$~}
+
+% ==============================================================
+\begin{document}
+
+% ══════════════════════════════════════════════════════════════
+%                        TRANG BÌA
+% ══════════════════════════════════════════════════════════════
+\backgroundsetup{
+    scale=1,
+    color=black,
+    opacity=1,
+    angle=0,
+    position=current page.center,
+    contents={\includegraphics[width=\paperwidth,height=\paperheight]{background.png}}
+}
+
+\begin{titlepage}
+\BgThispage
+    \centering
+    \textbf{\large HỌC VIỆN CÔNG NGHỆ BƯU CHÍNH VIỄN THÔNG}\\
+    \textbf{\large KHOA CÔNG NGHỆ THÔNG TIN 1}\\
+    \centerline{--------------------o0o--------------------}
+    \vspace{1cm}
+    \includegraphics[width=8cm]{logo.png}\\
+    \vspace{1cm}
+{\Large \textbf{Hệ quản trị cơ sở dữ liệu}}\\[0.5cm]
+{\Large\textbf{ĐỀ TÀI:} \\[0.4cm]}
+    {\Large\textbf{HỆ THỐNG QUẢN LÝ\\[0.25cm]
+    ĐĂNG KÝ TÍN CHỈ VÀ ĐIỂM SINH VIÊN}} \\[1.5cm]
+\begin{center}
+\fontsize{13pt}{15pt}\selectfont
+\begin{tabular}{@{}l@{\hspace{1.8cm}}l}
+        \textbf{Giảng viên}           & : Nguyễn Trọng Khánh \\[0.9em]
+        \textbf{Lớp}                  & : D23CQCE06-B \\[0.9em]
+        \textbf{Nhóm}                 & : 09 \\[1.4em]
+        \textbf{Sinh viên thực hiện}
+                                      & 1. Phùng Thu Hương - B23DCVT201 \\[0.5em]
+                                      & 2. Chu Tuyết Nhi - B23DCCE075 \\[0.5em]
+                                      & 3. Lê Như Quỳnh - B23DCCE081 \\[1.6em]
+    \end{tabular}
+\end{center}
+\vfill
+\end{titlepage}
+\backgroundsetup{contents={}}
+
+\newgeometry{top=2cm,bottom=2cm,left=2cm,right=3cm}
+
+\renewcommand{\thechapter}{\Roman{chapter}}
+\renewcommand{\chaptername}{Part}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}
+\titleformat{\chapter}[hang]
+  {\Huge\bfseries}
+  {\chaptername\ \thechapter}
+  {0.1em}
+  {}
+
+\tableofcontents
+\listoftables
+\clearpage
+
+%=============================================================
+\chapter{. System Overview}
+%=============================================================
+
+\section{Background and Motivation}
+
+Managing course registrations and student grades through spreadsheets creates problems that compound with scale. Data ends up scattered across multiple files, concurrent edits conflict with each other, and rules like seat limits or schedule constraints cannot be enforced at the data layer. A query that should return a student's full transcript in milliseconds becomes a manual task across several files.
+
+This report documents the analysis, design, and implementation of a web-based Student Credit Registration and Grade Management System for Posts and Telecommunications Institute of Technology (PTIT), using MySQL as the database engine. The system covers the full academic workflow for three user roles: students, teachers, and administrative staff. Beyond describing the table structure, this report explains the reasoning behind key design choices, including where tables were split or merged, which constraints belong in the database rather than in application code, and where the standard approach was deliberately adjusted.
+
+\section{System Scope and Users}
+
+The system covers two PTIT campuses, one in Hanoi and one in Ho Chi Minh City. Three user types interact with the system. All three share a common account table, and each has a role-specific extension table for data that does not apply to the others.
+
+\begin{table}[H]
+\renewcommand{\arraystretch}{1.35}
+\caption{User roles and main permissions}
+\label{tab:roles}
+\begin{tabular}{|p{3.8cm}|p{9.9cm}|}
+  \hline
+  \textbf{Role} & \textbf{Main permissions} \\
+  \hline
+  Student & Register for and cancel course sections, view weekly class schedule, view component grades and semester GPA \\
+  \hline
+  Teacher & Enter and update component grades for enrolled students, view teaching schedule, finalize course results to produce letter grades \\
+  \hline
+  Administrative staff & Manage the course catalog, open semesters, assign teachers to sections, trigger semester GPA calculations, view academic performance reports \\
+  \hline
+\end{tabular}
+\end{table}
+
+All users can change their own password. The administrative role maps to a single \texttt{ADMIN} role rather than finer subdivisions. The project scope explicitly excludes exam scheduling, tuition calculation, email or push notifications, and native mobile applications.
+
+\section{Main Functional Groups}
+
+\begin{table}[H]
+\renewcommand{\arraystretch}{1.35}
+\caption{Functional groups}
+\label{tab:funcgroups}
+\begin{tabular}{|p{4.2cm}|p{9.5cm}|}
+  \hline
+  \textbf{Group} & \textbf{Description} \\
+  \hline
+  Credit registration & Students browse course sections available for their major in the current semester, check seat counts and schedules, and submit registrations in batch. The backend validates capacity and schedule conflicts within a database transaction. \\
+  \hline
+  Grade management & Teachers enter component scores per enrolled student. The system calculates weighted averages automatically. Finalizing a course locks in letter grades and makes them visible to students. \\
+  \hline
+  Reporting and lookup & Administrative staff view GPA distributions, per-faculty enrollment counts, average GPA trends across semesters, and failure rate rankings by course. \\
+  \hline
+  System management & Staff maintain courses, semesters, classrooms, section assignments, and user accounts through a set of management pages. \\
+  \hline
+\end{tabular}
+\end{table}
+
+%=============================================================
+\chapter{. Configuration, Tools, Platforms and Database Design}
+%=============================================================
+
+\section{Technology Stack}
+
+The system uses a three-tier architecture. MySQL 8 stores all persistent data. A Spring Boot application layer exposes a JSON REST API and enforces business rules that span multiple tables. A React single-page application presents the interface to each user role.
+
+\begin{table}[H]
+\renewcommand{\arraystretch}{1.35}
+\caption{Technology stack by layer}
+\label{tab:stack}
+\begin{tabular}{|p{3cm}|p{10.7cm}|}
+  \hline
+  \textbf{Layer} & \textbf{Technologies} \\
+  \hline
+  Database & MySQL 8 \\
+  \hline
+  Backend & Java 17, Spring Boot 3.2, Spring Data JPA, Spring Security 6, JWT, BCrypt \\
+  \hline
+  Frontend & React 18, Vite, React Router v6, Ant Design 5, Zustand \\
+  \hline
+\end{tabular}
+\end{table}
+
+\section{Business Process Descriptions}
+
+\subsection{Credit Registration (Student)}
+
+A student opens the registration page for the current semester. The page shows all course sections available for the student's declared major. For each section, the display includes the current enrollment count relative to the 80-student capacity limit, the assigned teacher, the classroom, and the weekly meeting time. Sections already at capacity are disabled. Sections that conflict with something the student has already selected remain clickable, but a warning appears on the schedule grid and the backend rejects them at submission time.
+
+Once the student has assembled a list of desired sections, they submit the entire list as a batch. The backend processes each requested section in a single database transaction. For each one, it acquires a row lock on the section record, checks current enrollment against the capacity limit, checks the section's schedule against all sections already registered by the student in this semester, and inserts the enrollment record only if both checks pass. The response tells the student which sections were accepted and which were rejected, along with the reason for each rejection.
+
+The rules the system enforces on registration are:
+
+\begin{itemize}
+  \item A course section accepts at most 80 students.
+  \item A student cannot enroll in the same section twice.
+  \item A student cannot hold registrations in two sections whose schedules overlap.
+  \item A student who already passed a course in a prior semester cannot register for it again.
+\end{itemize}
+
+\subsection{Grade Entry (Teacher)}
+
+A teacher selects one of their assigned sections for the current semester. The system shows the full student list alongside the grade components defined for that course. For example, a course might use four components: attendance weighted at 10 percent, homework at 20 percent, midterm at 30 percent, and final exam at 40 percent. The teacher enters scores on a 0-to-10 scale for each student and each component. Scores can be updated until the teacher chooses to finalize the course.
+
+When the teacher clicks finalize, the system calculates the weighted average for every student in the section, looks up the corresponding letter grade from the grade scale table, and writes the result to the course result table. After finalization, grades appear in the student view.
+
+The weighted average formula is:
+
+\[
+  \text{Final Score} = \sum_{i} \left( \text{Score}_i \times \text{Weight}_i \right)
+\]
+
+where each weight is a decimal value and all weights for a given course sum to exactly 1.0.
+
+\subsection{Semester Summary (Administrative Staff)}
+
+At the end of each semester, an administrator triggers a batch job that computes a semester summary for every student who had registrations in that period. The job calculates GPA on both a 10-point and a 4-point scale, counts total credits registered and credits passed, assigns each student to one of six academic performance bands, and writes the result to the summary table. The job uses upsert semantics so re-running it on the same semester does not create duplicate rows.
+
+\section{Entity Identification}
+
+The three business processes above produce the following main entities.
+
+\begin{table}[H]
+\renewcommand{\arraystretch}{1.35}
+\caption{Main entities and their roles}
+\label{tab:entities}
+\begin{tabular}{|p{4cm}|p{9.7cm}|}
+  \hline
+  \textbf{Entity} & \textbf{Description} \\
+  \hline
+  University & One of the two PTIT campuses \\
+  \hline
+  Faculty & An academic faculty belonging to one campus \\
+  \hline
+  Department & An academic department within a faculty \\
+  \hline
+  Major & An academic program offered by a faculty \\
+  \hline
+  Course & A course offered by a department, with a fixed credit count \\
+  \hline
+  Semester & A specific semester, combining an academic year with a slot (1 or 2) \\
+  \hline
+  Course section & One offering of a course in one semester, with a capacity limit \\
+  \hline
+  Classroom & A physical room with a seating capacity \\
+  \hline
+  User account & A shared credential record for students, teachers, and staff \\
+  \hline
+  Student & A student profile linked to one user account \\
+  \hline
+  Teacher & A teacher profile linked to one user account \\
+  \hline
+  Registration & A student's enrollment in a specific course section \\
+  \hline
+  Component grade & A score for one grade component within one registration \\
+  \hline
+  Course result & The final weighted score and letter grade for one registration \\
+  \hline
+  Semester summary & The semester GPA and credit totals for one student in one semester \\
+  \hline
+\end{tabular}
+\end{table}
+
+\section{Business Rules as Database Constraints}
+
+Several business rules translate directly into database constraints rather than relying solely on application code.
+
+\begin{itemize}
+  \item A unique constraint on (\texttt{sinhvien\_id}, \texttt{lophocphan\_id}) in the registration table prevents duplicate enrollments at the database level.
+  \item A unique constraint on (\texttt{ngay\_id}, \texttt{kiphoc\_id}, \texttt{phonghoc\_id}) in the session table prevents two sections from occupying the same room at the same time.
+  \item A unique constraint on (\texttt{ngay\_id}, \texttt{kiphoc\_id}, \texttt{giangvien\_id}) prevents a teacher from being assigned to two sections simultaneously.
+  \item A unique constraint on (\texttt{sinhvien\_id}, \texttt{kihoc\_id}) in the semester summary table makes re-running the batch job safe without producing duplicates.
+  \item Grade component weights for each course are stored as decimal fractions summing to 1.0. The application validates this invariant when an administrator modifies the grade configuration.
+\end{itemize}
+
+Placing these constraints in the schema means they hold regardless of which application layer, migration script, or direct database client writes to the database.
+
+%=============================================================
+\section{Database Design}
+%=============================================================
+
+\subsection{Data Model Overview}
+
+The schema contains 32 tables organized into six functional layers. Each layer handles an independent business domain. The model reaches Third Normal Form (3NF): no data redundancy and no transitive attribute dependencies.
+
+\begin{table}[H]
+\renewcommand{\arraystretch}{1.35}
+\caption{Data model layers}
+\label{tab:layers}
+\begin{tabular}{|c|p{4.5cm}|p{7.5cm}|}
+  \hline
+  \textbf{Layer} & \textbf{Name} & \textbf{Tables} \\
+  \hline
+  1 & Geographic Infrastructure & DiaChi \\
+  \hline
+  2 & Academic Organization & Truong, Khoa, BoMon, NganhHoc, LopHanhChinh \\
+  \hline
+  3 & System Users & ThanhVien, SinhVien, GiangVien, NhanVien \\
+  \hline
+  4 & Training Program & MonHoc, DauDiem, NganhHoc\_MonHoc, MonHoc\_DauDiem, SinhVien\_Nganh \\
+  \hline
+  5 & Time and Scheduling & NamHoc, HocKi, KiHoc, MonHoc\_KiHoc, LopHocPhan, GiangVien\_LopHocPhan, TuanHoc, NgayHoc, KipHoc, PhongHoc, BuoiHoc \\
+  \hline
+  6 & Academic Results & DangKyHoc, DiemThanhPhan, KetQuaMon, DiemHeChu, LoaiHocLuc, TONGKET\_HOCKI \\
+  \hline
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{erd.png}
+  \caption{Entity-Relationship Diagram}
+  \label{fig:erd}
+\end{figure}
+
+\subsection{Entity Relationships}
+
+\subsection*{Academic Organization}
+\begin{itemize}
+  \item \textbf{1 TRUONG -- n KHOA:} One school manages many affiliated training faculties.
+  \item \textbf{1 TRUONG -- n DIACHI:} One school has multiple different campuses (physical addresses).
+  \item \textbf{1 KHOA -- n BOMON:} One faculty contains many specialized departments.
+  \item \textbf{1 KHOA -- n NGANHHOC:} One faculty offers many academic major programs.
+  \item \textbf{1 NGANHHOC -- n LOPHANHCHINH:} One major program groups students into many administrative classes.
+  \item \textbf{1 LOPHANHCHINH -- n SINHVIEN:} One administrative class contains many students.
+\end{itemize}
+
+\subsection*{User Accounts}
+\begin{itemize}
+  \item \textbf{1 DIACHI -- n THANHVIEN:} One address can be shared by multiple account holders.
+  \item \textbf{1 THANHVIEN -- 1 SINHVIEN:} One account extends to at most one student profile.
+  \item \textbf{1 THANHVIEN -- 1 GIANGVIEN:} One account extends to at most one lecturer profile.
+  \item \textbf{1 THANHVIEN -- 1 NHANVIEN:} One account extends to at most one staff profile.
+  \item \textbf{1 BOMON -- n GIANGVIEN:} One department employs many lecturers.
+\end{itemize}
+
+\subsection*{Training Program}
+\begin{itemize}
+  \item \textbf{1 BOMON -- n MONHOC:} One department owns many courses.
+  \item \textbf{n NGANHHOC -- m MONHOC:} Many majors include many courses; each pairing records whether the course is mandatory or elective (via \texttt{NganhHoc\_MonHoc}).
+  \item \textbf{n MONHOC -- m DAUDIEM:} Many courses configure many grade component types, each with its own weight (via \texttt{MonHoc\_DauDiem}).
+  \item \textbf{n SINHVIEN -- m NGANHHOC:} Many students enroll in many majors, supporting double-major registration (via \texttt{SinhVien\_Nganh}).
+\end{itemize}
+
+\subsection*{Time and Scheduling}
+\begin{itemize}
+  \item \textbf{1 NAMHOC -- n KIHOC:} One academic year contains many concrete term instances.
+  \item \textbf{1 HOCKI -- n KIHOC:} One semester slot (e.g.\ Semester 1) recurs across many academic years.
+  \item \textbf{n MONHOC -- m KIHOC:} Many courses are offered in many terms (via \texttt{MonHoc\_KiHoc}).
+  \item \textbf{1 MONHOCKIHOC -- n LOPHOCPHAN:} One course offering in a term splits into many sections.
+  \item \textbf{n GIANGVIEN -- m LOPHOCPHAN:} Many lecturers are assigned to many sections, enabling co-teaching (via \texttt{GiangVien\_LopHocPhan}).
+  \item \textbf{1 LOPHOCPHAN -- n BUOIHOC:} One section produces many individual class sessions (one per week).
+\end{itemize}
+
+\subsection*{Academic Results}
+\begin{itemize}
+  \item \textbf{n SINHVIEN -- m LOPHOCPHAN:} Many students register in many sections (via \texttt{DangKyHoc}).
+  \item \textbf{1 DANGKYHOC -- n DIEMTHANHPHAN:} One registration record accumulates many component scores.
+  \item \textbf{1 DANGKYHOC -- 1 KETQUAMON:} One registration produces exactly one final course result.
+  \item \textbf{1 SINHVIEN -- n TONGKET\_HOCKI:} One student accumulates one semester summary per term.
+\end{itemize}
+
+\subsection{Layer 1: Geographic Infrastructure}
+
+\subsubsection{DiaChi -- Address}
+
+\texttt{DiaChi} stores physical addresses and is referenced by both campus records and individual user accounts. Without this table, the same street and district data would need to appear in multiple places. Centralizing addresses means a correction touches one row.
+
+\begin{table}[H]
+\renewcommand{\arraystretch}{1.35}
+\caption{DiaChi attributes}
+\label{tab:diachi}
+\begin{tabular}{|p{3cm}|p{2.5cm}|p{2.5cm}|p{5.5cm}|}
+  \hline
+  \textbf{Attribute} & \textbf{Type} & \textbf{Constraint} & \textbf{Description} \\
+  \hline
+  id & INT & PK & Unique identifier \\
+  \hline
+  sonha & VARCHAR & -- & House or apartment number \\
+  \hline
+  toanha & VARCHAR & -- & Building name \\
+  \hline
+  xompho & VARCHAR & -- & Hamlet or street \\
+  \hline
+  phuongxa & VARCHAR & -- & Ward or commune \\
+  \hline
+  quanhuyen & VARCHAR & -- & District \\
+  \hline
+  tinhthanh & VARCHAR & -- & Province or city \\
+  \hline
+  truong\_id & INT & FK $\to$ Truong & Campus this address belongs to \\
+  \hline
+\end{tabular}
+\end{table}
+
+One campus can have multiple addresses. One address record can be shared by multiple members (for example, family members at the same household).
+
+\subsection{Layer 2: Academic Organization}
+
+\subsubsection{Truong -- Campus}
+
+\texttt{Truong} stores the two PTIT campuses. It is the root of the organizational hierarchy.
+
+\begin{table}[H]
+\renewcommand{\arraystretch}{1.35}
+\caption{Truong attributes}
+\label{tab:truong}
+\begin{tabular}{|p{3cm}|p{2.5cm}|p{2.5cm}|p{5.5cm}|}
+  \hline
+  \textbf{Attribute} & \textbf{Type} & \textbf{Constraint} & \textbf{Description} \\
+  \hline
+  id & INT & PK & Unique identifier \\
+  \hline
+  ten & VARCHAR & -- & Full campus name \\
+  \hline
+  mota & VARCHAR & -- & Description \\
+  \hline
+\end{tabular}
+\end{table}
+
+One campus owns many faculties (\texttt{Khoa}) and many addresses (\texttt{DiaChi}).
+
+\subsubsection{Khoa -- Faculty}
+
+\texttt{Khoa} holds the academic faculties within a campus. Each faculty manages departments and major programs.
+
+\begin{table}[H]
+\renewcommand{\arraystretch}{1.35}
+\caption{Khoa attributes}
+\label{tab:khoa}
+\begin{tabular}{|p{3cm}|p{2.5cm}|p{2.5cm}|p{5.5cm}|}
+  \hline
+  \textbf{Attribute} & \textbf{Type} & \textbf{Constraint} & \textbf{Description} \\
+  \hline
+  id & INT & PK & Unique identifier \\
+  \hline
+  ten & VARCHAR & -- & Faculty name \\
+  \hline
+  mota & VARCHAR & -- & Description \\
+  \hline
+  truong\_id & INT & FK $\to$ Truong & Parent campus \\
+  \hline
+\end{tabular}
+\end{table}
+
+Many faculties belong to one campus. One faculty owns many departments (\texttt{BoMon}) and many major programs (\texttt{NganhHoc}).
+
+\subsubsection{BoMon -- Department}
+
+\texttt{BoMon} represents specialized departments within a faculty. A department manages lecturers by field and owns the courses it is responsible for.
+
+\begin{table}[H]
+\renewcommand{\arraystretch}{1.35}
+\caption{BoMon attributes}
+\label{tab:bomon}
+\begin{tabular}{|p{3cm}|p{2.5cm}|p{2.5cm}|p{5.5cm}|}
+  \hline
+  \textbf{Attribute} & \textbf{Type} & \textbf{Constraint} & \textbf{Description} \\
+  \hline
+  id & INT & PK & Unique identifier \\
+  \hline
+  ten & VARCHAR & -- & Department name \\
+  \hline
+  mota & VARCHAR & -- & Description \\
+  \hline
+  khoa\_id & INT & FK $\to$ Khoa & Parent faculty \\
+  \hline
+\end{tabular}
+\end{table}
+
+Many departments belong to one faculty. One department has many lecturers (\texttt{GiangVien}) and is responsible for many courses (\texttt{MonHoc}).
+
+\subsubsection{NganhHoc -- Academic Major}
+
+\texttt{NganhHoc} stores the five academic programs. It determines which courses make up a curriculum and is the unit through which students register for a program.
+
+\begin{table}[H]
+\renewcommand{\arraystretch}{1.35}
+\caption{NganhHoc attributes}
+\label{tab:nganhhoc}
+\begin{tabular}{|p{3cm}|p{2.5cm}|p{2.5cm}|p{5.5cm}|}
+  \hline
+  \textbf{Attribute} & \textbf{Type} & \textbf{Constraint} & \textbf{Description} \\
+  \hline
+  id & INT & PK & Unique identifier \\
+  \hline
+  ten & VARCHAR & -- & Major program name \\
+  \hline
+  khoa\_id & INT & FK $\to$ Khoa & Governing faculty \\
+  \hline
+\end{tabular}
+\end{table}
+
+Many majors belong to one faculty. Majors and courses link through \texttt{NganhHoc\_MonHoc} (N-N). Majors and students link through \texttt{SinhVien\_Nganh} (N-N), supporting double-major enrollment.
+
+\subsubsection{LopHanhChinh -- Administrative Class}
+
+\texttt{LopHanhChinh} models the real-world homeroom cohort that a student belongs to (e.g.\ \texttt{D20CQCN01-B}). Unlike a course section (\texttt{LopHocPhan}), this grouping is administrative: it does not change per semester and is used for roster management and reporting. Each administrative class belongs to one major program.
+
+\begin{table}[H]
+\renewcommand{\arraystretch}{1.35}
+\caption{LopHanhChinh attributes}
+\label{tab:lophanhchinh}
+\begin{tabular}{|p{3cm}|p{2.5cm}|p{2.5cm}|p{5.5cm}|}
+  \hline
+  \textbf{Attribute} & \textbf{Type} & \textbf{Constraint} & \textbf{Description} \\
+  \hline
+  id & INT & PK & Unique identifier \\
+  \hline
+  tenlop & VARCHAR & UNIQUE & Class code, e.g.\ D20CQCN01-B \\
+  \hline
+  nganh\_id & INT & FK $\to$ NganhHoc & Governing major program \\
+  \hline
+\end{tabular}
+\end{table}
+
+One administrative class belongs to one major program. One administrative class contains many students (\texttt{SinhVien}).
+
+\subsection{Layer 3: System Users}
+
+\subsubsection{ThanhVien -- User Account}
+
+\texttt{ThanhVien} is the central account table shared by all three user types. It stores credentials, personal information, and the role string. Role-specific data lives in the extension tables below, avoiding sparse nullable columns in the central table.
+
+\begin{table}[H]
+\renewcommand{\arraystretch}{1.35}
+\caption{ThanhVien attributes}
+\label{tab:thanhvien}
+\begin{tabular}{|p{3cm}|p{2.5cm}|p{2.5cm}|p{5.5cm}|}
+  \hline
+  \textbf{Attribute} & \textbf{Type} & \textbf{Constraint} & \textbf{Description} \\
+  \hline
+  id & INT & PK & Unique identifier \\
+  \hline
+  username & VARCHAR & UNIQUE & Login name \\
+  \hline
+  password & VARCHAR & -- & BCrypt-hashed password \\
+  \hline
+  hodem & VARCHAR & -- & Family and middle name \\
+  \hline
+  ten & VARCHAR & -- & Given name \\
+  \hline
+  ngaysinh & DATE & -- & Date of birth \\
+  \hline
+  email & VARCHAR & UNIQUE & Contact email \\
+  \hline
+  dt & VARCHAR & -- & Phone number \\
+  \hline
+  vaitro & VARCHAR & -- & Role: SV / GV / ADMIN \\
+  \hline
+  diachi\_id & INT & FK $\to$ DiaChi & Home address \\
+  \hline
+\end{tabular}
+\end{table}
+
+One \texttt{ThanhVien} row extends to at most one \texttt{SinhVien}, \texttt{GiangVien}, or \texttt{NhanVien} row depending on the role.
+
+\subsubsection{SinhVien -- Student}
+
+\texttt{SinhVien} extends \texttt{ThanhVien} for students. The student code (\texttt{masv}) is the primary key rather than a surrogate integer. The code encodes campus, enrollment year, and major -- for example, \texttt{B23DCCE001} means campus B, year 2023, major CCE, number 001. Using the business identifier as the primary key lets other tables reference it directly without a lookup step.
+
+\begin{table}[H]
+\renewcommand{\arraystretch}{1.35}
+\caption{SinhVien attributes}
+\label{tab:sinhvien}
+\begin{tabular}{|p{3cm}|p{2.5cm}|p{3cm}|p{5cm}|}
+  \hline
+  \textbf{Attribute} & \textbf{Type} & \textbf{Constraint} & \textbf{Description} \\
+  \hline
+  masv & VARCHAR & PK & Student code \\
+  \hline
+  thanhvien\_id & INT & UNIQUE, FK $\to$ ThanhVien & Linked account \\
+  \hline
+  lophanhchinh\_id & INT & FK $\to$ LopHanhChinh & Administrative class \\
+  \hline
+\end{tabular}
+\end{table}
+
+One student has many registrations (\texttt{DangKyHoc}) and one semester summary per term (\texttt{TONGKET\_HOCKI}). Major enrollment is recorded in \texttt{SinhVien\_Nganh}.
+
+\subsubsection{GiangVien -- Lecturer}
+
+\texttt{GiangVien} extends \texttt{ThanhVien} for lecturers, adding the home department and academic rank. The shared-primary-key pattern (\texttt{thanhvien\_id} is both PK and FK) enforces the one-to-one relationship at the database level.
+
+\begin{table}[H]
+\renewcommand{\arraystretch}{1.35}
+\caption{GiangVien attributes}
+\label{tab:giangvien}
+\begin{tabular}{|p{3cm}|p{2.5cm}|p{2.5cm}|p{5.5cm}|}
+  \hline
+  \textbf{Attribute} & \textbf{Type} & \textbf{Constraint} & \textbf{Description} \\
+  \hline
+  thanhvien\_id & INT & PK, FK $\to$ ThanhVien & Linked account \\
+  \hline
+  bomon\_id & INT & FK $\to$ BoMon & Home department \\
+  \hline
+  hocham & VARCHAR & -- & Academic rank (PhD, MSc, ...) \\
+  \hline
+\end{tabular}
+\end{table}
+
+Many lecturers belong to one department. Lecturers and sections link through \texttt{GiangVien\_LopHocPhan} (N-N). Each class session (\texttt{BuoiHoc}) names one lecturer as the session instructor.
+
+\subsubsection{NhanVien -- Staff}
+
+\texttt{NhanVien} extends \texttt{ThanhVien} for administrative staff, storing only the job position. Like \texttt{GiangVien}, it uses the shared-primary-key pattern.
+
+\begin{table}[H]
+\renewcommand{\arraystretch}{1.35}
+\caption{NhanVien attributes}
+\label{tab:nhanvien}
+\begin{tabular}{|p{3cm}|p{2.5cm}|p{2.5cm}|p{5.5cm}|}
+  \hline
+  \textbf{Attribute} & \textbf{Type} & \textbf{Constraint} & \textbf{Description} \\
+  \hline
+  thanhvien\_id & INT & PK, FK $\to$ ThanhVien & Linked account \\
+  \hline
+  vitri & VARCHAR & -- & Job position \\
+  \hline
+\end{tabular}
+\end{table}
+
+One \texttt{NhanVien} row inherits all personal and login information from the linked \texttt{ThanhVien} record. Staff have no direct relationships to academic entities.
+
+\subsection{Layer 4: Training Program}
+
+\subsubsection{MonHoc -- Course}
+
+\texttt{MonHoc} is the catalog of courses offered by the departments. Each course carries a credit count and belongs to one department.
+
+\begin{table}[H]
+\renewcommand{\arraystretch}{1.35}
+\caption{MonHoc attributes}
+\label{tab:monhoc}
+\begin{tabular}{|p{3cm}|p{2.5cm}|p{2.5cm}|p{5.5cm}|}
+  \hline
+  \textbf{Attribute} & \textbf{Type} & \textbf{Constraint} & \textbf{Description} \\
+  \hline
+  id & INT & PK & Unique identifier \\
+  \hline
+  ten & VARCHAR & -- & Course name \\
+  \hline
+  sotc & INT & -- & Credit count \\
+  \hline
+  mota & TEXT & -- & Course description \\
+  \hline
+  bomon\_id & INT & FK $\to$ BoMon & Owning department \\
+  \hline
+\end{tabular}
+\end{table}
+
+Courses and majors link through \texttt{NganhHoc\_MonHoc}. Grade component weights are configured in \texttt{MonHoc\_DauDiem}. Courses offered in a specific term are recorded in \texttt{MonHoc\_KiHoc}.
+
+\subsubsection{DauDiem -- Grade Component}
+
+\texttt{DauDiem} is a catalog of evaluation component types: attendance (CC), homework (BT), midterm (GK), lab (TH), and final exam (CK). Separating these into a catalog table standardizes naming across courses.
+
+\begin{table}[H]
+\renewcommand{\arraystretch}{1.35}
+\caption{DauDiem attributes}
+\label{tab:daudiem}
+\begin{tabular}{|p{3cm}|p{2.5cm}|p{2.5cm}|p{5.5cm}|}
+  \hline
+  \textbf{Attribute} & \textbf{Type} & \textbf{Constraint} & \textbf{Description} \\
+  \hline
+  id & INT & PK & Unique identifier \\
+  \hline
+  ten & VARCHAR & -- & Component name \\
+  \hline
+  mota & VARCHAR & -- & Evaluation format description \\
+  \hline
+\end{tabular}
+\end{table}
+
+One component type is configured with weights for multiple courses via \texttt{MonHoc\_DauDiem}. Component score records across all courses and students reference a \texttt{DauDiem} row via \texttt{DiemThanhPhan}.
+
+\subsubsection{NganhHoc\_MonHoc -- Major--Course Link}
+
+This junction table resolves the N-N relationship between \texttt{NganhHoc} and \texttt{MonHoc}. The \texttt{loai} column records whether the course is mandatory or elective within each major. The same course can be mandatory in one major and elective in another.
+
+\begin{table}[H]
+\renewcommand{\arraystretch}{1.35}
+\caption{NganhHoc\_MonHoc attributes}
+\label{tab:nganh_monhoc}
+\begin{tabular}{|p{3cm}|p{2.5cm}|p{3cm}|p{5cm}|}
+  \hline
+  \textbf{Attribute} & \textbf{Type} & \textbf{Constraint} & \textbf{Description} \\
+  \hline
+  nganh\_id & INT & PK, FK $\to$ NganhHoc & Major \\
+  \hline
+  monhoc\_id & INT & PK, FK $\to$ MonHoc & Course \\
+  \hline
+  loai & VARCHAR & -- & Course type: mandatory or elective \\
+  \hline
+\end{tabular}
+\end{table}
+
+Many records link back to one \texttt{NganhHoc}. Many records link back to one \texttt{MonHoc}.
+
+\subsubsection{MonHoc\_DauDiem -- Course Grade Configuration}
+
+This junction table defines the percentage weight of each grade component for each course. The weights for a given course sum to 1.0, which simplifies the final score to a dot product with no division step required.
+
+\begin{table}[H]
+\renewcommand{\arraystretch}{1.35}
+\caption{MonHoc\_DauDiem attributes}
+\label{tab:monhoc_daudiem}
+\begin{tabular}{|p{3cm}|p{2.5cm}|p{3cm}|p{5cm}|}
+  \hline
+  \textbf{Attribute} & \textbf{Type} & \textbf{Constraint} & \textbf{Description} \\
+  \hline
+  monhoc\_id & INT & PK, FK $\to$ MonHoc & Course \\
+  \hline
+  daudiem\_id & INT & PK, FK $\to$ DauDiem & Grade component \\
+  \hline
+  tile & FLOAT & -- & Weight as a decimal (0.0--1.0) \\
+  \hline
+\end{tabular}
+\end{table}
+
+Many configuration rows belong to one course. Many courses can use the same component type, each with its own weight.
+
+\subsubsection{SinhVien\_Nganh -- Student--Major Link}
+
+This junction table resolves the N-N relationship between \texttt{SinhVien} and \texttt{NganhHoc}, recording all majors a student is enrolled in. A student pursuing a double major has two rows here.
+
+\begin{table}[H]
+\renewcommand{\arraystretch}{1.35}
+\caption{SinhVien\_Nganh attributes}
+\label{tab:sv_nganh}
+\begin{tabular}{|p{3cm}|p{2.5cm}|p{3cm}|p{5cm}|}
+  \hline
+  \textbf{Attribute} & \textbf{Type} & \textbf{Constraint} & \textbf{Description} \\
+  \hline
+  sinhvien\_id & VARCHAR & PK, FK $\to$ SinhVien & Student \\
+  \hline
+  nganh\_id & INT & PK, FK $\to$ NganhHoc & Major \\
+  \hline
+\end{tabular}
+\end{table}
+
+Many records belong to one student (a student enrolled in multiple majors has one row per major). Many students can share one major.
+
+\subsection{Layer 5: Time and Scheduling}
+
+\subsubsection{Calendar reference tables}
+
+Three catalog tables define the time primitives. \texttt{NamHoc} stores academic year names (for example, 2024-2025). \texttt{HocKi} stores semester slot names (Semester 1, Semester 2, Summer). \texttt{KiHoc} combines them into concrete academic term instances: one row per year-semester pair.
+
+\begin{table}[H]
+\renewcommand{\arraystretch}{1.35}
+\caption{KiHoc attributes}
+\label{tab:kihoc}
+\begin{tabular}{|p{3cm}|p{2.5cm}|p{2.5cm}|p{5.5cm}|}
+  \hline
+  \textbf{Attribute} & \textbf{Type} & \textbf{Constraint} & \textbf{Description} \\
+  \hline
+  id & INT & PK & Unique identifier \\
+  \hline
+  namhoc\_id & INT & FK $\to$ NamHoc & Academic year \\
+  \hline
+  hocki\_id & INT & FK $\to$ HocKi & Semester slot \\
+  \hline
+\end{tabular}
+\end{table}
+
+\subsubsection{MonHoc\_KiHoc -- Course Offered in Term}
+
+Records the decision that a specific course will be taught in a specific term. This record must exist before any sections can be created for that offering.
+
+\begin{table}[H]
+\renewcommand{\arraystretch}{1.35}
+\caption{MonHoc\_KiHoc attributes}
+\label{tab:monhoc_kihoc}
+\begin{tabular}{|p{3cm}|p{2.5cm}|p{2.5cm}|p{5.5cm}|}
+  \hline
+  \textbf{Attribute} & \textbf{Type} & \textbf{Constraint} & \textbf{Description} \\
+  \hline
+  id & INT & PK & Unique identifier \\
+  \hline
+  monhoc\_id & INT & FK $\to$ MonHoc & Course \\
+  \hline
+  kihoc\_id & INT & FK $\to$ KiHoc & Term \\
+  \hline
+\end{tabular}
+\end{table}
+
+Many offering records link back to one course (a course can be offered in multiple terms). Many courses are offered in the same term. One offering generates many sections via \texttt{LopHocPhan}.
+
+\subsubsection{LopHocPhan -- Course Section}
+
+Each \texttt{MonHoc\_KiHoc} record generates multiple course sections. \texttt{LopHocPhan} is the unit of enrollment: students register to a section, not to a course directly. The \texttt{sisotoida} column is the hard capacity limit enforced at registration time.
+
+\begin{table}[H]
+\renewcommand{\arraystretch}{1.35}
+\caption{LopHocPhan attributes}
+\label{tab:lophocphan}
+\begin{tabular}{|p{3.5cm}|p{2.5cm}|p{2.5cm}|p{5cm}|}
+  \hline
+  \textbf{Attribute} & \textbf{Type} & \textbf{Constraint} & \textbf{Description} \\
+  \hline
+  id & INT & PK & Unique identifier \\
+  \hline
+  ten & VARCHAR & -- & Section code or name \\
+  \hline
+  sisotoida & INT & -- & Maximum enrollment capacity \\
+  \hline
+  monhockihoc\_id & INT & FK $\to$ MonHoc\_KiHoc & Parent course offering \\
+  \hline
+\end{tabular}
+\end{table}
+
+Many sections belong to one course offering. One section has many class sessions (\texttt{BuoiHoc}). Many students register into one section via \texttt{DangKyHoc}. One section links to one or more lecturers via \texttt{GiangVien\_LopHocPhan}.
+
+\subsubsection{GiangVien\_LopHocPhan -- Lecturer--Section Link}
+
+This junction table records which lecturers are associated with a section. The composite primary key \texttt{(giangvien\_id, lophocphan\_id)} allows more than one lecturer per section, covering co-teaching arrangements.
+
+\begin{table}[H]
+\renewcommand{\arraystretch}{1.35}
+\caption{GiangVien\_LopHocPhan attributes}
+\label{tab:gv_lhp}
+\begin{tabular}{|p{3cm}|p{2.5cm}|p{3cm}|p{5cm}|}
+  \hline
+  \textbf{Attribute} & \textbf{Type} & \textbf{Constraint} & \textbf{Description} \\
+  \hline
+  giangvien\_id & INT & PK, FK $\to$ GiangVien & Lecturer \\
+  \hline
+  lophocphan\_id & INT & PK, FK $\to$ LopHocPhan & Section \\
+  \hline
+\end{tabular}
+\end{table}
+
+Many assignment records link back to one lecturer. Many lecturers can be assigned to one section.
+
+\subsubsection{Scheduling reference tables}
+
+Four catalog tables store the remaining scheduling primitives. \texttt{TuanHoc} holds the teaching weeks. \texttt{NgayHoc} holds the teaching days. \texttt{KipHoc} holds the time slots per day. \texttt{PhongHoc} stores classrooms with seat capacities.
+
+\begin{table}[H]
+\renewcommand{\arraystretch}{1.35}
+\caption{PhongHoc attributes}
+\label{tab:phonghoc}
+\begin{tabular}{|p{3cm}|p{2.5cm}|p{2.5cm}|p{5.5cm}|}
+  \hline
+  \textbf{Attribute} & \textbf{Type} & \textbf{Constraint} & \textbf{Description} \\
+  \hline
+  id & INT & PK & Unique identifier \\
+  \hline
+  ten & VARCHAR & -- & Room code or name \\
+  \hline
+  succhua & INT & -- & Seating capacity \\
+  \hline
+\end{tabular}
+\end{table}
+
+One classroom is used for many class sessions (\texttt{BuoiHoc}) across different weeks and time slots. The unique constraint in \texttt{BuoiHoc} prevents double-booking.
+
+\subsubsection{BuoiHoc -- Class Session}
+
+\texttt{BuoiHoc} is the most detailed table in the schema. Each row represents one class session, defined by six dimensions: section, week, day, time slot, classroom, and lecturer. A section that meets once per week for 15 weeks produces 15 rows here.
+
+\begin{table}[H]
+\renewcommand{\arraystretch}{1.35}
+\caption{BuoiHoc attributes}
+\label{tab:buoihoc}
+\begin{tabular}{|p{3.5cm}|p{2.5cm}|p{2.5cm}|p{5cm}|}
+  \hline
+  \textbf{Attribute} & \textbf{Type} & \textbf{Constraint} & \textbf{Description} \\
+  \hline
+  id & INT & PK & Unique identifier \\
+  \hline
+  lophocphan\_id & INT & FK $\to$ LopHocPhan & Section \\
+  \hline
+  tuan\_id & INT & FK $\to$ TuanHoc & Teaching week \\
+  \hline
+  ngay\_id & INT & FK $\to$ NgayHoc & Day of week \\
+  \hline
+  kiphoc\_id & INT & FK $\to$ KipHoc & Time slot \\
+  \hline
+  phonghoc\_id & INT & FK $\to$ PhongHoc & Classroom \\
+  \hline
+  giangvien\_id & INT & FK $\to$ GiangVien & Session instructor \\
+  \hline
+\end{tabular}
+\end{table}
+
+Two unique constraints implement the scheduling rules:
+
+\begin{itemize}
+  \item \texttt{UNIQUE (tuan\_id, ngay\_id, kiphoc\_id, phonghoc\_id)} prevents two sections from using the same room at the same day and time slot within the same week.
+  \item \texttt{UNIQUE (tuan\_id, ngay\_id, kiphoc\_id, giangvien\_id)} prevents a lecturer from being scheduled in two places at the same time within the same week.
+\end{itemize}
+
+Including \texttt{tuan\_id} in both constraints is necessary because the same room and lecturer legitimately repeat the same day and slot across different weeks. These constraints hold for any client writing to the database, not only the application layer.
+
+\subsection{Layer 6: Academic Results}
+
+\subsubsection{DangKyHoc -- Registration}
+
+\texttt{DangKyHoc} records each student's enrollment in a section. A unique constraint on \texttt{(sinhvien\_id, lophocphan\_id)} prevents duplicate enrollments at the database level. All component scores and the final course result are linked to this record.
+
+\begin{table}[H]
+\renewcommand{\arraystretch}{1.35}
+\caption{DangKyHoc attributes}
+\label{tab:dangkyhoc}
+\begin{tabular}{|p{3.5cm}|p{2.5cm}|p{3cm}|p{4.5cm}|}
+  \hline
+  \textbf{Attribute} & \textbf{Type} & \textbf{Constraint} & \textbf{Description} \\
+  \hline
+  id & INT & PK & Unique identifier \\
+  \hline
+  sinhvien\_id & VARCHAR & FK $\to$ SinhVien & Enrolled student \\
+  \hline
+  lophocphan\_id & INT & FK $\to$ LopHocPhan & Section \\
+  \hline
+  \multicolumn{4}{|l|}{UNIQUE (sinhvien\_id, lophocphan\_id)} \\
+  \hline
+\end{tabular}
+\end{table}
+
+Many registrations belong to one student. Many students register into one section. One registration has many component scores (\texttt{DiemThanhPhan}). One registration produces exactly one course result (\texttt{KetQuaMon}).
+
+\subsubsection{DiemThanhPhan -- Component Score}
+
+Stores the raw score for each grade component within one registration. The composite primary key is \texttt{(dangkyhoc\_id, daudiem\_id)}. These rows are the input to the final weighted-average calculation.
+
+\begin{table}[H]
+\renewcommand{\arraystretch}{1.35}
+\caption{DiemThanhPhan attributes}
+\label{tab:diemthanhphan}
+\begin{tabular}{|p{3cm}|p{2.5cm}|p{3cm}|p{5cm}|}
+  \hline
+  \textbf{Attribute} & \textbf{Type} & \textbf{Constraint} & \textbf{Description} \\
+  \hline
+  dangkyhoc\_id & INT & PK, FK $\to$ DangKyHoc & Registration \\
+  \hline
+  daudiem\_id & INT & PK, FK $\to$ DauDiem & Grade component \\
+  \hline
+  diem & FLOAT & -- & Score (0--10 scale) \\
+  \hline
+\end{tabular}
+\end{table}
+
+Many component scores belong to one registration. Many scores across different students and courses fall under one component type.
+
+\subsubsection{DiemHeChu -- Letter Grade Scale}
+
+Defines the eight letter grades and the 10-scale intervals used to assign them.
+
+\begin{table}[H]
+\renewcommand{\arraystretch}{1.35}
+\caption{Letter grade scale (DiemHeChu)}
+\label{tab:gradescale}
+\begin{tabular}{|c|c|c|c|c|}
+  \hline
+  \textbf{Letter} & \textbf{4-scale} & \textbf{10-scale min} & \textbf{10-scale max} & \textbf{Band} \\
+  \hline
+  A+  & 4.0 & 9.0 & 10.0 & Excellent \\
+    \hline
+  A  & 3.7 & 8.5 & 8.9 & Very Good \\
+  \hline
+  B+ & 3.5 & 8.0 & 8.4  & Good Plus \\
+  \hline
+  B  & 3.0 & 7.0 & 7.9  & Good \\
+  \hline
+  C+ & 2.5 & 6.5 & 6.9  & Average-Good \\
+  \hline
+  C  & 2.0 & 5.5 & 6.4  & Average \\
+  \hline
+  D+ & 1.5 & 5.0 & 5.4  & Below Average \\
+  \hline
+  D  & 1.0 & 4.0 & 4.9  & Weak \\
+  \hline
+  F  & 0.0 & 0.0 & 3.9  & Fail \\
+  \hline
+\end{tabular}
+\end{table}
+
+One letter grade level is assigned to many course results (\texttt{KetQuaMon}).
+
+\subsubsection{KetQuaMon -- Course Result}
+
+Holds the final weighted score and the corresponding letter grade for each registration. One registration produces exactly one result record, enforced by a UNIQUE constraint on \texttt{dangkyhoc\_id}.
+
+\begin{table}[H]
+\renewcommand{\arraystretch}{1.35}
+\caption{KetQuaMon attributes}
+\label{tab:ketquamon}
+\begin{tabular}{|p{3cm}|p{2.5cm}|p{3cm}|p{5cm}|}
+  \hline
+  \textbf{Attribute} & \textbf{Type} & \textbf{Constraint} & \textbf{Description} \\
+  \hline
+  id & INT & PK & Unique identifier \\
+  \hline
+  dangkyhoc\_id & INT & UNIQUE, FK $\to$ DangKyHoc & Registration \\
+  \hline
+  diem & FLOAT & -- & Final weighted score (10-scale) \\
+  \hline
+  diemhechu\_id & INT & FK $\to$ DiemHeChu & Assigned letter grade \\
+  \hline
+\end{tabular}
+\end{table}
+
+One result maps to exactly one registration (enforced by the UNIQUE constraint on \texttt{dangkyhoc\_id}). Many results share one letter grade level.
+
+\subsubsection{LoaiHocLuc -- Academic Standing}
+
+Defines six academic performance bands keyed on 4-scale GPA, from Excellent (GPA $\geq$ 3.6) down to Poor (GPA $<$ 1.0). Used during semester summary generation to classify each student's overall performance.
+
+\begin{table}[H]
+\renewcommand{\arraystretch}{1.35}
+\caption{LoaiHocLuc attributes}
+\label{tab:loaihocluc}
+\begin{tabular}{|p{3cm}|p{2.5cm}|p{2.5cm}|p{5.5cm}|}
+  \hline
+  \textbf{Attribute} & \textbf{Type} & \textbf{Constraint} & \textbf{Description} \\
+  \hline
+  id & INT & PK & Unique identifier \\
+  \hline
+  ten & VARCHAR & -- & Band name \\
+  \hline
+  diem\_min & FLOAT & -- & Minimum 4-scale GPA \\
+  \hline
+  diem\_max & FLOAT & -- & Maximum 4-scale GPA \\
+  \hline
+  mota & VARCHAR & -- & Classification notes \\
+  \hline
+\end{tabular}
+\end{table}
+
+One standing band is assigned to many semester summary records (\texttt{TONGKET\_HOCKI}).
+
+\subsubsection{TONGKET\_HOCKI -- Semester Summary}
+
+Stores the semester summary for each student per term: GPA on both scales, total credits registered, and credits passed. The unique constraint on \texttt{(sinhvien\_id, kihoc\_id)} makes re-running the batch job safe without producing duplicate rows.
+
+\begin{table}[H]
+\renewcommand{\arraystretch}{1.35}
+\caption{TONGKET\_HOCKI attributes}
+\label{tab:tongket}
+\begin{tabular}{|p{3.5cm}|p{2.5cm}|p{2.5cm}|p{5cm}|}
+  \hline
+  \textbf{Attribute} & \textbf{Type} & \textbf{Constraint} & \textbf{Description} \\
+  \hline
+  id & INT & PK & Unique identifier \\
+  \hline
+  sinhvien\_id & VARCHAR & FK $\to$ SinhVien & Student \\
+  \hline
+  kihoc\_id & INT & FK $\to$ KiHoc & Term \\
+  \hline
+  loaihocluc\_id & INT & FK $\to$ LoaiHocLuc & Academic standing \\
+  \hline
+  gpa\_he10 & FLOAT & -- & Semester GPA (10-scale) \\
+  \hline
+  gpa\_he4 & FLOAT & -- & Semester GPA (4-scale) \\
+  \hline
+  tongtinchi & INT & -- & Total credits registered \\
+  \hline
+  sotinchi\_dat & INT & -- & Credits passed \\
+  \hline
+  created\_at & TIMESTAMP & -- & Record generation timestamp \\
+  \hline
+  \multicolumn{4}{|l|}{UNIQUE (sinhvien\_id, kihoc\_id)} \\
+  \hline
+\end{tabular}
+\end{table}
+
+Many summary records belong to one student (one per term). Many summaries fall in the same term. Many summaries share one academic standing band.
+
+\section{Data Integrity Constraints}
+
+The schema enforces integrity at three levels.
+
+\textbf{Foreign key constraints.} All dependency relationships are declared as \texttt{FOREIGN KEY}. This prevents orphaned data: a \texttt{LopHocPhan} row cannot reference a non-existent \texttt{MonHoc\_KiHoc}, and deleting a \texttt{SinhVien} is blocked while related \texttt{DangKyHoc} rows exist.
+
+\textbf{Unique constraints.} Applied at critical operational points:
+
+\begin{itemize}
+  \item \texttt{username} in \texttt{ThanhVien}: no two accounts share the same login name.
+  \item \texttt{email} in \texttt{ThanhVien}: each contact address belongs to exactly one account.
+  \item \texttt{(sinhvien\_id, lophocphan\_id)} in \texttt{DangKyHoc}: each student registers for each section exactly once.
+  \item \texttt{(monhoc\_id, kihoc\_id)} in \texttt{MonHoc\_KiHoc}: each course is offered at most once per term.
+  \item \texttt{(sinhvien\_id, kihoc\_id)} in \texttt{TONGKET\_HOCKI}: each student has one summary record per term.
+  \item \texttt{(tuan\_id, ngay\_id, kiphoc\_id, phonghoc\_id)} in \texttt{BuoiHoc}: no room is double-booked within the same week.
+  \item \texttt{(tuan\_id, ngay\_id, kiphoc\_id, giangvien\_id)} in \texttt{BuoiHoc}: no lecturer is scheduled in two places at the same time within the same week.
+\end{itemize}
+
+\textbf{Check constraints.} Declared inline on columns where a legal value range is known at the schema level:
+
+\begin{itemize}
+  \item \texttt{sotc > 0} in \texttt{MonHoc}: a course must carry at least one credit.
+  \item \texttt{sisotoida > 0} in \texttt{LopHocPhan}: a section must have a positive capacity.
+  \item \texttt{diem BETWEEN 0 AND 10} in \texttt{DiemThanhPhan} and \texttt{KetQuaMon}: grades on the 10-point scale cannot fall outside the legal range.
+\end{itemize}
+
+\textbf{Value constraints enforced in the application layer.} The sum of grade component weights in \texttt{MonHoc\_DauDiem} for any given course must equal 1.0, validated when an administrator saves a grade configuration. This rule aggregates multiple rows in the same table, which MySQL CHECK constraints cannot express. Storing both \texttt{DiemThanhPhan} (raw component scores) and \texttt{KetQuaMon} (calculated final scores) in parallel preserves the audit trail and allows recalculation if grading rules change.
+
+\textbf{Trigger: student schedule conflict.} A BEFORE INSERT trigger \texttt{trg\_check\_sv\_lich} on \texttt{DangKyHoc} prevents a student from registering for two sections whose class sessions overlap. On each attempted enrollment the trigger joins the sessions of the target section against the sessions of every section the student has already registered for; if any pair shares the same week, day, and time slot, the insert is rejected with a \texttt{SIGNAL SQLSTATE '45000'} error. Because the check runs inside the same transaction as the insert, it closes the race window that an application-layer pre-check cannot eliminate when two concurrent requests arrive simultaneously.
+
+\section{Query Design: Database vs Application Layer}
+
+The system splits data logic between the database schema and the application service layer. Understanding this split is important because both sides carry load and each was chosen deliberately.
+
+\textbf{Logic placed in the database.} Structural rules that must hold for any client writing to the schema are expressed as schema-level constraints and triggers. The UNIQUE constraint on \texttt{(sinhvien\_id, lophocphan\_id)} in \texttt{DangKyHoc} blocks duplicate enrollments even if two concurrent requests both pass the application check before either commits. The two UNIQUE constraints in \texttt{BuoiHoc} block room double-booking and teacher schedule conflicts the same way. The trigger \texttt{trg\_check\_sv\_lich} prevents a student from registering for two sections that share a time slot, closing the race window that a pure application-layer check cannot cover. Foreign key constraints prevent orphaned rows at every dependency edge.
+
+\textbf{Logic placed in the application layer.} Calculations that iterate over a result set, apply conditional branching, or coordinate writes across several tables are handled in the Java service layer rather than in SQL. Three cases stand out. First, the weighted GPA and final score calculations multiply per-row values and sum them, which can be written in SQL but produces a large correlated subquery that is difficult to test in isolation. In Java the same logic is a short loop that can be covered by a unit test without a database connection. Second, schedule conflict pre-checking before a registration attempt is also done in the service layer so the system can return a user-readable message naming which sections conflict before the insert reaches the trigger. Third, the semester finalization batch iterates over every student who registered in a term and writes one summary row per student. Running this as a stored procedure would make the logic invisible to the test suite and harder to change when the GPA formula is adjusted.
+
+\textbf{One rule that cannot go in the database.} Grade component weights for a course must sum to 1.0 across all rows in \texttt{MonHoc\_DauDiem}. MySQL does not support CHECK constraints that aggregate multiple rows in the same table, so this invariant is validated in the service layer when an administrator saves a grade configuration.
+
+\section{Key SQL Queries}
+
+The queries below cover all major data access operations in the system. They are written in standard SQL. The application layer issues equivalent JPQL through the Spring Data repository interfaces, which Hibernate translates to SQL at runtime.
+
+\subsection{Available Sections for Registration}
+
+Loads all course sections available to a student in a given term. The subquery restricts results to courses belonging to the student's enrolled majors. The outer query attaches current enrollment counts so the frontend can show capacity status:
+
+\begin{verbatim}
+SELECT lhp.id,
+       lhp.ten,
+       lhp.sisotoida,
+       COUNT(dkh.id)  AS sisohientai,
+       mh.ten         AS mon_hoc,
+       mh.sotc
+FROM   LopHocPhan    lhp
+JOIN   MonHoc_KiHoc  mkh ON lhp.monhockihoc_id = mkh.id
+JOIN   MonHoc         mh ON mkh.monhoc_id       = mh.id
+LEFT   JOIN DangKyHoc dkh ON dkh.lophocphan_id  = lhp.id
+WHERE  mkh.kihoc_id = :kihocId
+  AND  mkh.monhoc_id IN (
+       SELECT nm.monhoc_id
+       FROM   NganhHoc_MonHoc nm
+       JOIN   SinhVien_Nganh  sn ON nm.nganh_id = sn.nganh_id
+       WHERE  sn.sinhvien_id = :masv
+  )
+GROUP  BY lhp.id, lhp.ten, lhp.sisotoida, mh.ten, mh.sotc
+\end{verbatim}
+
+A second check determines whether the student already passed this course in a prior term, which disables the section from being selectable:
+
+\begin{verbatim}
+SELECT dkh.lophocphan_id
+FROM   DangKyHoc    dkh
+JOIN   LopHocPhan   lhp ON dkh.lophocphan_id   = lhp.id
+JOIN   MonHoc_KiHoc mkh ON lhp.monhockihoc_id  = mkh.id
+JOIN   KetQuaMon    kqm ON dkh.id              = kqm.dangkyhoc_id
+WHERE  dkh.sinhvien_id = :masv
+  AND  mkh.monhoc_id   = :monhocId
+  AND  kqm.diem       >= 4
+\end{verbatim}
+
+\subsection{Student \&\ Teacher Schedule Retrieval}
+
+Retrieves all class sessions for a student in a given term by joining through their registered sections:
+
+\begin{verbatim}
+SELECT b.tuan_id, b.ngay_id, b.kiphoc_id,
+       ph.ten  AS phong,
+       mh.ten  AS mon_hoc,
+       lhp.ten AS lop,
+       CONCAT(tv.hodem, ' ', tv.ten) AS giang_vien
+FROM   BuoiHoc      b
+JOIN   LopHocPhan   lhp ON b.lophocphan_id    = lhp.id
+JOIN   MonHoc_KiHoc mkh ON lhp.monhockihoc_id = mkh.id
+JOIN   MonHoc        mh ON mkh.monhoc_id       = mh.id
+JOIN   PhongHoc      ph ON b.phonghoc_id       = ph.id
+JOIN   GiangVien     gv ON b.giangvien_id      = gv.thanhvien_id
+JOIN   ThanhVien     tv ON gv.thanhvien_id     = tv.id
+WHERE  lhp.id IN (
+       SELECT dkh.lophocphan_id
+       FROM   DangKyHoc dkh
+       WHERE  dkh.sinhvien_id = :masv
+         AND  mkh.kihoc_id    = :kihocId
+)
+\end{verbatim}
+
+The same pattern applies to the teacher schedule: 
+\begin{verbatim}
+SELECT b.tuan_id, b.ngay_id, b.kiphoc_id,
+       ph.ten  AS phong,
+       mh.ten  AS mon_hoc,
+       lhp.ten AS lop,
+       CONCAT(tv.hodem, ' ', tv.ten) AS giang_vien
+FROM   BuoiHoc      b
+JOIN   LopHocPhan   lhp ON b.lophocphan_id    = lhp.id
+JOIN   MonHoc_KiHoc mkh ON lhp.monhockihoc_id = mkh.id
+JOIN   MonHoc        mh ON mkh.monhoc_id       = mh.id
+JOIN   PhongHoc      ph ON b.phonghoc_id       = ph.id
+JOIN   GiangVien     gv ON b.giangvien_id      = gv.thanhvien_id
+JOIN   ThanhVien     tv ON gv.thanhvien_id     = tv.id
+WHERE b.giangvien_id = :giangvienId
+AND mkh.kihoc_id = :kihocId
+\end{verbatim}
+
+\subsection{Weighted Final Score Calculation}
+
+Computes the weighted average for one enrollment when a teacher finalizes grades. All component weights for a given course sum to 1.0, so the result is a direct dot product with no division step:
+
+\begin{verbatim}
+SELECT SUM(dtp.diem * mdd.tile) AS diem_tong
+FROM   DiemThanhPhan  dtp
+JOIN   MonHoc_DauDiem mdd
+    ON dtp.daudiem_id  = mdd.daudiem_id
+   AND mdd.monhoc_id   = :monhocId
+WHERE  dtp.dangkyhoc_id = :dangkyhocId
+\end{verbatim}
+
+The result is matched against \texttt{DiemHeChu} to assign a letter grade:
+
+\begin{verbatim}
+SELECT id, ten, diem4
+FROM   DiemHeChu
+WHERE  :diemTong BETWEEN diem10_min AND diem10_max
+LIMIT  1
+\end{verbatim}
+
+\subsection{Semester GPA Calculation}
+
+Computes GPA on both scales, total credits registered, and credits passed for one student in one term. This is the core query of the semester finalization batch:
+
+\begin{verbatim}
+SELECT
+    SUM(kqm.diem  * mh.sotc) / SUM(mh.sotc) AS gpa_he10,
+    SUM(dhc.diem4 * mh.sotc) / SUM(mh.sotc) AS gpa_he4,
+    SUM(mh.sotc)                             AS tong_tinchi,
+    SUM(CASE WHEN kqm.diem >= 4
+             THEN mh.sotc ELSE 0 END)        AS tinchi_dat
+FROM   DangKyHoc    dkh
+JOIN   LopHocPhan   lhp ON dkh.lophocphan_id  = lhp.id
+JOIN   MonHoc_KiHoc mkh ON lhp.monhockihoc_id = mkh.id
+JOIN   MonHoc        mh ON mkh.monhoc_id       = mh.id
+JOIN   KetQuaMon    kqm ON dkh.id             = kqm.dangkyhoc_id
+JOIN   DiemHeChu    dhc ON kqm.diemhechu_id   = dhc.id
+WHERE  dkh.sinhvien_id = :masv
+  AND  mkh.kihoc_id    = :kihocId
+\end{verbatim}
+
+The GPA hệ 4 result is compared against \texttt{diem\_min} and \texttt{diem\_max} in \texttt{LoaiHocLuc} to assign academic standing. The row is then upserted into \texttt{TONGKET\_HOCKI} on the unique key \texttt{(sinhvien\_id, kihoc\_id)}.
+
+\subsection{Average GPA Trend Across Terms}
+
+Returns the school-wide average GPA hệ 4 per term in chronological order, used for the trend line chart on the administrative dashboard:
+
+\begin{verbatim}
+SELECT t.kihoc_id                          AS ki_id,
+       CONCAT(nh.ten, ' - ', hk.ten)       AS ten_ki,
+       AVG(t.gpa_he4)                      AS gpa_tb
+FROM   TONGKET_HOCKI t
+JOIN   KiHoc          k  ON t.kihoc_id   = k.id
+JOIN   NamHoc        nh  ON k.namhoc_id  = nh.id
+JOIN   HocKi         hk  ON k.hocki_id   = hk.id
+GROUP  BY t.kihoc_id, nh.ten, hk.ten
+ORDER  BY t.kihoc_id
+\end{verbatim}
+
+\subsection{Student Count by Faculty}
+
+Counts how many students are enrolled in each faculty, used for the enrollment bar chart on the administrative dashboard. A student enrolled in a double major is counted once per major:
+
+\begin{verbatim}
+SELECT kh.ten             AS khoa,
+       COUNT(sn.sinhvien_id) AS so_sinhvien
+FROM   SinhVien_Nganh sn
+JOIN   NganhHoc       ng ON sn.nganh_id  = ng.id
+JOIN   Khoa           kh ON ng.khoa_id   = kh.id
+GROUP  BY kh.ten
+\end{verbatim}
+
+\subsection{Academic Standing Distribution}
+
+Aggregates the count of students in each standing band for a given term, used for the distribution pie chart:
+
+\begin{verbatim}
+SELECT lhl.ten  AS loai_hoc_luc,
+       COUNT(*) AS so_luong
+FROM   TONGKET_HOCKI tkh
+JOIN   LoaiHocLuc    lhl ON tkh.loaihocluc_id = lhl.id
+WHERE  tkh.kihoc_id = :kihocId
+GROUP  BY lhl.ten
+\end{verbatim}
+
+\subsection{Fail Rate by Course}
+
+Ranks courses by failure rate, used for the top-10 bar chart on the administrative dashboard:
+
+\begin{verbatim}
+SELECT mh.ten             AS mon_hoc,
+       COUNT(kqm.id)      AS tong_sv,
+       SUM(CASE WHEN kqm.diem < 4
+                THEN 1 ELSE 0 END) AS so_truot
+FROM   KetQuaMon    kqm
+JOIN   DangKyHoc   dkh ON kqm.dangkyhoc_id    = dkh.id
+JOIN   LopHocPhan  lhp ON dkh.lophocphan_id   = lhp.id
+JOIN   MonHoc_KiHoc mkh ON lhp.monhockihoc_id = mkh.id
+JOIN   MonHoc       mh ON mkh.monhoc_id        = mh.id
+GROUP  BY mh.ten
+ORDER  BY so_truot * 1.0 / tong_sv DESC
+\end{verbatim}
+
+%=============================================================
+\chapter{. Installation and Deployment}
+%=============================================================
+
+\section{Backend Structure}
+
+The backend follows a three-layer MVC pattern. Controllers handle HTTP routing and input validation. Service classes contain business logic and manage database transactions. Repository interfaces declare all data access operations. No JPA entity passes through the controller; all cross-layer data travels as DTOs.
+
+Authentication uses stateless JWT tokens. On login, the server verifies the BCrypt-hashed password stored in \texttt{ThanhVien} and issues a signed token encoding the user's role and ID. Every subsequent request carries the token in the \texttt{Authorization: Bearer} header. A filter verifies the signature and sets the security context before any controller method runs, and each endpoint is restricted to the roles allowed to call it.
+
+The two operations with the most significant database interaction are batch course registration and grade finalization. Both run inside database transactions. The registration service also relies on the UNIQUE constraints in \texttt{DangKyHoc} and \texttt{BuoiHoc} as a last line of defense against concurrent conflicts that pass the application-layer checks.
+
+\section{Web Interface}
+
+Three separate interfaces correspond to the three user roles. The student interface covers course section browsing, registration, weekly schedule display, and grade visibility. The teacher interface supports component score entry and grade finalization for assigned sections. The administrative interface covers catalog management, scheduling, semester finalization, and reporting with aggregated charts.
+
+All interfaces share a red-themed layout built with Ant Design, with role-specific sidebar navigation and a semester selector that drives the data shown on most pages.
+
+\section{Installation and Setup}
+
+\subsection*{Prerequisites}
+
+\begin{itemize}
+  \item Java 17 or later (\texttt{java -version})
+  \item Apache Maven 3.8 or later (\texttt{mvn -version})
+  \item Node.js 18 or later with npm (\texttt{node -v})
+  \item MySQL 8.0 (\texttt{mysql --version})
+  \item Python 3.9 or later (\texttt{python --version})
+\end{itemize}
+
+\subsection*{Step 1. Clone the repository}
+
+\begin{verbatim}
+git clone <repo-url>
+cd Team09-BTL-QuanLySinhVien
+\end{verbatim}
+
+\subsection*{Step 2. Create the database and run the schema}
+
+Log in to MySQL as root (or any account with CREATE privilege) and run:
+
+\begin{verbatim}
+CREATE DATABASE IF NOT EXISTS SinhVien
+    CHARACTER SET utf8mb4
+    COLLATE utf8mb4_unicode_ci;
+USE SinhVien;
+SOURCE data-generator/SinhVien.sql;
+\end{verbatim}
+
+The script creates all 32 tables, the \texttt{trg\_check\_sv\_lich} trigger, and the DROP block at the end resets them if needed.
+
+\subsection*{Step 3. Configure the backend}
+
+Open \texttt{backend/src/main/resources/application.yml} and update the datasource credentials to match your local MySQL installation:
+
+\begin{verbatim}
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/sinhvien?...
+    username: root
+    password: <your-password>
+\end{verbatim}
+
+\subsection*{Step 4. Generate test data}
+
+\begin{verbatim}
+cd data-generator
+pip install -r requirements.txt   # if a requirements file exists
+python gen_data.py
+cd ..
+\end{verbatim}
+
+The script writes reproducible JSON files under \texttt{data-generator/data/} using a fixed random seed of 42.
+
+\subsection*{Step 5. Start the backend with the seed profile}
+
+On the first run, activate the \texttt{seed} Spring profile so \texttt{DataSeeder} reads the JSON files and populates the database:
+
+\begin{verbatim}
+cd backend
+mvn spring-boot:run -Dspring-boot.run.profiles=seed
+\end{verbatim}
+
+Wait for the log line \texttt{DataSeeder finished}. The seeder is idempotent: re-running it on a populated database is safe. On subsequent runs the profile is not needed:
+
+\begin{verbatim}
+mvn spring-boot:run
+\end{verbatim}
+
+The REST API is available at \texttt{http://localhost:8080}. 
+
+Swagger UI is at \texttt{http://localhost:8080/swagger-ui.html}.
+
+\subsection*{Step 6. Start the frontend}
+
+\begin{verbatim}
+cd frontend
+npm install
+npm run dev
+\end{verbatim}
+
+The application opens at \texttt{http://localhost:5173}. The Vite dev server proxies all \texttt{/api} requests to \texttt{localhost:8080}, so no CORS configuration is required during development.
+
+\subsection*{Default login credentials}
+
+All seeded accounts use the password \texttt{123456}. Sample usernames: \texttt{admin} (administrator), \texttt{gv\_test} (lecturer), \texttt{sv\_test} (student). The exact list is visible in the generated JSON files under \texttt{data-generator/data/}.
+
+\chapter{. Conclusion}
+%=============================================================
+
+\section{Summary}
+
+The system covers the three core workflows defined at the start of the project. Students can register for course sections and view their grades. Teachers can enter component scores and finalize course results. Administrative staff can manage the full course catalog and generate semester performance reports.
+
+The database schema is the most load-bearing component. Scheduling conflicts are prevented at the database level: UNIQUE constraints in \texttt{BuoiHoc} block room and teacher double-booking, and a BEFORE INSERT trigger on \texttt{DangKyHoc} blocks student time-slot conflicts. Duplicate enrollment, value range violations, and referential integrity are enforced through UNIQUE, CHECK, and FOREIGN KEY constraints respectively, so these rules hold regardless of which client writes to the database.
+
+The backend enforces a clean separation between layers: no entity passes through the controller, all multi-table writes run in transactions, and access control uses both Spring's \texttt{@PreAuthorize} annotations on the server and role-based route guards on the client. The two most complex service operations, batch registration and grade finalization, are covered by unit tests that run against mocked repositories so they do not require a live database connection.
+
+\section{Limitations}
+
+Several features were excluded by design. There is no prerequisite tracking: a student can register for any course in their major's curriculum regardless of what they have already passed. The system does not distinguish between a first attempt and a retake in the registration or grading tables, which means it cannot generate an official transcript that marks retaken courses correctly.
+
+The registration page requires a desktop browser. The three-panel layout with course list, weekly schedule grid, and summary table does not work comfortably below 1280 pixels wide. Small-screen users see a warning banner but no adapted layout.
+
+\section{Future Work}
+
+The most useful extension is prerequisite tracking. This requires a self-referential relationship on \texttt{MonHoc} and an additional check in the registration service before accepting each enrollment. A close second is a registration window flag on \texttt{KiHoc} so that administrators can open and close registration periods rather than having the system always accept cancellations.
+
+Longer term, the grading model would need to record which semester a student first attempted each course before the system could produce accurate transcripts for students who retook courses. That change requires either adding a column to \texttt{DangKyHoc} or introducing a separate attempt-tracking table, and it would affect how \texttt{TONGKET\_HOCKI} aggregates credits passed.
+
+
+\chapter{. References}
+
+
+\begingroup
+    \renewcommand{\chapter}[2]{} 
+    
+    \begin{thebibliography}{9}
+
+    \bibitem{mysql_manual}
+    Oracle Corporation, "MySQL 8.0 Reference Manual," 2024. [Online]. Available: https://dev.mysql.com/doc/refman/8.0/en/.
+
+    \bibitem{stored_routines}
+    Oracle Corporation, "MySQL 8.0 Reference Manual – 27.2 Using Stored Routines," 2024. [Online]. Available: https://dev.mysql.com/doc/refman/8.0/en/stored-routines.html. 
+
+    \bibitem{triggers}
+    Oracle Corporation, "MySQL 8.0 Reference Manual – 27.3 Using Triggers," 2024. [Online]. Available: https://dev.mysql.com/doc/refman/8.0/en/triggers.html.
+    \bibitem{student_management_system}
+    K. Shelke, Y. Khan, and A. S. Kapse, ``Student Management System: A Web-Based Solution for Academic Administration,'' \textit{International Journal of Scientific Research in Science and Technology}, vol. 12, no. 3, pp. 50--54, May 2025. [Online]. Available: https://doi.org/10.32628/IJSRST251222719
+
+    \end{thebibliography}
+\endgroup
+
+\end{document}
