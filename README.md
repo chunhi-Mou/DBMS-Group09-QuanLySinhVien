@@ -21,7 +21,4 @@ Hệ thống quản lý sinh viên, tập trung vào quản lý đăng ký tín 
 - **Java 17+** và **Maven 3.8+**
 - **Node.js 18+** và **npm**
 - **MySQL 8** đang chạy ở `localhost:3306`
-  - User: `root`
-  - Password: `chunhi`
-  - Có thể đổi cấu hình trong `backend/src/main/resources/application.yml` nếu cần
-- **Python 3.9+** nếu dự án sử dụng thêm các script hỗ trợ
+  - Cập nhật user/password theo môi trường của bạn trong `backend/src/main/resources/application.yml`
