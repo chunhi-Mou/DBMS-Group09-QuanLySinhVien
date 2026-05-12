@@ -1,0 +1,2537 @@
+[
+  {
+    "masv": "B22DCCE001",
+    "thanhvien_id": 45,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B22DCCE002",
+    "thanhvien_id": 46,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B22DCCE003",
+    "thanhvien_id": 47,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B22DCCE004",
+    "thanhvien_id": 48,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B22DCCE005",
+    "thanhvien_id": 49,
+    "lophanhchinh_id": 2
+  },
+  {
+    "masv": "B22DCCE006",
+    "thanhvien_id": 50,
+    "lophanhchinh_id": 2
+  },
+  {
+    "masv": "B23DCKT001",
+    "thanhvien_id": 51,
+    "lophanhchinh_id": 9
+  },
+  {
+    "masv": "B23DCCE002",
+    "thanhvien_id": 52,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B23DCCE003",
+    "thanhvien_id": 53,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B23DCCE004",
+    "thanhvien_id": 54,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B23DCCE005",
+    "thanhvien_id": 55,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B23DCCE006",
+    "thanhvien_id": 56,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B23DCCE007",
+    "thanhvien_id": 57,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B23DCCE008",
+    "thanhvien_id": 58,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B23DCCE009",
+    "thanhvien_id": 59,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B23DCCE010",
+    "thanhvien_id": 60,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B23DCCE011",
+    "thanhvien_id": 61,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B23DCCE012",
+    "thanhvien_id": 62,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B23DCCE013",
+    "thanhvien_id": 63,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B23DCCE014",
+    "thanhvien_id": 64,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B23DCCE015",
+    "thanhvien_id": 65,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B23DCCE016",
+    "thanhvien_id": 66,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B23DCCE017",
+    "thanhvien_id": 67,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B23DCCE018",
+    "thanhvien_id": 68,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B23DCCE019",
+    "thanhvien_id": 69,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B23DCCE020",
+    "thanhvien_id": 70,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B23DCCE021",
+    "thanhvien_id": 71,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B23DCCE022",
+    "thanhvien_id": 72,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B23DCCE023",
+    "thanhvien_id": 73,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B23DCCE024",
+    "thanhvien_id": 74,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B23DCCE025",
+    "thanhvien_id": 75,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B23DCCE026",
+    "thanhvien_id": 76,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B23DCCE027",
+    "thanhvien_id": 77,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B23DCCE028",
+    "thanhvien_id": 78,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B23DCCE029",
+    "thanhvien_id": 79,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B23DCCE030",
+    "thanhvien_id": 80,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B23DCCE031",
+    "thanhvien_id": 81,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B23DCCE032",
+    "thanhvien_id": 82,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B23DCCE033",
+    "thanhvien_id": 83,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B23DCCE034",
+    "thanhvien_id": 84,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B23DCCE035",
+    "thanhvien_id": 85,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B23DCCE036",
+    "thanhvien_id": 86,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B23DCCE037",
+    "thanhvien_id": 87,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B23DCCE038",
+    "thanhvien_id": 88,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B23DCCE039",
+    "thanhvien_id": 89,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B23DCCE040",
+    "thanhvien_id": 90,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B23DCCE041",
+    "thanhvien_id": 91,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B23DCCE042",
+    "thanhvien_id": 92,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B23DCCE043",
+    "thanhvien_id": 93,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B23DCCE044",
+    "thanhvien_id": 94,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B23DCCE045",
+    "thanhvien_id": 95,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B23DCCE046",
+    "thanhvien_id": 96,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B23DCCE047",
+    "thanhvien_id": 97,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B23DCCE048",
+    "thanhvien_id": 98,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B23DCCE049",
+    "thanhvien_id": 99,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B23DCCE050",
+    "thanhvien_id": 100,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B23DCCE051",
+    "thanhvien_id": 101,
+    "lophanhchinh_id": 1
+  },
+  {
+    "masv": "B23DCCE052",
+    "thanhvien_id": 102,
+    "lophanhchinh_id": 2
+  },
+  {
+    "masv": "B23DCCE053",
+    "thanhvien_id": 103,
+    "lophanhchinh_id": 2
+  },
+  {
+    "masv": "B23DCCE054",
+    "thanhvien_id": 104,
+    "lophanhchinh_id": 2
+  },
+  {
+    "masv": "B23DCCE055",
+    "thanhvien_id": 105,
+    "lophanhchinh_id": 2
+  },
+  {
+    "masv": "B23DCCE056",
+    "thanhvien_id": 106,
+    "lophanhchinh_id": 2
+  },
+  {
+    "masv": "B23DCCE057",
+    "thanhvien_id": 107,
+    "lophanhchinh_id": 2
+  },
+  {
+    "masv": "B23DCCE058",
+    "thanhvien_id": 108,
+    "lophanhchinh_id": 2
+  },
+  {
+    "masv": "B23DCCE059",
+    "thanhvien_id": 109,
+    "lophanhchinh_id": 2
+  },
+  {
+    "masv": "B23DCCE060",
+    "thanhvien_id": 110,
+    "lophanhchinh_id": 2
+  },
+  {
+    "masv": "B23DCCE061",
+    "thanhvien_id": 111,
+    "lophanhchinh_id": 2
+  },
+  {
+    "masv": "B23DCCE062",
+    "thanhvien_id": 112,
+    "lophanhchinh_id": 2
+  },
+  {
+    "masv": "B23DCCE063",
+    "thanhvien_id": 113,
+    "lophanhchinh_id": 2
+  },
+  {
+    "masv": "B23DCCE064",
+    "thanhvien_id": 114,
+    "lophanhchinh_id": 2
+  },
+  {
+    "masv": "B23DCCE065",
+    "thanhvien_id": 115,
+    "lophanhchinh_id": 2
+  },
+  {
+    "masv": "B23DCCE066",
+    "thanhvien_id": 116,
+    "lophanhchinh_id": 2
+  },
+  {
+    "masv": "B23DCCE067",
+    "thanhvien_id": 117,
+    "lophanhchinh_id": 2
+  },
+  {
+    "masv": "B23DCCE068",
+    "thanhvien_id": 118,
+    "lophanhchinh_id": 2
+  },
+  {
+    "masv": "B23DCCE069",
+    "thanhvien_id": 119,
+    "lophanhchinh_id": 2
+  },
+  {
+    "masv": "B23DCCE070",
+    "thanhvien_id": 120,
+    "lophanhchinh_id": 2
+  },
+  {
+    "masv": "B23DCCE071",
+    "thanhvien_id": 121,
+    "lophanhchinh_id": 2
+  },
+  {
+    "masv": "B23DCCE072",
+    "thanhvien_id": 122,
+    "lophanhchinh_id": 2
+  },
+  {
+    "masv": "B23DCCE073",
+    "thanhvien_id": 123,
+    "lophanhchinh_id": 2
+  },
+  {
+    "masv": "B23DCCE074",
+    "thanhvien_id": 124,
+    "lophanhchinh_id": 2
+  },
+  {
+    "masv": "B23DCCE075",
+    "thanhvien_id": 125,
+    "lophanhchinh_id": 2
+  },
+  {
+    "masv": "B23DCCE076",
+    "thanhvien_id": 126,
+    "lophanhchinh_id": 2
+  },
+  {
+    "masv": "B23DCCE077",
+    "thanhvien_id": 127,
+    "lophanhchinh_id": 2
+  },
+  {
+    "masv": "B23DCCE078",
+    "thanhvien_id": 128,
+    "lophanhchinh_id": 2
+  },
+  {
+    "masv": "B23DCCE079",
+    "thanhvien_id": 129,
+    "lophanhchinh_id": 2
+  },
+  {
+    "masv": "B23DCCE080",
+    "thanhvien_id": 130,
+    "lophanhchinh_id": 2
+  },
+  {
+    "masv": "B23DCCE081",
+    "thanhvien_id": 131,
+    "lophanhchinh_id": 2
+  },
+  {
+    "masv": "B23DCCE082",
+    "thanhvien_id": 132,
+    "lophanhchinh_id": 2
+  },
+  {
+    "masv": "B23DCCE083",
+    "thanhvien_id": 133,
+    "lophanhchinh_id": 2
+  },
+  {
+    "masv": "B23DCCE084",
+    "thanhvien_id": 134,
+    "lophanhchinh_id": 2
+  },
+  {
+    "masv": "B23DCCE085",
+    "thanhvien_id": 135,
+    "lophanhchinh_id": 2
+  },
+  {
+    "masv": "B23DCCE086",
+    "thanhvien_id": 136,
+    "lophanhchinh_id": 2
+  },
+  {
+    "masv": "B23DCCE087",
+    "thanhvien_id": 137,
+    "lophanhchinh_id": 2
+  },
+  {
+    "masv": "B23DCCE088",
+    "thanhvien_id": 138,
+    "lophanhchinh_id": 2
+  },
+  {
+    "masv": "B23DCCE089",
+    "thanhvien_id": 139,
+    "lophanhchinh_id": 2
+  },
+  {
+    "masv": "B23DCCE090",
+    "thanhvien_id": 140,
+    "lophanhchinh_id": 2
+  },
+  {
+    "masv": "B23DCCE091",
+    "thanhvien_id": 141,
+    "lophanhchinh_id": 2
+  },
+  {
+    "masv": "B23DCCE092",
+    "thanhvien_id": 142,
+    "lophanhchinh_id": 2
+  },
+  {
+    "masv": "B23DCCE093",
+    "thanhvien_id": 143,
+    "lophanhchinh_id": 2
+  },
+  {
+    "masv": "B23DCCE094",
+    "thanhvien_id": 144,
+    "lophanhchinh_id": 2
+  },
+  {
+    "masv": "B23DCCE095",
+    "thanhvien_id": 145,
+    "lophanhchinh_id": 2
+  },
+  {
+    "masv": "B23DCCE096",
+    "thanhvien_id": 146,
+    "lophanhchinh_id": 2
+  },
+  {
+    "masv": "B23DCCE097",
+    "thanhvien_id": 147,
+    "lophanhchinh_id": 2
+  },
+  {
+    "masv": "B23DCCE098",
+    "thanhvien_id": 148,
+    "lophanhchinh_id": 2
+  },
+  {
+    "masv": "B23DCCE099",
+    "thanhvien_id": 149,
+    "lophanhchinh_id": 2
+  },
+  {
+    "masv": "B23DCCE100",
+    "thanhvien_id": 150,
+    "lophanhchinh_id": 2
+  },
+  {
+    "masv": "B23DCCE101",
+    "thanhvien_id": 151,
+    "lophanhchinh_id": 2
+  },
+  {
+    "masv": "B23DCAT001",
+    "thanhvien_id": 152,
+    "lophanhchinh_id": 3
+  },
+  {
+    "masv": "B23DCAT002",
+    "thanhvien_id": 153,
+    "lophanhchinh_id": 3
+  },
+  {
+    "masv": "B23DCAT003",
+    "thanhvien_id": 154,
+    "lophanhchinh_id": 3
+  },
+  {
+    "masv": "B23DCAT004",
+    "thanhvien_id": 155,
+    "lophanhchinh_id": 3
+  },
+  {
+    "masv": "B23DCAT005",
+    "thanhvien_id": 156,
+    "lophanhchinh_id": 3
+  },
+  {
+    "masv": "B23DCAT006",
+    "thanhvien_id": 157,
+    "lophanhchinh_id": 3
+  },
+  {
+    "masv": "B23DCAT007",
+    "thanhvien_id": 158,
+    "lophanhchinh_id": 3
+  },
+  {
+    "masv": "B23DCAT008",
+    "thanhvien_id": 159,
+    "lophanhchinh_id": 3
+  },
+  {
+    "masv": "B23DCAT009",
+    "thanhvien_id": 160,
+    "lophanhchinh_id": 3
+  },
+  {
+    "masv": "B23DCAT010",
+    "thanhvien_id": 161,
+    "lophanhchinh_id": 3
+  },
+  {
+    "masv": "B23DCAT011",
+    "thanhvien_id": 162,
+    "lophanhchinh_id": 3
+  },
+  {
+    "masv": "B23DCAT012",
+    "thanhvien_id": 163,
+    "lophanhchinh_id": 3
+  },
+  {
+    "masv": "B23DCAT013",
+    "thanhvien_id": 164,
+    "lophanhchinh_id": 3
+  },
+  {
+    "masv": "B23DCAT014",
+    "thanhvien_id": 165,
+    "lophanhchinh_id": 3
+  },
+  {
+    "masv": "B23DCAT015",
+    "thanhvien_id": 166,
+    "lophanhchinh_id": 3
+  },
+  {
+    "masv": "B23DCAT016",
+    "thanhvien_id": 167,
+    "lophanhchinh_id": 3
+  },
+  {
+    "masv": "B23DCAT017",
+    "thanhvien_id": 168,
+    "lophanhchinh_id": 3
+  },
+  {
+    "masv": "B23DCAT018",
+    "thanhvien_id": 169,
+    "lophanhchinh_id": 3
+  },
+  {
+    "masv": "B23DCAT019",
+    "thanhvien_id": 170,
+    "lophanhchinh_id": 3
+  },
+  {
+    "masv": "B23DCAT020",
+    "thanhvien_id": 171,
+    "lophanhchinh_id": 3
+  },
+  {
+    "masv": "B23DCAT021",
+    "thanhvien_id": 172,
+    "lophanhchinh_id": 3
+  },
+  {
+    "masv": "B23DCAT022",
+    "thanhvien_id": 173,
+    "lophanhchinh_id": 3
+  },
+  {
+    "masv": "B23DCAT023",
+    "thanhvien_id": 174,
+    "lophanhchinh_id": 3
+  },
+  {
+    "masv": "B23DCAT024",
+    "thanhvien_id": 175,
+    "lophanhchinh_id": 3
+  },
+  {
+    "masv": "B23DCAT025",
+    "thanhvien_id": 176,
+    "lophanhchinh_id": 3
+  },
+  {
+    "masv": "B23DCAT026",
+    "thanhvien_id": 177,
+    "lophanhchinh_id": 3
+  },
+  {
+    "masv": "B23DCAT027",
+    "thanhvien_id": 178,
+    "lophanhchinh_id": 3
+  },
+  {
+    "masv": "B23DCAT028",
+    "thanhvien_id": 179,
+    "lophanhchinh_id": 3
+  },
+  {
+    "masv": "B23DCAT029",
+    "thanhvien_id": 180,
+    "lophanhchinh_id": 3
+  },
+  {
+    "masv": "B23DCAT030",
+    "thanhvien_id": 181,
+    "lophanhchinh_id": 3
+  },
+  {
+    "masv": "B23DCAT031",
+    "thanhvien_id": 182,
+    "lophanhchinh_id": 3
+  },
+  {
+    "masv": "B23DCAT032",
+    "thanhvien_id": 183,
+    "lophanhchinh_id": 3
+  },
+  {
+    "masv": "B23DCAT033",
+    "thanhvien_id": 184,
+    "lophanhchinh_id": 3
+  },
+  {
+    "masv": "B23DCAT034",
+    "thanhvien_id": 185,
+    "lophanhchinh_id": 3
+  },
+  {
+    "masv": "B23DCAT035",
+    "thanhvien_id": 186,
+    "lophanhchinh_id": 3
+  },
+  {
+    "masv": "B23DCAT036",
+    "thanhvien_id": 187,
+    "lophanhchinh_id": 3
+  },
+  {
+    "masv": "B23DCAT037",
+    "thanhvien_id": 188,
+    "lophanhchinh_id": 3
+  },
+  {
+    "masv": "B23DCAT038",
+    "thanhvien_id": 189,
+    "lophanhchinh_id": 3
+  },
+  {
+    "masv": "B23DCAT039",
+    "thanhvien_id": 190,
+    "lophanhchinh_id": 3
+  },
+  {
+    "masv": "B23DCAT040",
+    "thanhvien_id": 191,
+    "lophanhchinh_id": 3
+  },
+  {
+    "masv": "B23DCAT041",
+    "thanhvien_id": 192,
+    "lophanhchinh_id": 3
+  },
+  {
+    "masv": "B23DCAT042",
+    "thanhvien_id": 193,
+    "lophanhchinh_id": 3
+  },
+  {
+    "masv": "B23DCAT043",
+    "thanhvien_id": 194,
+    "lophanhchinh_id": 3
+  },
+  {
+    "masv": "B23DCAT044",
+    "thanhvien_id": 195,
+    "lophanhchinh_id": 3
+  },
+  {
+    "masv": "B23DCAT045",
+    "thanhvien_id": 196,
+    "lophanhchinh_id": 3
+  },
+  {
+    "masv": "B23DCAT046",
+    "thanhvien_id": 197,
+    "lophanhchinh_id": 3
+  },
+  {
+    "masv": "B23DCAT047",
+    "thanhvien_id": 198,
+    "lophanhchinh_id": 3
+  },
+  {
+    "masv": "B23DCAT048",
+    "thanhvien_id": 199,
+    "lophanhchinh_id": 3
+  },
+  {
+    "masv": "B23DCAT049",
+    "thanhvien_id": 200,
+    "lophanhchinh_id": 3
+  },
+  {
+    "masv": "B23DCAT050",
+    "thanhvien_id": 201,
+    "lophanhchinh_id": 3
+  },
+  {
+    "masv": "B23DCAT051",
+    "thanhvien_id": 202,
+    "lophanhchinh_id": 4
+  },
+  {
+    "masv": "B23DCAT052",
+    "thanhvien_id": 203,
+    "lophanhchinh_id": 4
+  },
+  {
+    "masv": "B23DCAT053",
+    "thanhvien_id": 204,
+    "lophanhchinh_id": 4
+  },
+  {
+    "masv": "B23DCAT054",
+    "thanhvien_id": 205,
+    "lophanhchinh_id": 4
+  },
+  {
+    "masv": "B23DCAT055",
+    "thanhvien_id": 206,
+    "lophanhchinh_id": 4
+  },
+  {
+    "masv": "B23DCAT056",
+    "thanhvien_id": 207,
+    "lophanhchinh_id": 4
+  },
+  {
+    "masv": "B23DCAT057",
+    "thanhvien_id": 208,
+    "lophanhchinh_id": 4
+  },
+  {
+    "masv": "B23DCAT058",
+    "thanhvien_id": 209,
+    "lophanhchinh_id": 4
+  },
+  {
+    "masv": "B23DCAT059",
+    "thanhvien_id": 210,
+    "lophanhchinh_id": 4
+  },
+  {
+    "masv": "B23DCAT060",
+    "thanhvien_id": 211,
+    "lophanhchinh_id": 4
+  },
+  {
+    "masv": "B23DCAT061",
+    "thanhvien_id": 212,
+    "lophanhchinh_id": 4
+  },
+  {
+    "masv": "B23DCAT062",
+    "thanhvien_id": 213,
+    "lophanhchinh_id": 4
+  },
+  {
+    "masv": "B23DCAT063",
+    "thanhvien_id": 214,
+    "lophanhchinh_id": 4
+  },
+  {
+    "masv": "B23DCAT064",
+    "thanhvien_id": 215,
+    "lophanhchinh_id": 4
+  },
+  {
+    "masv": "B23DCAT065",
+    "thanhvien_id": 216,
+    "lophanhchinh_id": 4
+  },
+  {
+    "masv": "B23DCAT066",
+    "thanhvien_id": 217,
+    "lophanhchinh_id": 4
+  },
+  {
+    "masv": "B23DCAT067",
+    "thanhvien_id": 218,
+    "lophanhchinh_id": 4
+  },
+  {
+    "masv": "B23DCAT068",
+    "thanhvien_id": 219,
+    "lophanhchinh_id": 4
+  },
+  {
+    "masv": "B23DCAT069",
+    "thanhvien_id": 220,
+    "lophanhchinh_id": 4
+  },
+  {
+    "masv": "B23DCAT070",
+    "thanhvien_id": 221,
+    "lophanhchinh_id": 4
+  },
+  {
+    "masv": "B23DCAT071",
+    "thanhvien_id": 222,
+    "lophanhchinh_id": 4
+  },
+  {
+    "masv": "B23DCAT072",
+    "thanhvien_id": 223,
+    "lophanhchinh_id": 4
+  },
+  {
+    "masv": "B23DCAT073",
+    "thanhvien_id": 224,
+    "lophanhchinh_id": 4
+  },
+  {
+    "masv": "B23DCAT074",
+    "thanhvien_id": 225,
+    "lophanhchinh_id": 4
+  },
+  {
+    "masv": "B23DCAT075",
+    "thanhvien_id": 226,
+    "lophanhchinh_id": 4
+  },
+  {
+    "masv": "B23DCAT076",
+    "thanhvien_id": 227,
+    "lophanhchinh_id": 4
+  },
+  {
+    "masv": "B23DCAT077",
+    "thanhvien_id": 228,
+    "lophanhchinh_id": 4
+  },
+  {
+    "masv": "B23DCAT078",
+    "thanhvien_id": 229,
+    "lophanhchinh_id": 4
+  },
+  {
+    "masv": "B23DCAT079",
+    "thanhvien_id": 230,
+    "lophanhchinh_id": 4
+  },
+  {
+    "masv": "B23DCAT080",
+    "thanhvien_id": 231,
+    "lophanhchinh_id": 4
+  },
+  {
+    "masv": "B23DCAT081",
+    "thanhvien_id": 232,
+    "lophanhchinh_id": 4
+  },
+  {
+    "masv": "B23DCAT082",
+    "thanhvien_id": 233,
+    "lophanhchinh_id": 4
+  },
+  {
+    "masv": "B23DCAT083",
+    "thanhvien_id": 234,
+    "lophanhchinh_id": 4
+  },
+  {
+    "masv": "B23DCAT084",
+    "thanhvien_id": 235,
+    "lophanhchinh_id": 4
+  },
+  {
+    "masv": "B23DCAT085",
+    "thanhvien_id": 236,
+    "lophanhchinh_id": 4
+  },
+  {
+    "masv": "B23DCAT086",
+    "thanhvien_id": 237,
+    "lophanhchinh_id": 4
+  },
+  {
+    "masv": "B23DCAT087",
+    "thanhvien_id": 238,
+    "lophanhchinh_id": 4
+  },
+  {
+    "masv": "B23DCAT088",
+    "thanhvien_id": 239,
+    "lophanhchinh_id": 4
+  },
+  {
+    "masv": "B23DCAT089",
+    "thanhvien_id": 240,
+    "lophanhchinh_id": 4
+  },
+  {
+    "masv": "B23DCAT090",
+    "thanhvien_id": 241,
+    "lophanhchinh_id": 4
+  },
+  {
+    "masv": "B23DCAT091",
+    "thanhvien_id": 242,
+    "lophanhchinh_id": 4
+  },
+  {
+    "masv": "B23DCAT092",
+    "thanhvien_id": 243,
+    "lophanhchinh_id": 4
+  },
+  {
+    "masv": "B23DCAT093",
+    "thanhvien_id": 244,
+    "lophanhchinh_id": 4
+  },
+  {
+    "masv": "B23DCAT094",
+    "thanhvien_id": 245,
+    "lophanhchinh_id": 4
+  },
+  {
+    "masv": "B23DCAT095",
+    "thanhvien_id": 246,
+    "lophanhchinh_id": 4
+  },
+  {
+    "masv": "B23DCAT096",
+    "thanhvien_id": 247,
+    "lophanhchinh_id": 4
+  },
+  {
+    "masv": "B23DCAT097",
+    "thanhvien_id": 248,
+    "lophanhchinh_id": 4
+  },
+  {
+    "masv": "B23DCAT098",
+    "thanhvien_id": 249,
+    "lophanhchinh_id": 4
+  },
+  {
+    "masv": "B23DCAT099",
+    "thanhvien_id": 250,
+    "lophanhchinh_id": 4
+  },
+  {
+    "masv": "B23DCAT100",
+    "thanhvien_id": 251,
+    "lophanhchinh_id": 4
+  },
+  {
+    "masv": "B23DCPM001",
+    "thanhvien_id": 252,
+    "lophanhchinh_id": 5
+  },
+  {
+    "masv": "B23DCPM002",
+    "thanhvien_id": 253,
+    "lophanhchinh_id": 5
+  },
+  {
+    "masv": "B23DCPM003",
+    "thanhvien_id": 254,
+    "lophanhchinh_id": 5
+  },
+  {
+    "masv": "B23DCPM004",
+    "thanhvien_id": 255,
+    "lophanhchinh_id": 5
+  },
+  {
+    "masv": "B23DCPM005",
+    "thanhvien_id": 256,
+    "lophanhchinh_id": 5
+  },
+  {
+    "masv": "B23DCPM006",
+    "thanhvien_id": 257,
+    "lophanhchinh_id": 5
+  },
+  {
+    "masv": "B23DCPM007",
+    "thanhvien_id": 258,
+    "lophanhchinh_id": 5
+  },
+  {
+    "masv": "B23DCPM008",
+    "thanhvien_id": 259,
+    "lophanhchinh_id": 5
+  },
+  {
+    "masv": "B23DCPM009",
+    "thanhvien_id": 260,
+    "lophanhchinh_id": 5
+  },
+  {
+    "masv": "B23DCPM010",
+    "thanhvien_id": 261,
+    "lophanhchinh_id": 5
+  },
+  {
+    "masv": "B23DCPM011",
+    "thanhvien_id": 262,
+    "lophanhchinh_id": 5
+  },
+  {
+    "masv": "B23DCPM012",
+    "thanhvien_id": 263,
+    "lophanhchinh_id": 5
+  },
+  {
+    "masv": "B23DCPM013",
+    "thanhvien_id": 264,
+    "lophanhchinh_id": 5
+  },
+  {
+    "masv": "B23DCPM014",
+    "thanhvien_id": 265,
+    "lophanhchinh_id": 5
+  },
+  {
+    "masv": "B23DCPM015",
+    "thanhvien_id": 266,
+    "lophanhchinh_id": 5
+  },
+  {
+    "masv": "B23DCPM016",
+    "thanhvien_id": 267,
+    "lophanhchinh_id": 5
+  },
+  {
+    "masv": "B23DCPM017",
+    "thanhvien_id": 268,
+    "lophanhchinh_id": 5
+  },
+  {
+    "masv": "B23DCPM018",
+    "thanhvien_id": 269,
+    "lophanhchinh_id": 5
+  },
+  {
+    "masv": "B23DCPM019",
+    "thanhvien_id": 270,
+    "lophanhchinh_id": 5
+  },
+  {
+    "masv": "B23DCPM020",
+    "thanhvien_id": 271,
+    "lophanhchinh_id": 5
+  },
+  {
+    "masv": "B23DCPM021",
+    "thanhvien_id": 272,
+    "lophanhchinh_id": 5
+  },
+  {
+    "masv": "B23DCPM022",
+    "thanhvien_id": 273,
+    "lophanhchinh_id": 5
+  },
+  {
+    "masv": "B23DCPM023",
+    "thanhvien_id": 274,
+    "lophanhchinh_id": 5
+  },
+  {
+    "masv": "B23DCPM024",
+    "thanhvien_id": 275,
+    "lophanhchinh_id": 5
+  },
+  {
+    "masv": "B23DCPM025",
+    "thanhvien_id": 276,
+    "lophanhchinh_id": 5
+  },
+  {
+    "masv": "B23DCPM026",
+    "thanhvien_id": 277,
+    "lophanhchinh_id": 5
+  },
+  {
+    "masv": "B23DCPM027",
+    "thanhvien_id": 278,
+    "lophanhchinh_id": 5
+  },
+  {
+    "masv": "B23DCPM028",
+    "thanhvien_id": 279,
+    "lophanhchinh_id": 5
+  },
+  {
+    "masv": "B23DCPM029",
+    "thanhvien_id": 280,
+    "lophanhchinh_id": 5
+  },
+  {
+    "masv": "B23DCPM030",
+    "thanhvien_id": 281,
+    "lophanhchinh_id": 5
+  },
+  {
+    "masv": "B23DCPM031",
+    "thanhvien_id": 282,
+    "lophanhchinh_id": 5
+  },
+  {
+    "masv": "B23DCPM032",
+    "thanhvien_id": 283,
+    "lophanhchinh_id": 5
+  },
+  {
+    "masv": "B23DCPM033",
+    "thanhvien_id": 284,
+    "lophanhchinh_id": 5
+  },
+  {
+    "masv": "B23DCPM034",
+    "thanhvien_id": 285,
+    "lophanhchinh_id": 5
+  },
+  {
+    "masv": "B23DCPM035",
+    "thanhvien_id": 286,
+    "lophanhchinh_id": 5
+  },
+  {
+    "masv": "B23DCPM036",
+    "thanhvien_id": 287,
+    "lophanhchinh_id": 5
+  },
+  {
+    "masv": "B23DCPM037",
+    "thanhvien_id": 288,
+    "lophanhchinh_id": 5
+  },
+  {
+    "masv": "B23DCPM038",
+    "thanhvien_id": 289,
+    "lophanhchinh_id": 5
+  },
+  {
+    "masv": "B23DCPM039",
+    "thanhvien_id": 290,
+    "lophanhchinh_id": 5
+  },
+  {
+    "masv": "B23DCPM040",
+    "thanhvien_id": 291,
+    "lophanhchinh_id": 5
+  },
+  {
+    "masv": "B23DCPM041",
+    "thanhvien_id": 292,
+    "lophanhchinh_id": 5
+  },
+  {
+    "masv": "B23DCPM042",
+    "thanhvien_id": 293,
+    "lophanhchinh_id": 5
+  },
+  {
+    "masv": "B23DCPM043",
+    "thanhvien_id": 294,
+    "lophanhchinh_id": 5
+  },
+  {
+    "masv": "B23DCPM044",
+    "thanhvien_id": 295,
+    "lophanhchinh_id": 5
+  },
+  {
+    "masv": "B23DCPM045",
+    "thanhvien_id": 296,
+    "lophanhchinh_id": 5
+  },
+  {
+    "masv": "B23DCPM046",
+    "thanhvien_id": 297,
+    "lophanhchinh_id": 5
+  },
+  {
+    "masv": "B23DCPM047",
+    "thanhvien_id": 298,
+    "lophanhchinh_id": 5
+  },
+  {
+    "masv": "B23DCPM048",
+    "thanhvien_id": 299,
+    "lophanhchinh_id": 5
+  },
+  {
+    "masv": "B23DCPM049",
+    "thanhvien_id": 300,
+    "lophanhchinh_id": 5
+  },
+  {
+    "masv": "B23DCPM050",
+    "thanhvien_id": 301,
+    "lophanhchinh_id": 5
+  },
+  {
+    "masv": "B23DCPM051",
+    "thanhvien_id": 302,
+    "lophanhchinh_id": 6
+  },
+  {
+    "masv": "B23DCPM052",
+    "thanhvien_id": 303,
+    "lophanhchinh_id": 6
+  },
+  {
+    "masv": "B23DCPM053",
+    "thanhvien_id": 304,
+    "lophanhchinh_id": 6
+  },
+  {
+    "masv": "B23DCPM054",
+    "thanhvien_id": 305,
+    "lophanhchinh_id": 6
+  },
+  {
+    "masv": "B23DCPM055",
+    "thanhvien_id": 306,
+    "lophanhchinh_id": 6
+  },
+  {
+    "masv": "B23DCPM056",
+    "thanhvien_id": 307,
+    "lophanhchinh_id": 6
+  },
+  {
+    "masv": "B23DCPM057",
+    "thanhvien_id": 308,
+    "lophanhchinh_id": 6
+  },
+  {
+    "masv": "B23DCPM058",
+    "thanhvien_id": 309,
+    "lophanhchinh_id": 6
+  },
+  {
+    "masv": "B23DCPM059",
+    "thanhvien_id": 310,
+    "lophanhchinh_id": 6
+  },
+  {
+    "masv": "B23DCPM060",
+    "thanhvien_id": 311,
+    "lophanhchinh_id": 6
+  },
+  {
+    "masv": "B23DCPM061",
+    "thanhvien_id": 312,
+    "lophanhchinh_id": 6
+  },
+  {
+    "masv": "B23DCPM062",
+    "thanhvien_id": 313,
+    "lophanhchinh_id": 6
+  },
+  {
+    "masv": "B23DCPM063",
+    "thanhvien_id": 314,
+    "lophanhchinh_id": 6
+  },
+  {
+    "masv": "B23DCPM064",
+    "thanhvien_id": 315,
+    "lophanhchinh_id": 6
+  },
+  {
+    "masv": "B23DCPM065",
+    "thanhvien_id": 316,
+    "lophanhchinh_id": 6
+  },
+  {
+    "masv": "B23DCPM066",
+    "thanhvien_id": 317,
+    "lophanhchinh_id": 6
+  },
+  {
+    "masv": "B23DCPM067",
+    "thanhvien_id": 318,
+    "lophanhchinh_id": 6
+  },
+  {
+    "masv": "B23DCPM068",
+    "thanhvien_id": 319,
+    "lophanhchinh_id": 6
+  },
+  {
+    "masv": "B23DCPM069",
+    "thanhvien_id": 320,
+    "lophanhchinh_id": 6
+  },
+  {
+    "masv": "B23DCPM070",
+    "thanhvien_id": 321,
+    "lophanhchinh_id": 6
+  },
+  {
+    "masv": "B23DCPM071",
+    "thanhvien_id": 322,
+    "lophanhchinh_id": 6
+  },
+  {
+    "masv": "B23DCPM072",
+    "thanhvien_id": 323,
+    "lophanhchinh_id": 6
+  },
+  {
+    "masv": "B23DCPM073",
+    "thanhvien_id": 324,
+    "lophanhchinh_id": 6
+  },
+  {
+    "masv": "B23DCPM074",
+    "thanhvien_id": 325,
+    "lophanhchinh_id": 6
+  },
+  {
+    "masv": "B23DCPM075",
+    "thanhvien_id": 326,
+    "lophanhchinh_id": 6
+  },
+  {
+    "masv": "B23DCPM076",
+    "thanhvien_id": 327,
+    "lophanhchinh_id": 6
+  },
+  {
+    "masv": "B23DCPM077",
+    "thanhvien_id": 328,
+    "lophanhchinh_id": 6
+  },
+  {
+    "masv": "B23DCPM078",
+    "thanhvien_id": 329,
+    "lophanhchinh_id": 6
+  },
+  {
+    "masv": "B23DCPM079",
+    "thanhvien_id": 330,
+    "lophanhchinh_id": 6
+  },
+  {
+    "masv": "B23DCPM080",
+    "thanhvien_id": 331,
+    "lophanhchinh_id": 6
+  },
+  {
+    "masv": "B23DCPM081",
+    "thanhvien_id": 332,
+    "lophanhchinh_id": 6
+  },
+  {
+    "masv": "B23DCPM082",
+    "thanhvien_id": 333,
+    "lophanhchinh_id": 6
+  },
+  {
+    "masv": "B23DCPM083",
+    "thanhvien_id": 334,
+    "lophanhchinh_id": 6
+  },
+  {
+    "masv": "B23DCPM084",
+    "thanhvien_id": 335,
+    "lophanhchinh_id": 6
+  },
+  {
+    "masv": "B23DCPM085",
+    "thanhvien_id": 336,
+    "lophanhchinh_id": 6
+  },
+  {
+    "masv": "B23DCPM086",
+    "thanhvien_id": 337,
+    "lophanhchinh_id": 6
+  },
+  {
+    "masv": "B23DCPM087",
+    "thanhvien_id": 338,
+    "lophanhchinh_id": 6
+  },
+  {
+    "masv": "B23DCPM088",
+    "thanhvien_id": 339,
+    "lophanhchinh_id": 6
+  },
+  {
+    "masv": "B23DCPM089",
+    "thanhvien_id": 340,
+    "lophanhchinh_id": 6
+  },
+  {
+    "masv": "B23DCPM090",
+    "thanhvien_id": 341,
+    "lophanhchinh_id": 6
+  },
+  {
+    "masv": "B23DCPM091",
+    "thanhvien_id": 342,
+    "lophanhchinh_id": 6
+  },
+  {
+    "masv": "B23DCPM092",
+    "thanhvien_id": 343,
+    "lophanhchinh_id": 6
+  },
+  {
+    "masv": "B23DCPM093",
+    "thanhvien_id": 344,
+    "lophanhchinh_id": 6
+  },
+  {
+    "masv": "B23DCPM094",
+    "thanhvien_id": 345,
+    "lophanhchinh_id": 6
+  },
+  {
+    "masv": "B23DCPM095",
+    "thanhvien_id": 346,
+    "lophanhchinh_id": 6
+  },
+  {
+    "masv": "B23DCPM096",
+    "thanhvien_id": 347,
+    "lophanhchinh_id": 6
+  },
+  {
+    "masv": "B23DCPM097",
+    "thanhvien_id": 348,
+    "lophanhchinh_id": 6
+  },
+  {
+    "masv": "B23DCPM098",
+    "thanhvien_id": 349,
+    "lophanhchinh_id": 6
+  },
+  {
+    "masv": "B23DCPM099",
+    "thanhvien_id": 350,
+    "lophanhchinh_id": 6
+  },
+  {
+    "masv": "B23DCPM100",
+    "thanhvien_id": 351,
+    "lophanhchinh_id": 6
+  },
+  {
+    "masv": "B23DCHT001",
+    "thanhvien_id": 352,
+    "lophanhchinh_id": 7
+  },
+  {
+    "masv": "B23DCHT002",
+    "thanhvien_id": 353,
+    "lophanhchinh_id": 7
+  },
+  {
+    "masv": "B23DCHT003",
+    "thanhvien_id": 354,
+    "lophanhchinh_id": 7
+  },
+  {
+    "masv": "B23DCHT004",
+    "thanhvien_id": 355,
+    "lophanhchinh_id": 7
+  },
+  {
+    "masv": "B23DCHT005",
+    "thanhvien_id": 356,
+    "lophanhchinh_id": 7
+  },
+  {
+    "masv": "B23DCHT006",
+    "thanhvien_id": 357,
+    "lophanhchinh_id": 7
+  },
+  {
+    "masv": "B23DCHT007",
+    "thanhvien_id": 358,
+    "lophanhchinh_id": 7
+  },
+  {
+    "masv": "B23DCHT008",
+    "thanhvien_id": 359,
+    "lophanhchinh_id": 7
+  },
+  {
+    "masv": "B23DCHT009",
+    "thanhvien_id": 360,
+    "lophanhchinh_id": 7
+  },
+  {
+    "masv": "B23DCHT010",
+    "thanhvien_id": 361,
+    "lophanhchinh_id": 7
+  },
+  {
+    "masv": "B23DCHT011",
+    "thanhvien_id": 362,
+    "lophanhchinh_id": 7
+  },
+  {
+    "masv": "B23DCHT012",
+    "thanhvien_id": 363,
+    "lophanhchinh_id": 7
+  },
+  {
+    "masv": "B23DCHT013",
+    "thanhvien_id": 364,
+    "lophanhchinh_id": 7
+  },
+  {
+    "masv": "B23DCHT014",
+    "thanhvien_id": 365,
+    "lophanhchinh_id": 7
+  },
+  {
+    "masv": "B23DCHT015",
+    "thanhvien_id": 366,
+    "lophanhchinh_id": 7
+  },
+  {
+    "masv": "B23DCHT016",
+    "thanhvien_id": 367,
+    "lophanhchinh_id": 7
+  },
+  {
+    "masv": "B23DCHT017",
+    "thanhvien_id": 368,
+    "lophanhchinh_id": 7
+  },
+  {
+    "masv": "B23DCHT018",
+    "thanhvien_id": 369,
+    "lophanhchinh_id": 7
+  },
+  {
+    "masv": "B23DCHT019",
+    "thanhvien_id": 370,
+    "lophanhchinh_id": 7
+  },
+  {
+    "masv": "B23DCHT020",
+    "thanhvien_id": 371,
+    "lophanhchinh_id": 7
+  },
+  {
+    "masv": "B23DCHT021",
+    "thanhvien_id": 372,
+    "lophanhchinh_id": 7
+  },
+  {
+    "masv": "B23DCHT022",
+    "thanhvien_id": 373,
+    "lophanhchinh_id": 7
+  },
+  {
+    "masv": "B23DCHT023",
+    "thanhvien_id": 374,
+    "lophanhchinh_id": 7
+  },
+  {
+    "masv": "B23DCHT024",
+    "thanhvien_id": 375,
+    "lophanhchinh_id": 7
+  },
+  {
+    "masv": "B23DCHT025",
+    "thanhvien_id": 376,
+    "lophanhchinh_id": 7
+  },
+  {
+    "masv": "B23DCHT026",
+    "thanhvien_id": 377,
+    "lophanhchinh_id": 7
+  },
+  {
+    "masv": "B23DCHT027",
+    "thanhvien_id": 378,
+    "lophanhchinh_id": 7
+  },
+  {
+    "masv": "B23DCHT028",
+    "thanhvien_id": 379,
+    "lophanhchinh_id": 7
+  },
+  {
+    "masv": "B23DCHT029",
+    "thanhvien_id": 380,
+    "lophanhchinh_id": 7
+  },
+  {
+    "masv": "B23DCHT030",
+    "thanhvien_id": 381,
+    "lophanhchinh_id": 7
+  },
+  {
+    "masv": "B23DCHT031",
+    "thanhvien_id": 382,
+    "lophanhchinh_id": 7
+  },
+  {
+    "masv": "B23DCHT032",
+    "thanhvien_id": 383,
+    "lophanhchinh_id": 7
+  },
+  {
+    "masv": "B23DCHT033",
+    "thanhvien_id": 384,
+    "lophanhchinh_id": 7
+  },
+  {
+    "masv": "B23DCHT034",
+    "thanhvien_id": 385,
+    "lophanhchinh_id": 7
+  },
+  {
+    "masv": "B23DCHT035",
+    "thanhvien_id": 386,
+    "lophanhchinh_id": 7
+  },
+  {
+    "masv": "B23DCHT036",
+    "thanhvien_id": 387,
+    "lophanhchinh_id": 7
+  },
+  {
+    "masv": "B23DCHT037",
+    "thanhvien_id": 388,
+    "lophanhchinh_id": 7
+  },
+  {
+    "masv": "B23DCHT038",
+    "thanhvien_id": 389,
+    "lophanhchinh_id": 7
+  },
+  {
+    "masv": "B23DCHT039",
+    "thanhvien_id": 390,
+    "lophanhchinh_id": 7
+  },
+  {
+    "masv": "B23DCHT040",
+    "thanhvien_id": 391,
+    "lophanhchinh_id": 7
+  },
+  {
+    "masv": "B23DCHT041",
+    "thanhvien_id": 392,
+    "lophanhchinh_id": 7
+  },
+  {
+    "masv": "B23DCHT042",
+    "thanhvien_id": 393,
+    "lophanhchinh_id": 7
+  },
+  {
+    "masv": "B23DCHT043",
+    "thanhvien_id": 394,
+    "lophanhchinh_id": 7
+  },
+  {
+    "masv": "B23DCHT044",
+    "thanhvien_id": 395,
+    "lophanhchinh_id": 7
+  },
+  {
+    "masv": "B23DCHT045",
+    "thanhvien_id": 396,
+    "lophanhchinh_id": 7
+  },
+  {
+    "masv": "B23DCHT046",
+    "thanhvien_id": 397,
+    "lophanhchinh_id": 7
+  },
+  {
+    "masv": "B23DCHT047",
+    "thanhvien_id": 398,
+    "lophanhchinh_id": 7
+  },
+  {
+    "masv": "B23DCHT048",
+    "thanhvien_id": 399,
+    "lophanhchinh_id": 7
+  },
+  {
+    "masv": "B23DCHT049",
+    "thanhvien_id": 400,
+    "lophanhchinh_id": 7
+  },
+  {
+    "masv": "B23DCHT050",
+    "thanhvien_id": 401,
+    "lophanhchinh_id": 7
+  },
+  {
+    "masv": "B23DCHT051",
+    "thanhvien_id": 402,
+    "lophanhchinh_id": 8
+  },
+  {
+    "masv": "B23DCHT052",
+    "thanhvien_id": 403,
+    "lophanhchinh_id": 8
+  },
+  {
+    "masv": "B23DCHT053",
+    "thanhvien_id": 404,
+    "lophanhchinh_id": 8
+  },
+  {
+    "masv": "B23DCHT054",
+    "thanhvien_id": 405,
+    "lophanhchinh_id": 8
+  },
+  {
+    "masv": "B23DCHT055",
+    "thanhvien_id": 406,
+    "lophanhchinh_id": 8
+  },
+  {
+    "masv": "B23DCHT056",
+    "thanhvien_id": 407,
+    "lophanhchinh_id": 8
+  },
+  {
+    "masv": "B23DCHT057",
+    "thanhvien_id": 408,
+    "lophanhchinh_id": 8
+  },
+  {
+    "masv": "B23DCHT058",
+    "thanhvien_id": 409,
+    "lophanhchinh_id": 8
+  },
+  {
+    "masv": "B23DCHT059",
+    "thanhvien_id": 410,
+    "lophanhchinh_id": 8
+  },
+  {
+    "masv": "B23DCHT060",
+    "thanhvien_id": 411,
+    "lophanhchinh_id": 8
+  },
+  {
+    "masv": "B23DCHT061",
+    "thanhvien_id": 412,
+    "lophanhchinh_id": 8
+  },
+  {
+    "masv": "B23DCHT062",
+    "thanhvien_id": 413,
+    "lophanhchinh_id": 8
+  },
+  {
+    "masv": "B23DCHT063",
+    "thanhvien_id": 414,
+    "lophanhchinh_id": 8
+  },
+  {
+    "masv": "B23DCHT064",
+    "thanhvien_id": 415,
+    "lophanhchinh_id": 8
+  },
+  {
+    "masv": "B23DCHT065",
+    "thanhvien_id": 416,
+    "lophanhchinh_id": 8
+  },
+  {
+    "masv": "B23DCHT066",
+    "thanhvien_id": 417,
+    "lophanhchinh_id": 8
+  },
+  {
+    "masv": "B23DCHT067",
+    "thanhvien_id": 418,
+    "lophanhchinh_id": 8
+  },
+  {
+    "masv": "B23DCHT068",
+    "thanhvien_id": 419,
+    "lophanhchinh_id": 8
+  },
+  {
+    "masv": "B23DCHT069",
+    "thanhvien_id": 420,
+    "lophanhchinh_id": 8
+  },
+  {
+    "masv": "B23DCHT070",
+    "thanhvien_id": 421,
+    "lophanhchinh_id": 8
+  },
+  {
+    "masv": "B23DCHT071",
+    "thanhvien_id": 422,
+    "lophanhchinh_id": 8
+  },
+  {
+    "masv": "B23DCHT072",
+    "thanhvien_id": 423,
+    "lophanhchinh_id": 8
+  },
+  {
+    "masv": "B23DCHT073",
+    "thanhvien_id": 424,
+    "lophanhchinh_id": 8
+  },
+  {
+    "masv": "B23DCHT074",
+    "thanhvien_id": 425,
+    "lophanhchinh_id": 8
+  },
+  {
+    "masv": "B23DCHT075",
+    "thanhvien_id": 426,
+    "lophanhchinh_id": 8
+  },
+  {
+    "masv": "B23DCHT076",
+    "thanhvien_id": 427,
+    "lophanhchinh_id": 8
+  },
+  {
+    "masv": "B23DCHT077",
+    "thanhvien_id": 428,
+    "lophanhchinh_id": 8
+  },
+  {
+    "masv": "B23DCHT078",
+    "thanhvien_id": 429,
+    "lophanhchinh_id": 8
+  },
+  {
+    "masv": "B23DCHT079",
+    "thanhvien_id": 430,
+    "lophanhchinh_id": 8
+  },
+  {
+    "masv": "B23DCHT080",
+    "thanhvien_id": 431,
+    "lophanhchinh_id": 8
+  },
+  {
+    "masv": "B23DCHT081",
+    "thanhvien_id": 432,
+    "lophanhchinh_id": 8
+  },
+  {
+    "masv": "B23DCHT082",
+    "thanhvien_id": 433,
+    "lophanhchinh_id": 8
+  },
+  {
+    "masv": "B23DCHT083",
+    "thanhvien_id": 434,
+    "lophanhchinh_id": 8
+  },
+  {
+    "masv": "B23DCHT084",
+    "thanhvien_id": 435,
+    "lophanhchinh_id": 8
+  },
+  {
+    "masv": "B23DCHT085",
+    "thanhvien_id": 436,
+    "lophanhchinh_id": 8
+  },
+  {
+    "masv": "B23DCHT086",
+    "thanhvien_id": 437,
+    "lophanhchinh_id": 8
+  },
+  {
+    "masv": "B23DCHT087",
+    "thanhvien_id": 438,
+    "lophanhchinh_id": 8
+  },
+  {
+    "masv": "B23DCHT088",
+    "thanhvien_id": 439,
+    "lophanhchinh_id": 8
+  },
+  {
+    "masv": "B23DCHT089",
+    "thanhvien_id": 440,
+    "lophanhchinh_id": 8
+  },
+  {
+    "masv": "B23DCHT090",
+    "thanhvien_id": 441,
+    "lophanhchinh_id": 8
+  },
+  {
+    "masv": "B23DCHT091",
+    "thanhvien_id": 442,
+    "lophanhchinh_id": 8
+  },
+  {
+    "masv": "B23DCHT092",
+    "thanhvien_id": 443,
+    "lophanhchinh_id": 8
+  },
+  {
+    "masv": "B23DCHT093",
+    "thanhvien_id": 444,
+    "lophanhchinh_id": 8
+  },
+  {
+    "masv": "B23DCHT094",
+    "thanhvien_id": 445,
+    "lophanhchinh_id": 8
+  },
+  {
+    "masv": "B23DCHT095",
+    "thanhvien_id": 446,
+    "lophanhchinh_id": 8
+  },
+  {
+    "masv": "B23DCHT096",
+    "thanhvien_id": 447,
+    "lophanhchinh_id": 8
+  },
+  {
+    "masv": "B23DCHT097",
+    "thanhvien_id": 448,
+    "lophanhchinh_id": 8
+  },
+  {
+    "masv": "B23DCHT098",
+    "thanhvien_id": 449,
+    "lophanhchinh_id": 8
+  },
+  {
+    "masv": "B23DCHT099",
+    "thanhvien_id": 450,
+    "lophanhchinh_id": 8
+  },
+  {
+    "masv": "B23DCHT100",
+    "thanhvien_id": 451,
+    "lophanhchinh_id": 8
+  },
+  {
+    "masv": "B23DCKT002",
+    "thanhvien_id": 452,
+    "lophanhchinh_id": 9
+  },
+  {
+    "masv": "B23DCKT003",
+    "thanhvien_id": 453,
+    "lophanhchinh_id": 9
+  },
+  {
+    "masv": "B23DCKT004",
+    "thanhvien_id": 454,
+    "lophanhchinh_id": 9
+  },
+  {
+    "masv": "B23DCKT005",
+    "thanhvien_id": 455,
+    "lophanhchinh_id": 9
+  },
+  {
+    "masv": "B23DCKT006",
+    "thanhvien_id": 456,
+    "lophanhchinh_id": 9
+  },
+  {
+    "masv": "B23DCKT007",
+    "thanhvien_id": 457,
+    "lophanhchinh_id": 9
+  },
+  {
+    "masv": "B23DCKT008",
+    "thanhvien_id": 458,
+    "lophanhchinh_id": 9
+  },
+  {
+    "masv": "B23DCKT009",
+    "thanhvien_id": 459,
+    "lophanhchinh_id": 9
+  },
+  {
+    "masv": "B23DCKT010",
+    "thanhvien_id": 460,
+    "lophanhchinh_id": 9
+  },
+  {
+    "masv": "B23DCKT011",
+    "thanhvien_id": 461,
+    "lophanhchinh_id": 9
+  },
+  {
+    "masv": "B23DCKT012",
+    "thanhvien_id": 462,
+    "lophanhchinh_id": 9
+  },
+  {
+    "masv": "B23DCKT013",
+    "thanhvien_id": 463,
+    "lophanhchinh_id": 9
+  },
+  {
+    "masv": "B23DCKT014",
+    "thanhvien_id": 464,
+    "lophanhchinh_id": 9
+  },
+  {
+    "masv": "B23DCKT015",
+    "thanhvien_id": 465,
+    "lophanhchinh_id": 9
+  },
+  {
+    "masv": "B23DCKT016",
+    "thanhvien_id": 466,
+    "lophanhchinh_id": 9
+  },
+  {
+    "masv": "B23DCKT017",
+    "thanhvien_id": 467,
+    "lophanhchinh_id": 9
+  },
+  {
+    "masv": "B23DCKT018",
+    "thanhvien_id": 468,
+    "lophanhchinh_id": 9
+  },
+  {
+    "masv": "B23DCKT019",
+    "thanhvien_id": 469,
+    "lophanhchinh_id": 9
+  },
+  {
+    "masv": "B23DCKT020",
+    "thanhvien_id": 470,
+    "lophanhchinh_id": 9
+  },
+  {
+    "masv": "B23DCKT021",
+    "thanhvien_id": 471,
+    "lophanhchinh_id": 9
+  },
+  {
+    "masv": "B23DCKT022",
+    "thanhvien_id": 472,
+    "lophanhchinh_id": 9
+  },
+  {
+    "masv": "B23DCKT023",
+    "thanhvien_id": 473,
+    "lophanhchinh_id": 9
+  },
+  {
+    "masv": "B23DCKT024",
+    "thanhvien_id": 474,
+    "lophanhchinh_id": 9
+  },
+  {
+    "masv": "B23DCKT025",
+    "thanhvien_id": 475,
+    "lophanhchinh_id": 9
+  },
+  {
+    "masv": "B23DCKT026",
+    "thanhvien_id": 476,
+    "lophanhchinh_id": 9
+  },
+  {
+    "masv": "B23DCKT027",
+    "thanhvien_id": 477,
+    "lophanhchinh_id": 9
+  },
+  {
+    "masv": "B23DCKT028",
+    "thanhvien_id": 478,
+    "lophanhchinh_id": 9
+  },
+  {
+    "masv": "B23DCKT029",
+    "thanhvien_id": 479,
+    "lophanhchinh_id": 9
+  },
+  {
+    "masv": "B23DCKT030",
+    "thanhvien_id": 480,
+    "lophanhchinh_id": 9
+  },
+  {
+    "masv": "B23DCKT031",
+    "thanhvien_id": 481,
+    "lophanhchinh_id": 9
+  },
+  {
+    "masv": "B23DCKT032",
+    "thanhvien_id": 482,
+    "lophanhchinh_id": 9
+  },
+  {
+    "masv": "B23DCKT033",
+    "thanhvien_id": 483,
+    "lophanhchinh_id": 9
+  },
+  {
+    "masv": "B23DCKT034",
+    "thanhvien_id": 484,
+    "lophanhchinh_id": 9
+  },
+  {
+    "masv": "B23DCKT035",
+    "thanhvien_id": 485,
+    "lophanhchinh_id": 9
+  },
+  {
+    "masv": "B23DCKT036",
+    "thanhvien_id": 486,
+    "lophanhchinh_id": 9
+  },
+  {
+    "masv": "B23DCKT037",
+    "thanhvien_id": 487,
+    "lophanhchinh_id": 9
+  },
+  {
+    "masv": "B23DCKT038",
+    "thanhvien_id": 488,
+    "lophanhchinh_id": 9
+  },
+  {
+    "masv": "B23DCKT039",
+    "thanhvien_id": 489,
+    "lophanhchinh_id": 9
+  },
+  {
+    "masv": "B23DCKT040",
+    "thanhvien_id": 490,
+    "lophanhchinh_id": 9
+  },
+  {
+    "masv": "B23DCKT041",
+    "thanhvien_id": 491,
+    "lophanhchinh_id": 9
+  },
+  {
+    "masv": "B23DCKT042",
+    "thanhvien_id": 492,
+    "lophanhchinh_id": 9
+  },
+  {
+    "masv": "B23DCKT043",
+    "thanhvien_id": 493,
+    "lophanhchinh_id": 9
+  },
+  {
+    "masv": "B23DCKT044",
+    "thanhvien_id": 494,
+    "lophanhchinh_id": 9
+  },
+  {
+    "masv": "B23DCKT045",
+    "thanhvien_id": 495,
+    "lophanhchinh_id": 9
+  },
+  {
+    "masv": "B23DCKT046",
+    "thanhvien_id": 496,
+    "lophanhchinh_id": 9
+  },
+  {
+    "masv": "B23DCKT047",
+    "thanhvien_id": 497,
+    "lophanhchinh_id": 9
+  },
+  {
+    "masv": "B23DCKT048",
+    "thanhvien_id": 498,
+    "lophanhchinh_id": 9
+  },
+  {
+    "masv": "B23DCKT049",
+    "thanhvien_id": 499,
+    "lophanhchinh_id": 9
+  },
+  {
+    "masv": "B23DCKT050",
+    "thanhvien_id": 500,
+    "lophanhchinh_id": 9
+  },
+  {
+    "masv": "B23DCKT051",
+    "thanhvien_id": 501,
+    "lophanhchinh_id": 9
+  },
+  {
+    "masv": "B23DCKT052",
+    "thanhvien_id": 502,
+    "lophanhchinh_id": 10
+  },
+  {
+    "masv": "B23DCKT053",
+    "thanhvien_id": 503,
+    "lophanhchinh_id": 10
+  },
+  {
+    "masv": "B23DCKT054",
+    "thanhvien_id": 504,
+    "lophanhchinh_id": 10
+  },
+  {
+    "masv": "B23DCKT055",
+    "thanhvien_id": 505,
+    "lophanhchinh_id": 10
+  },
+  {
+    "masv": "B23DCKT056",
+    "thanhvien_id": 506,
+    "lophanhchinh_id": 10
+  },
+  {
+    "masv": "B23DCKT057",
+    "thanhvien_id": 507,
+    "lophanhchinh_id": 10
+  },
+  {
+    "masv": "B23DCKT058",
+    "thanhvien_id": 508,
+    "lophanhchinh_id": 10
+  },
+  {
+    "masv": "B23DCKT059",
+    "thanhvien_id": 509,
+    "lophanhchinh_id": 10
+  },
+  {
+    "masv": "B23DCKT060",
+    "thanhvien_id": 510,
+    "lophanhchinh_id": 10
+  },
+  {
+    "masv": "B23DCKT061",
+    "thanhvien_id": 511,
+    "lophanhchinh_id": 10
+  },
+  {
+    "masv": "B23DCKT062",
+    "thanhvien_id": 512,
+    "lophanhchinh_id": 10
+  },
+  {
+    "masv": "B23DCKT063",
+    "thanhvien_id": 513,
+    "lophanhchinh_id": 10
+  },
+  {
+    "masv": "B23DCKT064",
+    "thanhvien_id": 514,
+    "lophanhchinh_id": 10
+  },
+  {
+    "masv": "B23DCKT065",
+    "thanhvien_id": 515,
+    "lophanhchinh_id": 10
+  },
+  {
+    "masv": "B23DCKT066",
+    "thanhvien_id": 516,
+    "lophanhchinh_id": 10
+  },
+  {
+    "masv": "B23DCKT067",
+    "thanhvien_id": 517,
+    "lophanhchinh_id": 10
+  },
+  {
+    "masv": "B23DCKT068",
+    "thanhvien_id": 518,
+    "lophanhchinh_id": 10
+  },
+  {
+    "masv": "B23DCKT069",
+    "thanhvien_id": 519,
+    "lophanhchinh_id": 10
+  },
+  {
+    "masv": "B23DCKT070",
+    "thanhvien_id": 520,
+    "lophanhchinh_id": 10
+  },
+  {
+    "masv": "B23DCKT071",
+    "thanhvien_id": 521,
+    "lophanhchinh_id": 10
+  },
+  {
+    "masv": "B23DCKT072",
+    "thanhvien_id": 522,
+    "lophanhchinh_id": 10
+  },
+  {
+    "masv": "B23DCKT073",
+    "thanhvien_id": 523,
+    "lophanhchinh_id": 10
+  },
+  {
+    "masv": "B23DCKT074",
+    "thanhvien_id": 524,
+    "lophanhchinh_id": 10
+  },
+  {
+    "masv": "B23DCKT075",
+    "thanhvien_id": 525,
+    "lophanhchinh_id": 10
+  },
+  {
+    "masv": "B23DCKT076",
+    "thanhvien_id": 526,
+    "lophanhchinh_id": 10
+  },
+  {
+    "masv": "B23DCKT077",
+    "thanhvien_id": 527,
+    "lophanhchinh_id": 10
+  },
+  {
+    "masv": "B23DCKT078",
+    "thanhvien_id": 528,
+    "lophanhchinh_id": 10
+  },
+  {
+    "masv": "B23DCKT079",
+    "thanhvien_id": 529,
+    "lophanhchinh_id": 10
+  },
+  {
+    "masv": "B23DCKT080",
+    "thanhvien_id": 530,
+    "lophanhchinh_id": 10
+  },
+  {
+    "masv": "B23DCKT081",
+    "thanhvien_id": 531,
+    "lophanhchinh_id": 10
+  },
+  {
+    "masv": "B23DCKT082",
+    "thanhvien_id": 532,
+    "lophanhchinh_id": 10
+  },
+  {
+    "masv": "B23DCKT083",
+    "thanhvien_id": 533,
+    "lophanhchinh_id": 10
+  },
+  {
+    "masv": "B23DCKT084",
+    "thanhvien_id": 534,
+    "lophanhchinh_id": 10
+  },
+  {
+    "masv": "B23DCKT085",
+    "thanhvien_id": 535,
+    "lophanhchinh_id": 10
+  },
+  {
+    "masv": "B23DCKT086",
+    "thanhvien_id": 536,
+    "lophanhchinh_id": 10
+  },
+  {
+    "masv": "B23DCKT087",
+    "thanhvien_id": 537,
+    "lophanhchinh_id": 10
+  },
+  {
+    "masv": "B23DCKT088",
+    "thanhvien_id": 538,
+    "lophanhchinh_id": 10
+  },
+  {
+    "masv": "B23DCKT089",
+    "thanhvien_id": 539,
+    "lophanhchinh_id": 10
+  },
+  {
+    "masv": "B23DCKT090",
+    "thanhvien_id": 540,
+    "lophanhchinh_id": 10
+  },
+  {
+    "masv": "B23DCKT091",
+    "thanhvien_id": 541,
+    "lophanhchinh_id": 10
+  },
+  {
+    "masv": "B23DCKT092",
+    "thanhvien_id": 542,
+    "lophanhchinh_id": 10
+  },
+  {
+    "masv": "B23DCKT093",
+    "thanhvien_id": 543,
+    "lophanhchinh_id": 10
+  },
+  {
+    "masv": "B23DCKT094",
+    "thanhvien_id": 544,
+    "lophanhchinh_id": 10
+  },
+  {
+    "masv": "B23DCKT095",
+    "thanhvien_id": 545,
+    "lophanhchinh_id": 10
+  },
+  {
+    "masv": "B23DCKT096",
+    "thanhvien_id": 546,
+    "lophanhchinh_id": 10
+  },
+  {
+    "masv": "B23DCKT097",
+    "thanhvien_id": 547,
+    "lophanhchinh_id": 10
+  },
+  {
+    "masv": "B23DCKT098",
+    "thanhvien_id": 548,
+    "lophanhchinh_id": 10
+  },
+  {
+    "masv": "B23DCKT099",
+    "thanhvien_id": 549,
+    "lophanhchinh_id": 10
+  },
+  {
+    "masv": "B23DCKT100",
+    "thanhvien_id": 550,
+    "lophanhchinh_id": 10
+  },
+  {
+    "masv": "B23DCKT101",
+    "thanhvien_id": 551,
+    "lophanhchinh_id": 10
+  }
+]

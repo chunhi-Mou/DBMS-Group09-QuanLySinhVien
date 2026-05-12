@@ -1,0 +1,1202 @@
+[
+  {
+    "id": 1,
+    "sonha": "Số 7",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Thành phố Thái Bình",
+    "tinhthanh": "Thái Bình",
+    "truong_id": null
+  },
+  {
+    "id": 2,
+    "sonha": "Số 63",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Hồng Lĩnh",
+    "tinhthanh": "Hà Tĩnh",
+    "truong_id": null
+  },
+  {
+    "id": 3,
+    "sonha": "Số 189",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Thanh Xuân",
+    "tinhthanh": "Hà Nội",
+    "truong_id": null
+  },
+  {
+    "id": 4,
+    "sonha": "Số 190",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Ba Đình",
+    "tinhthanh": "Hà Nội",
+    "truong_id": null
+  },
+  {
+    "id": 5,
+    "sonha": "Số 152",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Thành phố Thanh Hóa",
+    "tinhthanh": "Thanh Hóa",
+    "truong_id": null
+  },
+  {
+    "id": 6,
+    "sonha": "Số 8",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Lê Chân",
+    "tinhthanh": "Hải Phòng",
+    "truong_id": null
+  },
+  {
+    "id": 7,
+    "sonha": "Số 60",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Thanh Xuân",
+    "tinhthanh": "Hà Nội",
+    "truong_id": null
+  },
+  {
+    "id": 8,
+    "sonha": "Số 7",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Bỉm Sơn",
+    "tinhthanh": "Thanh Hóa",
+    "truong_id": null
+  },
+  {
+    "id": 9,
+    "sonha": "Số 184",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Thành phố Nam Định",
+    "tinhthanh": "Nam Định",
+    "truong_id": null
+  },
+  {
+    "id": 10,
+    "sonha": "Số 140",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Kiến Xương",
+    "tinhthanh": "Thái Bình",
+    "truong_id": null
+  },
+  {
+    "id": 11,
+    "sonha": "Số 115",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Ngô Quyền",
+    "tinhthanh": "Hải Phòng",
+    "truong_id": null
+  },
+  {
+    "id": 12,
+    "sonha": "Số 2",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Mỹ Lộc",
+    "tinhthanh": "Nam Định",
+    "truong_id": null
+  },
+  {
+    "id": 13,
+    "sonha": "Số 179",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Thanh Khê",
+    "tinhthanh": "Đà Nẵng",
+    "truong_id": null
+  },
+  {
+    "id": 14,
+    "sonha": "Số 72",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Hồng Bàng",
+    "tinhthanh": "Hải Phòng",
+    "truong_id": null
+  },
+  {
+    "id": 15,
+    "sonha": "Số 196",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Thanh Xuân",
+    "tinhthanh": "Hà Nội",
+    "truong_id": null
+  },
+  {
+    "id": 16,
+    "sonha": "Số 24",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Quận 1",
+    "tinhthanh": "TP. Hồ Chí Minh",
+    "truong_id": null
+  },
+  {
+    "id": 17,
+    "sonha": "Số 92",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Lê Chân",
+    "tinhthanh": "Hải Phòng",
+    "truong_id": null
+  },
+  {
+    "id": 18,
+    "sonha": "Số 68",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Tân Bình",
+    "tinhthanh": "TP. Hồ Chí Minh",
+    "truong_id": null
+  },
+  {
+    "id": 19,
+    "sonha": "Số 118",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Ba Đình",
+    "tinhthanh": "Hà Nội",
+    "truong_id": null
+  },
+  {
+    "id": 20,
+    "sonha": "Số 97",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Thành phố Thanh Hóa",
+    "tinhthanh": "Thanh Hóa",
+    "truong_id": null
+  },
+  {
+    "id": 21,
+    "sonha": "Số 76",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Hai Bà Trưng",
+    "tinhthanh": "Hà Nội",
+    "truong_id": null
+  },
+  {
+    "id": 22,
+    "sonha": "Số 93",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Kiến Xương",
+    "tinhthanh": "Thái Bình",
+    "truong_id": null
+  },
+  {
+    "id": 23,
+    "sonha": "Số 181",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Thành phố Nam Định",
+    "tinhthanh": "Nam Định",
+    "truong_id": null
+  },
+  {
+    "id": 24,
+    "sonha": "Số 170",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Đống Đa",
+    "tinhthanh": "Hà Nội",
+    "truong_id": null
+  },
+  {
+    "id": 25,
+    "sonha": "Số 21",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Cầu Giấy",
+    "tinhthanh": "Hà Nội",
+    "truong_id": null
+  },
+  {
+    "id": 26,
+    "sonha": "Số 98",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Đống Đa",
+    "tinhthanh": "Hà Nội",
+    "truong_id": null
+  },
+  {
+    "id": 27,
+    "sonha": "Số 163",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Gò Vấp",
+    "tinhthanh": "TP. Hồ Chí Minh",
+    "truong_id": null
+  },
+  {
+    "id": 28,
+    "sonha": "Số 95",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Ngô Quyền",
+    "tinhthanh": "Hải Phòng",
+    "truong_id": null
+  },
+  {
+    "id": 29,
+    "sonha": "Số 172",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Ngô Quyền",
+    "tinhthanh": "Hải Phòng",
+    "truong_id": null
+  },
+  {
+    "id": 30,
+    "sonha": "Số 156",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Quận 1",
+    "tinhthanh": "TP. Hồ Chí Minh",
+    "truong_id": null
+  },
+  {
+    "id": 31,
+    "sonha": "Số 137",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Thành phố Thái Bình",
+    "tinhthanh": "Thái Bình",
+    "truong_id": null
+  },
+  {
+    "id": 32,
+    "sonha": "Số 42",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Thành phố Hà Tĩnh",
+    "tinhthanh": "Hà Tĩnh",
+    "truong_id": null
+  },
+  {
+    "id": 33,
+    "sonha": "Số 70",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Diễn Châu",
+    "tinhthanh": "Nghệ An",
+    "truong_id": null
+  },
+  {
+    "id": 34,
+    "sonha": "Số 143",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Kiến Xương",
+    "tinhthanh": "Thái Bình",
+    "truong_id": null
+  },
+  {
+    "id": 35,
+    "sonha": "Số 84",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Ba Đình",
+    "tinhthanh": "Hà Nội",
+    "truong_id": null
+  },
+  {
+    "id": 36,
+    "sonha": "Số 59",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Hải Châu",
+    "tinhthanh": "Đà Nẵng",
+    "truong_id": null
+  },
+  {
+    "id": 37,
+    "sonha": "Số 103",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Cầu Giấy",
+    "tinhthanh": "Hà Nội",
+    "truong_id": null
+  },
+  {
+    "id": 38,
+    "sonha": "Số 55",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Quận 1",
+    "tinhthanh": "TP. Hồ Chí Minh",
+    "truong_id": null
+  },
+  {
+    "id": 39,
+    "sonha": "Số 81",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Vụ Bản",
+    "tinhthanh": "Nam Định",
+    "truong_id": null
+  },
+  {
+    "id": 40,
+    "sonha": "Số 128",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Ba Đình",
+    "tinhthanh": "Hà Nội",
+    "truong_id": null
+  },
+  {
+    "id": 41,
+    "sonha": "Số 37",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Kiến An",
+    "tinhthanh": "Hải Phòng",
+    "truong_id": null
+  },
+  {
+    "id": 42,
+    "sonha": "Số 64",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Quận 3",
+    "tinhthanh": "TP. Hồ Chí Minh",
+    "truong_id": null
+  },
+  {
+    "id": 43,
+    "sonha": "Số 192",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Sơn Trà",
+    "tinhthanh": "Đà Nẵng",
+    "truong_id": null
+  },
+  {
+    "id": 44,
+    "sonha": "Số 150",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Mỹ Lộc",
+    "tinhthanh": "Nam Định",
+    "truong_id": null
+  },
+  {
+    "id": 45,
+    "sonha": "Số 57",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Hồng Bàng",
+    "tinhthanh": "Hải Phòng",
+    "truong_id": null
+  },
+  {
+    "id": 46,
+    "sonha": "Số 127",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Hai Bà Trưng",
+    "tinhthanh": "Hà Nội",
+    "truong_id": null
+  },
+  {
+    "id": 47,
+    "sonha": "Số 29",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Đống Đa",
+    "tinhthanh": "Hà Nội",
+    "truong_id": null
+  },
+  {
+    "id": 48,
+    "sonha": "Số 41",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Ba Đình",
+    "tinhthanh": "Hà Nội",
+    "truong_id": null
+  },
+  {
+    "id": 49,
+    "sonha": "Số 153",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Từ Sơn",
+    "tinhthanh": "Bắc Ninh",
+    "truong_id": null
+  },
+  {
+    "id": 50,
+    "sonha": "Số 98",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Hoàng Mai",
+    "tinhthanh": "Hà Nội",
+    "truong_id": null
+  },
+  {
+    "id": 51,
+    "sonha": "Số 136",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Mỹ Lộc",
+    "tinhthanh": "Nam Định",
+    "truong_id": null
+  },
+  {
+    "id": 52,
+    "sonha": "Số 3",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Tân Bình",
+    "tinhthanh": "TP. Hồ Chí Minh",
+    "truong_id": null
+  },
+  {
+    "id": 53,
+    "sonha": "Số 30",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Tiên Du",
+    "tinhthanh": "Bắc Ninh",
+    "truong_id": null
+  },
+  {
+    "id": 54,
+    "sonha": "Số 193",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Tiên Du",
+    "tinhthanh": "Bắc Ninh",
+    "truong_id": null
+  },
+  {
+    "id": 55,
+    "sonha": "Số 29",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Bình Thạnh",
+    "tinhthanh": "TP. Hồ Chí Minh",
+    "truong_id": null
+  },
+  {
+    "id": 56,
+    "sonha": "Số 41",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Gò Vấp",
+    "tinhthanh": "TP. Hồ Chí Minh",
+    "truong_id": null
+  },
+  {
+    "id": 57,
+    "sonha": "Số 185",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Thành phố Vinh",
+    "tinhthanh": "Nghệ An",
+    "truong_id": null
+  },
+  {
+    "id": 58,
+    "sonha": "Số 129",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Hồng Lĩnh",
+    "tinhthanh": "Hà Tĩnh",
+    "truong_id": null
+  },
+  {
+    "id": 59,
+    "sonha": "Số 130",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Thanh Khê",
+    "tinhthanh": "Đà Nẵng",
+    "truong_id": null
+  },
+  {
+    "id": 60,
+    "sonha": "Số 77",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Ba Đình",
+    "tinhthanh": "Hà Nội",
+    "truong_id": null
+  },
+  {
+    "id": 61,
+    "sonha": "Số 156",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Kiến Xương",
+    "tinhthanh": "Thái Bình",
+    "truong_id": null
+  },
+  {
+    "id": 62,
+    "sonha": "Số 96",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Thanh Xuân",
+    "tinhthanh": "Hà Nội",
+    "truong_id": null
+  },
+  {
+    "id": 63,
+    "sonha": "Số 139",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Thanh Khê",
+    "tinhthanh": "Đà Nẵng",
+    "truong_id": null
+  },
+  {
+    "id": 64,
+    "sonha": "Số 154",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Hải Châu",
+    "tinhthanh": "Đà Nẵng",
+    "truong_id": null
+  },
+  {
+    "id": 65,
+    "sonha": "Số 5",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Gò Vấp",
+    "tinhthanh": "TP. Hồ Chí Minh",
+    "truong_id": null
+  },
+  {
+    "id": 66,
+    "sonha": "Số 79",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Cầu Giấy",
+    "tinhthanh": "Hà Nội",
+    "truong_id": null
+  },
+  {
+    "id": 67,
+    "sonha": "Số 62",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Quận 1",
+    "tinhthanh": "TP. Hồ Chí Minh",
+    "truong_id": null
+  },
+  {
+    "id": 68,
+    "sonha": "Số 22",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Thành phố Nam Định",
+    "tinhthanh": "Nam Định",
+    "truong_id": null
+  },
+  {
+    "id": 69,
+    "sonha": "Số 18",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Hồng Lĩnh",
+    "tinhthanh": "Hà Tĩnh",
+    "truong_id": null
+  },
+  {
+    "id": 70,
+    "sonha": "Số 33",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Thanh Khê",
+    "tinhthanh": "Đà Nẵng",
+    "truong_id": null
+  },
+  {
+    "id": 71,
+    "sonha": "Số 141",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Đông Hưng",
+    "tinhthanh": "Thái Bình",
+    "truong_id": null
+  },
+  {
+    "id": 72,
+    "sonha": "Số 136",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Cầu Giấy",
+    "tinhthanh": "Hà Nội",
+    "truong_id": null
+  },
+  {
+    "id": 73,
+    "sonha": "Số 55",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Mỹ Lộc",
+    "tinhthanh": "Nam Định",
+    "truong_id": null
+  },
+  {
+    "id": 74,
+    "sonha": "Số 177",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Bỉm Sơn",
+    "tinhthanh": "Thanh Hóa",
+    "truong_id": null
+  },
+  {
+    "id": 75,
+    "sonha": "Số 80",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Ba Đình",
+    "tinhthanh": "Hà Nội",
+    "truong_id": null
+  },
+  {
+    "id": 76,
+    "sonha": "Số 113",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Hồng Bàng",
+    "tinhthanh": "Hải Phòng",
+    "truong_id": null
+  },
+  {
+    "id": 77,
+    "sonha": "Số 31",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Sầm Sơn",
+    "tinhthanh": "Thanh Hóa",
+    "truong_id": null
+  },
+  {
+    "id": 78,
+    "sonha": "Số 17",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Quận 3",
+    "tinhthanh": "TP. Hồ Chí Minh",
+    "truong_id": null
+  },
+  {
+    "id": 79,
+    "sonha": "Số 151",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Quận 1",
+    "tinhthanh": "TP. Hồ Chí Minh",
+    "truong_id": null
+  },
+  {
+    "id": 80,
+    "sonha": "Số 151",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Thành phố Thanh Hóa",
+    "tinhthanh": "Thanh Hóa",
+    "truong_id": null
+  },
+  {
+    "id": 81,
+    "sonha": "Số 19",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Đống Đa",
+    "tinhthanh": "Hà Nội",
+    "truong_id": null
+  },
+  {
+    "id": 82,
+    "sonha": "Số 16",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Can Lộc",
+    "tinhthanh": "Hà Tĩnh",
+    "truong_id": null
+  },
+  {
+    "id": 83,
+    "sonha": "Số 9",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Đống Đa",
+    "tinhthanh": "Hà Nội",
+    "truong_id": null
+  },
+  {
+    "id": 84,
+    "sonha": "Số 132",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Quận 1",
+    "tinhthanh": "TP. Hồ Chí Minh",
+    "truong_id": null
+  },
+  {
+    "id": 85,
+    "sonha": "Số 172",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Bình Thạnh",
+    "tinhthanh": "TP. Hồ Chí Minh",
+    "truong_id": null
+  },
+  {
+    "id": 86,
+    "sonha": "Số 139",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Thành phố Vinh",
+    "tinhthanh": "Nghệ An",
+    "truong_id": null
+  },
+  {
+    "id": 87,
+    "sonha": "Số 147",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Ba Đình",
+    "tinhthanh": "Hà Nội",
+    "truong_id": null
+  },
+  {
+    "id": 88,
+    "sonha": "Số 63",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Mỹ Lộc",
+    "tinhthanh": "Nam Định",
+    "truong_id": null
+  },
+  {
+    "id": 89,
+    "sonha": "Số 49",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Diễn Châu",
+    "tinhthanh": "Nghệ An",
+    "truong_id": null
+  },
+  {
+    "id": 90,
+    "sonha": "Số 169",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Đống Đa",
+    "tinhthanh": "Hà Nội",
+    "truong_id": null
+  },
+  {
+    "id": 91,
+    "sonha": "Số 109",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Diễn Châu",
+    "tinhthanh": "Nghệ An",
+    "truong_id": null
+  },
+  {
+    "id": 92,
+    "sonha": "Số 187",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Kiến An",
+    "tinhthanh": "Hải Phòng",
+    "truong_id": null
+  },
+  {
+    "id": 93,
+    "sonha": "Số 168",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Ba Đình",
+    "tinhthanh": "Hà Nội",
+    "truong_id": null
+  },
+  {
+    "id": 94,
+    "sonha": "Số 16",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Thành phố Thái Bình",
+    "tinhthanh": "Thái Bình",
+    "truong_id": null
+  },
+  {
+    "id": 95,
+    "sonha": "Số 28",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Hồng Bàng",
+    "tinhthanh": "Hải Phòng",
+    "truong_id": null
+  },
+  {
+    "id": 96,
+    "sonha": "Số 49",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Quận 3",
+    "tinhthanh": "TP. Hồ Chí Minh",
+    "truong_id": null
+  },
+  {
+    "id": 97,
+    "sonha": "Số 36",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Sầm Sơn",
+    "tinhthanh": "Thanh Hóa",
+    "truong_id": null
+  },
+  {
+    "id": 98,
+    "sonha": "Số 72",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Ngô Quyền",
+    "tinhthanh": "Hải Phòng",
+    "truong_id": null
+  },
+  {
+    "id": 99,
+    "sonha": "Số 20",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Thành phố Vinh",
+    "tinhthanh": "Nghệ An",
+    "truong_id": null
+  },
+  {
+    "id": 100,
+    "sonha": "Số 26",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Quỳnh Lưu",
+    "tinhthanh": "Nghệ An",
+    "truong_id": null
+  },
+  {
+    "id": 101,
+    "sonha": "Số 139",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Ba Đình",
+    "tinhthanh": "Hà Nội",
+    "truong_id": null
+  },
+  {
+    "id": 102,
+    "sonha": "Số 193",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Đống Đa",
+    "tinhthanh": "Hà Nội",
+    "truong_id": null
+  },
+  {
+    "id": 103,
+    "sonha": "Số 105",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Quận 3",
+    "tinhthanh": "TP. Hồ Chí Minh",
+    "truong_id": null
+  },
+  {
+    "id": 104,
+    "sonha": "Số 55",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Diễn Châu",
+    "tinhthanh": "Nghệ An",
+    "truong_id": null
+  },
+  {
+    "id": 105,
+    "sonha": "Số 43",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Lê Chân",
+    "tinhthanh": "Hải Phòng",
+    "truong_id": null
+  },
+  {
+    "id": 106,
+    "sonha": "Số 100",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Lê Chân",
+    "tinhthanh": "Hải Phòng",
+    "truong_id": null
+  },
+  {
+    "id": 107,
+    "sonha": "Số 74",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Gò Vấp",
+    "tinhthanh": "TP. Hồ Chí Minh",
+    "truong_id": null
+  },
+  {
+    "id": 108,
+    "sonha": "Số 40",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Kiến An",
+    "tinhthanh": "Hải Phòng",
+    "truong_id": null
+  },
+  {
+    "id": 109,
+    "sonha": "Số 56",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Cầu Giấy",
+    "tinhthanh": "Hà Nội",
+    "truong_id": null
+  },
+  {
+    "id": 110,
+    "sonha": "Số 189",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Hai Bà Trưng",
+    "tinhthanh": "Hà Nội",
+    "truong_id": null
+  },
+  {
+    "id": 111,
+    "sonha": "Số 192",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Thành phố Thanh Hóa",
+    "tinhthanh": "Thanh Hóa",
+    "truong_id": null
+  },
+  {
+    "id": 112,
+    "sonha": "Số 13",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Quận 1",
+    "tinhthanh": "TP. Hồ Chí Minh",
+    "truong_id": null
+  },
+  {
+    "id": 113,
+    "sonha": "Số 129",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Mỹ Lộc",
+    "tinhthanh": "Nam Định",
+    "truong_id": null
+  },
+  {
+    "id": 114,
+    "sonha": "Số 15",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Thành phố Thanh Hóa",
+    "tinhthanh": "Thanh Hóa",
+    "truong_id": null
+  },
+  {
+    "id": 115,
+    "sonha": "Số 48",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Thành phố Thanh Hóa",
+    "tinhthanh": "Thanh Hóa",
+    "truong_id": null
+  },
+  {
+    "id": 116,
+    "sonha": "Số 18",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Hai Bà Trưng",
+    "tinhthanh": "Hà Nội",
+    "truong_id": null
+  },
+  {
+    "id": 117,
+    "sonha": "Số 104",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Thành phố Bắc Ninh",
+    "tinhthanh": "Bắc Ninh",
+    "truong_id": null
+  },
+  {
+    "id": 118,
+    "sonha": "Số 64",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Hai Bà Trưng",
+    "tinhthanh": "Hà Nội",
+    "truong_id": null
+  },
+  {
+    "id": 119,
+    "sonha": "Số 11",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Vụ Bản",
+    "tinhthanh": "Nam Định",
+    "truong_id": null
+  },
+  {
+    "id": 120,
+    "sonha": "Số 108",
+    "toanha": "",
+    "xompho": "",
+    "phuongxa": "",
+    "quanhuyen": "Thành phố Thái Bình",
+    "tinhthanh": "Thái Bình",
+    "truong_id": null
+  }
+]
