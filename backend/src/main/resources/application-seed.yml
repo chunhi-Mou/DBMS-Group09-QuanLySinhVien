@@ -1,0 +1,3 @@
+spring:
+  jpa.hibernate.ddl-auto: validate
+qlsv.seed.dir: ${SEED_DIR:../data-generator/data}
