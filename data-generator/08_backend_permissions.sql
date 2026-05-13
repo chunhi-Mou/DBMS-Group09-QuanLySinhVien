@@ -16,5 +16,8 @@ GRANT EXECUTE ON PROCEDURE sinhvien.sp_LuuDiemThanhPhan TO 'qlsv_app'@'localhost
 GRANT EXECUTE ON PROCEDURE sinhvien.sp_ChotDiemMonHoc TO 'qlsv_app'@'localhost';
 GRANT EXECUTE ON PROCEDURE sinhvien.sp_GetBaoCaoHocLuc TO 'qlsv_app'@'localhost';
 GRANT EXECUTE ON PROCEDURE sinhvien.sp_TongKetHocKy TO 'qlsv_app'@'localhost';
+GRANT EXECUTE ON PROCEDURE sinhvien.sp_Admin_CreateKiHoc TO 'qlsv_app'@'localhost';
+GRANT EXECUTE ON PROCEDURE sinhvien.sp_Admin_CreateLopHocPhan TO 'qlsv_app'@'localhost';
+GRANT EXECUTE ON PROCEDURE sinhvien.sp_Admin_AssignGiangVienToLopHocPhan TO 'qlsv_app'@'localhost';
 
 FLUSH PRIVILEGES;

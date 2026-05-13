@@ -14,6 +14,9 @@ DROP PROCEDURE IF EXISTS sp_ChotDiemMonHoc;
 DROP PROCEDURE IF EXISTS sp_LuuDiemThanhPhan;
 DROP PROCEDURE IF EXISTS sp_HuyDangKyHoc;
 DROP PROCEDURE IF EXISTS sp_DangKyHoc;
+DROP PROCEDURE IF EXISTS sp_Admin_CreateKiHoc;
+DROP PROCEDURE IF EXISTS sp_Admin_CreateLopHocPhan;
+DROP PROCEDURE IF EXISTS sp_Admin_AssignGiangVienToLopHocPhan;
 
 DELIMITER //
 
@@ -74,8 +77,9 @@ BEGIN
 END //
 
 CREATE PROCEDURE sp_DangKyHoc(
-    IN p_sinhvien_id VARCHAR(50),
-    IN p_lophocphan_id INT
+    IN  p_sinhvien_id     VARCHAR(50),
+    IN  p_lophocphan_id   INT,
+    OUT p_new_id          INT
 )
 BEGIN
     DECLARE v_sisotoida INT;
@@ -192,17 +196,20 @@ BEGIN
            SET trangthai = 'Đã lưu',
                ngaydangky = NOW()
          WHERE id = v_dangky_id;
+        SET p_new_id = v_dangky_id;
     ELSE
         INSERT INTO DangKyHoc(ngaydangky, trangthai, sinhvien_id, lophocphan_id)
         VALUES (NOW(), 'Đã lưu', p_sinhvien_id, p_lophocphan_id);
+        SET p_new_id = LAST_INSERT_ID();
     END IF;
 
     COMMIT;
 END //
 
 CREATE PROCEDURE sp_HuyDangKyHoc(
-    IN p_dangkyhoc_id INT,
-    IN p_sinhvien_id VARCHAR(50)
+    IN  p_dangkyhoc_id    INT,
+    IN  p_sinhvien_id     VARCHAR(50),
+    OUT p_rows_affected   INT
 )
 BEGIN
     DECLARE v_owner VARCHAR(50);
@@ -237,6 +244,8 @@ BEGIN
     UPDATE DangKyHoc
        SET trangthai = 'Đã hủy'
      WHERE id = p_dangkyhoc_id;
+
+    SET p_rows_affected = ROW_COUNT();
 
     COMMIT;
 END //
@@ -286,8 +295,10 @@ BEGIN
 END //
 
 CREATE PROCEDURE sp_ChotDiemMonHoc(
-    IN p_lophocphan_id INT,
-    IN p_giangvien_id INT
+    IN  p_lophocphan_id     INT,
+    IN  p_giangvien_id      INT,
+    OUT p_so_sinh_vien      INT,
+    OUT p_diem_trung_binh   DECIMAL(5,2)
 )
 BEGIN
     DECLARE v_monhoc_id INT;
@@ -386,10 +397,20 @@ BEGIN
         diem = VALUES(diem),
         diemhechu_id = VALUES(diemhechu_id);
 
+    SELECT COUNT(*), AVG(kqm.diem)
+      INTO p_so_sinh_vien, p_diem_trung_binh
+      FROM KetQuaMon kqm
+      JOIN DangKyHoc dkh ON dkh.id = kqm.dangkyhoc_id
+     WHERE dkh.lophocphan_id = p_lophocphan_id
+       AND dkh.trangthai <> 'Đã hủy';
+
     COMMIT;
 END //
 
-CREATE PROCEDURE sp_TongKetHocKy(IN p_kihoc_id INT)
+CREATE PROCEDURE sp_TongKetHocKy(
+    IN  p_kihoc_id        INT,
+    OUT p_so_sinh_vien    INT
+)
 BEGIN
     DECLARE v_missing_count INT;
 
@@ -460,6 +481,11 @@ BEGIN
         sotinchi_dat = VALUES(sotinchi_dat),
         loaihocluc_id = VALUES(loaihocluc_id),
         created_at = CURRENT_TIMESTAMP;
+
+    SELECT COUNT(*)
+      INTO p_so_sinh_vien
+      FROM TONGKET_HOCKI
+     WHERE kihoc_id = p_kihoc_id;
 
     COMMIT;
 END //
@@ -749,6 +775,104 @@ BEGIN
                      ORDER BY gpa_he4 DESC, masv
                    ) b
         ), JSON_ARRAY()) AS sinhVien;
+END //
+
+CREATE PROCEDURE sp_Admin_CreateKiHoc(
+    IN p_namhoc_id INT,
+    IN p_hocki_id INT,
+    OUT p_new_id INT
+)
+BEGIN
+    DECLARE EXIT HANDLER FOR SQLEXCEPTION
+    BEGIN
+        ROLLBACK;
+        RESIGNAL;
+    END;
+
+    START TRANSACTION;
+
+    IF NOT EXISTS (SELECT 1 FROM NamHoc WHERE id = p_namhoc_id) THEN
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Năm học không tồn tại';
+    END IF;
+
+    IF NOT EXISTS (SELECT 1 FROM HocKi WHERE id = p_hocki_id) THEN
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Học kì không tồn tại';
+    END IF;
+
+    IF EXISTS (SELECT 1 FROM KiHoc WHERE namhoc_id = p_namhoc_id AND hocki_id = p_hocki_id) THEN
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Kì học đã tồn tại';
+    END IF;
+
+    INSERT INTO KiHoc(namhoc_id, hocki_id) VALUES (p_namhoc_id, p_hocki_id);
+    SET p_new_id = LAST_INSERT_ID();
+
+    COMMIT;
+END //
+
+CREATE PROCEDURE sp_Admin_CreateLopHocPhan(
+    IN p_monhockihoc_id INT,
+    IN p_ten VARCHAR(255),
+    IN p_nhom INT,
+    IN p_tothuchanh INT,
+    IN p_sisotoida INT,
+    OUT p_new_id INT
+)
+BEGIN
+    DECLARE EXIT HANDLER FOR SQLEXCEPTION
+    BEGIN
+        ROLLBACK;
+        RESIGNAL;
+    END;
+
+    START TRANSACTION;
+
+    IF NOT EXISTS (SELECT 1 FROM MonHoc_KiHoc WHERE id = p_monhockihoc_id) THEN
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Môn học kì học không tồn tại';
+    END IF;
+
+    IF p_sisotoida <= 0 THEN
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Sĩ số tối đa phải lớn hơn 0';
+    END IF;
+
+    INSERT INTO LopHocPhan(monhockihoc_id, ten, nhom, tothuchanh, sisotoida)
+    VALUES (p_monhockihoc_id, p_ten, p_nhom, p_tothuchanh, p_sisotoida);
+    SET p_new_id = LAST_INSERT_ID();
+
+    COMMIT;
+END //
+
+CREATE PROCEDURE sp_Admin_AssignGiangVienToLopHocPhan(
+    IN  p_lophocphan_id   INT,
+    IN  p_giangvien_id    INT,
+    OUT p_rows_affected   INT
+)
+BEGIN
+    DECLARE EXIT HANDLER FOR SQLEXCEPTION
+    BEGIN
+        ROLLBACK;
+        RESIGNAL;
+    END;
+
+    START TRANSACTION;
+
+    IF NOT EXISTS (SELECT 1 FROM LopHocPhan WHERE id = p_lophocphan_id) THEN
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Lớp học phần không tồn tại';
+    END IF;
+
+    IF NOT EXISTS (SELECT 1 FROM GiangVien WHERE thanhvien_id = p_giangvien_id) THEN
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Giảng viên không tồn tại';
+    END IF;
+
+    IF EXISTS (SELECT 1 FROM GiangVien_LopHocPhan WHERE lophocphan_id = p_lophocphan_id AND giangvien_id = p_giangvien_id) THEN
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Giảng viên đã được phân công cho lớp này';
+    END IF;
+
+    INSERT INTO GiangVien_LopHocPhan(lophocphan_id, giangvien_id)
+    VALUES (p_lophocphan_id, p_giangvien_id);
+
+    SET p_rows_affected = ROW_COUNT();
+
+    COMMIT;
 END //
 
 DELIMITER ;
