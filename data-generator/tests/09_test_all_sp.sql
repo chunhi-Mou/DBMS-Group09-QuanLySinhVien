@@ -130,7 +130,7 @@ BEGIN
         DECLARE CONTINUE HANDLER FOR SQLEXCEPTION BEGIN GET DIAGNOSTICS CONDITION 1 v_msg = MESSAGE_TEXT; END;
         CALL sp_TongKetHocKy(999, @v_so_sv4);
         INSERT INTO phase1_sp_test_result(test_name, expected, actual, status)
-        VALUES ('sp_TongKetHocKy kỳ không tồn tại', 'Không tồn tại', COALESCE(v_msg, 'OK'), IF(v_msg = 'Không tồn tại', 'PASS', 'FAIL'));
+        VALUES ('sp_TongKetHocKy kỳ không tồn tại', 'Kỳ không tồn tại', COALESCE(v_msg, 'OK'), IF(v_msg = 'Kỳ không tồn tại', 'PASS', 'FAIL'));
     END;
 
     BEGIN

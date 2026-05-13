@@ -112,6 +112,6 @@ INSERT INTO DiemThanhPhan(dangkyhoc_id, daudiem_id, diem) VALUES
     (3, 1, 7.0), (3, 3, 7.0), (3, 5, 7.0),
     (4, 1, 6.0), (4, 3, 6.0), (4, 5, 6.0);
 
-CALL sp_ChotDiemMonHoc(1, 2);
-CALL sp_TongKetHocKy(1);
-CALL sp_ChotDiemMonHoc(4, 3);
+CALL sp_ChotDiemMonHoc(1, 2, @seed_sv_count1, @seed_diem_tb1);
+CALL sp_TongKetHocKy(1, @seed_tk_count1);
+CALL sp_ChotDiemMonHoc(4, 3, @seed_sv_count2, @seed_diem_tb2);
