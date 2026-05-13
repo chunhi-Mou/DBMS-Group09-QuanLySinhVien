@@ -202,7 +202,7 @@ BEGIN
         SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Lớp không tồn tại';
     END IF;
 
-    -- Lấy thông tin lớp học và môn học (khóa lhp để tránh race condition siso)
+    -- Lấy thông tin lớp học và môn học
     SELECT lhp.sisotoida, mkh.monhoc_id, mkh.kihoc_id
       INTO v_sisotoida, v_monhoc_id, v_kihoc_id
       FROM LopHocPhan lhp
@@ -541,9 +541,12 @@ BEGIN
             ON gvlhp.lophocphan_id = dkh.lophocphan_id
            AND gvlhp.giangvien_id = p_giangvien_id
          WHERE dkh.id = p_dangkyhoc_id
-           AND dkh.trangthai <> 'Đã hủy'
     ) THEN
         SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Không có quyền';
+    END IF;
+
+    IF EXISTS (SELECT 1 FROM DangKyHoc WHERE id = p_dangkyhoc_id AND trangthai = 'Đã hủy') THEN
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Đăng ký đã hủy';
     END IF;
 
     IF NOT EXISTS (
@@ -972,6 +975,10 @@ BEGIN
         SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Không có quyền';
     END IF;
 
+    IF EXISTS (SELECT 1 FROM DangKyHoc WHERE lophocphan_id = p_lophocphan_id AND trangthai <> 'Đã hủy') THEN
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Đã có sinh viên';
+    END IF;
+
     SELECT sisotoida INTO v_lhp_siso FROM LopHocPhan WHERE id = p_lophocphan_id;
     SELECT succhua INTO v_phong_succhua FROM PhongHoc WHERE id = p_phonghoc_id;
 
@@ -980,30 +987,15 @@ BEGIN
     IF EXISTS (SELECT 1 FROM BuoiHoc WHERE tuan_id = p_tuan_id AND ngay_id = p_ngay_id AND kiphoc_id = p_kiphoc_id AND phonghoc_id = p_phonghoc_id) THEN SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Trùng phòng'; END IF;
     IF EXISTS (SELECT 1 FROM BuoiHoc WHERE tuan_id = p_tuan_id AND ngay_id = p_ngay_id AND kiphoc_id = p_kiphoc_id AND giangvien_id = p_giangvien_id) THEN SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Trùng lịch giảng viên'; END IF;
 
-    IF EXISTS (
-        SELECT 1
-          FROM DangKyHoc dkh_current
-          JOIN DangKyHoc dkh_other ON dkh_other.sinhvien_id = dkh_current.sinhvien_id
-                                  AND dkh_other.trangthai <> 'Đã hủy'
-                                  AND dkh_other.lophocphan_id <> p_lophocphan_id
-          JOIN BuoiHoc bh_other ON bh_other.lophocphan_id = dkh_other.lophocphan_id
-         WHERE dkh_current.lophocphan_id = p_lophocphan_id
-           AND dkh_current.trangthai <> 'Đã hủy'
-           AND bh_other.tuan_id = p_tuan_id
-           AND bh_other.ngay_id = p_ngay_id
-           AND bh_other.kiphoc_id = p_kiphoc_id
-    ) THEN
-        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Trùng lịch';
-    END IF;
-
-    INSERT INTO BuoiHoc(lophocphan_id, tuan_id, ngay_id, kiphoc_id, phonghoc_id, giangvien_id) VALUES (p_lophocphan_id, p_tuan_id, p_ngay_id, p_kiphoc_id, p_phonghoc_id, p_giangvien_id);
+    INSERT INTO BuoiHoc(lophocphan_id, tuan_id, ngay_id, kiphoc_id, phonghoc_id, giangvien_id) 
+    VALUES (p_lophocphan_id, p_tuan_id, p_ngay_id, p_kiphoc_id, p_phonghoc_id, p_giangvien_id);
 END //
 
 CREATE PROCEDURE sp_Admin_DeleteBuoiHoc(IN p_id INT)
 BEGIN
     IF NOT EXISTS (SELECT 1 FROM BuoiHoc WHERE id = p_id) THEN SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Không tồn tại'; END IF;
     IF EXISTS (SELECT 1 FROM BuoiHoc bh JOIN DangKyHoc dkh ON dkh.lophocphan_id = bh.lophocphan_id WHERE bh.id = p_id AND dkh.trangthai <> 'Đã hủy') THEN
-        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Lớp đã có sinh viên đăng ký';
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Đã có sinh viên';
     END IF;
     DELETE FROM BuoiHoc WHERE id = p_id;
 END //
