@@ -92,7 +92,7 @@ Truy cập ứng dụng tại `http://localhost:5173`.
 ├── backend/                Spring Boot REST API
 ├── frontend/               React + Vite SPA
 ├── data-generator/
-│   ├── gen_data.py         Sinh dữ liệu giả lập
+│   ├── gen_data.py         Sinh dữ liệu
 │   ├── import_data.py      Nạp dữ liệu vào MySQL
 │   ├── sinhvien.sql      Schema32 bảng
 │   └── data/               JSON đã sinh (tự động tạo)
